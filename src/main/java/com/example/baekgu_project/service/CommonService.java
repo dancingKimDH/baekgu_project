@@ -12,7 +12,7 @@ import com.example.baekgu_project.dao.SharedDao;
 
 @Service
 @Transactional
-public class PetDiaryService {
+public class CommonService {
     @Autowired
     SharedDao sharedDao;
     
@@ -23,6 +23,11 @@ public class PetDiaryService {
         Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
+
+    // public Map selectSearch(Map params) {
+    //     return null;
+    // }
+
 
     // 검색(조건-search : YEAR, CAR_NAME)
     // public List selectSearch(Map dataMap) {
