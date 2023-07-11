@@ -15,7 +15,7 @@ public class SharedDao {
         return result;
     }
 
-    // 레코드 하나
+    // 레코드 하나 (상세페이지 만들때 많이 사용)
     public Object getOne(String sqlMapId, Object dataMap){
         Object result = sqlSessionTemplate.selectOne(sqlMapId, dataMap);
         return result;
