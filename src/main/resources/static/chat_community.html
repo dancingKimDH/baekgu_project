@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
-
     <style>
         /* 헤더 우측 정렬 */
         header {
             text-align: right;
+            background-color: #fff;
         }
 
-        /* 헤더와 메인에 배경색 적용 */
-        header,
+        /* 메인에 배경색 적용 */
         main {
             background-color: #b3d9eb;
         }
@@ -36,88 +35,91 @@
             background-color: #fff;
             text-align: center;
         }
+
+        /* 수정 사항 추가 */
+        .community {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .input-group {
+            border-radius: 20px;
+        }
+
+        .list-unstyled>.list-unstyled {
+            border-top: 10px solid #fff;
+            border-bottom: 10px solid #fff;
+        }
+
+        .paging {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 20px 20px 10px;
+        }
+
+        .direction {
+            margin: 0 5px;
+        }
+
+        .direction.first::before,
+        .direction.last::after {
+            content: "";
+        }
     </style>
 
     <title>Community</title>
+
 </head>
 
 <body>
-    <header>
-        <!-- login -->
-        <a href="#" style="color: white; text-decoration: none; font-size: 1.1rem;">로그인</a>
-        <!-- Register -->
-        <a href="#" style="color: white; text-decoration: none; font-size: 1.1rem;">회원가입</a>
+    <header style="margin: 20px;">
+        <!-- My Page -->
+        <a href="#" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">마이 페이지</a>
     </header>
-</body>
-<main>
-    <div style="text-align: center;">
-        <ul class="list-unstyled m-25" style="display: inline-block;">
-            <li style="display: inline-block; float: left;">
-                <a href="#">
-                    <img src="./images/logoimage.png" alt="logo image" width="70" height="70">
-                    <hr>
-                </a>
-                <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
-                    <ul class="list-unstyled m-0" style="display: inline-block;">
-                        <li style="display: inline-block;">
-                            <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
-                                사이트 소개</a>
-                        </li>
-                        <li style="display: inline-block;">
-                            <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
-                                다이어리 사용 안내</a>
-                        </li>
-                        <li style="display: inline-block;">
-                            <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
-                                커뮤니티</a>
-                        </li>
-                        <li style="display: inline-block;">
-                            <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
-                                펫 다이어리</a>
-                        </li>
-                    </ul>
-                </div>
-        </ul>
-    </div>
-</main>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        main {
-            flex: 1;
-        }
-
-        footer {
-            padding: 5px;
-            background-color: #b3d9eb;
-            font-size: 0.8rem;
-            text-align: center;
-        }
-    </style>
-</head>
-
-<body>
     <main>
-        <!-- Main Content -->
-        <div class="container mt-4">
-            <div class="community main">
+        <div style="text-align: center;">
+            <ul class="list-unstyled m-25" style="display: inline-block; margin: 20px;">
+                <li style="display: inline-block; float: left;">
+                    <a href="">
+                        <img src="./images/logoimage.png" alt="logo image" width="70" height="70">
+                        <hr>
+                    </a>
+                    <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+                        <ul class="list-unstyled m-0" style="display: inline-block;">
+                            <li style="display: inline-block;">
+                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                    사이트 소개</a>
+                            </li>
+                            <li style="display: inline-block;">
+                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                    다이어리 사용 안내</a>
+                            </li>
+                            <li style="display: inline-block;">
+                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                    커뮤니티</a>
+                            </li>
+                            <li style="display: inline-block;">
+                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                    펫 다이어리</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="community main">
+            <div class="container mt-4">
                 <div class="col-md-8">
                     <h3 class="tit">커뮤니티 게시판</h3>
                     <p>반려동물 자랑, 병원, 사료 문의 등 자유로운 공간입니다 😄</p>
                     <div class="input-group mb-3">
-                        <input type="text" title="검색어 입력" class="form-control" placeholder="" value="" id="keydownEnter"
-                            maxlength="100">
+                        <input type="text" title="검색어 입력" class="form-control rounded-pill" placeholder="" value=""
+                            id="keydownEnter" maxlength="100">
                         <button class="btn btn-primary" type="button" onclick="communityTableBody()">
                             <img src="./images/search.png" alt="search image" width="23" height="23">
                         </button>
@@ -258,13 +260,21 @@
                             </tbody>
                         </table>
                         <div class="paging">
-                            <a href="/Community/PetTalk/List?page=1" class="direction first">이전</a>
-                                <a href="#" class="direction prev">이전</a>
-                                        <a href="#" class="on">1</a>
-                                    <a href="/Community/PetTalk/List?page=2">2</a>
-                                    <a href="/Community/PetTalk/List?page=3">3</a>
-                                    <a href="/Community/PetTalk/List?page=11" class="direction next">다음</a>
-                                    <a href="/Community/PetTalk/List?page=68" class="direction last">다음</a>
+                            <a href="/Community/PetTalk/List?page=1" class="direction first">
+                                <img src="./images/angle-double-left.png" alt="previous page" width="15" height="15">
+                            </a>
+                            <a href="#" class="direction prev">
+                                <img src="./images/angle-left.png" alt="previous page" width="15" height="15">
+                            </a>
+                            <a href="#" class="on">1</a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="" class="direction next">
+                                <img src="./images/angle-right.png" alt="next page" width="15" height="15">
+                            </a>
+                            <a href="/Community/PetTalk/List?page=68" class="direction last">
+                                <img src="./images/angle-double-right.png" alt="next page" width="15" height="15">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -310,7 +320,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
 
@@ -324,7 +333,3 @@
 </body>
 
 </html>
-
-
-
-<body>
