@@ -21,107 +21,109 @@
                 <li> <a href="" class="a">커뮤니티</a></li>
             </ul>
         </nav>
-
-
-        <table class="first_table">
-            <tr>
-                <form action="">
-                    <td>
-                        몸무게: &nbsp;
-                    </td>
-                    <td>
-                        <input type="text" name="weight" id="" placeholder="kg">
-                    </td>
-            </tr>
-            <tr>
-                <td>
-                    사료: &nbsp;
-                </td>
-                <td>
-                    <input type="text" name="meal" id="" placeholder="사료">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    간식: &nbsp;
-                </td>
-                <td>
-                    <input type="text" name="snack" id="" placeholder="간식">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <button class="submit">제출하기</button>
-                </td>
-            </tr>
-            </form>
-        </table>
-
+    </div>
+        <div class="main_container">
+            <div class="left-section">
+                <table class="first_table">
+                    <form action="">
+                    <tr>
+                        
+                            <td>
+                                몸무게: &nbsp;
+                            </td>
+                            <td>
+                                <input type="text" name="weight" id="" placeholder="kg">
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            사료: &nbsp;
+                        </td>
+                        <td>
+                            <input type="text" name="meal" id="" placeholder="사료">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            간식: &nbsp;
+                        </td>
+                        <td>
+                            <input type="text" name="snack" id="" placeholder="간식">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button class="submit">제출하기</button>
+                        </td>
+                    </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
 
         <!-- Second Section: Common Signs of Illness -->
-
-        <form id="illnessForm">
+        <div class="right-section">
             <form id="illnessForm">
-                <input type="radio" id="symptom1" name="symptom" value="식욕 부진">
-                <label for="symptom1">식욕 부진</label><br>
-            
-                <input type="radio" id="symptom2" name="symptom" value="체중 감소 또는 증가">
-                <label for="symptom2">체중 감소 또는 증가</label><br>
-            
-                <input type="radio" id="symptom3" name="symptom" value="무기력 또는 활동 감소">
-                <label for="symptom3">무기력 또는 활동 감소</label><br>
-            
-                <input type="radio" id="symptom4" name="symptom" value="과도한 갈증 또는 소변을 많이 보는 것">
-                <label for="symptom4">과도한 갈증 또는 자주 소변을 봄</label><br>
-            
-                <input type="radio" id="symptom5" name="symptom" value="기침이나 재채기">
-                <label for="symptom5">기침이나 재채기</label><br>
-            
-                <input type="radio" id="symptom6" name="symptom" value="숨 쉬는 데 어려움">
-                <label for="symptom6">호흡에 어려움</label><br>
-            
-                <input type="radio" id="symptom7" name="symptom" value="구토 또는 설사">
-                <label for="symptom7">구토 또는 설사</label><br>
-            
-                <input type="radio" id="symptom8" name="symptom" value="대변이나 소변의 변화 (색상, 일관성, 냄새)">
-                <label for="symptom8">대변이나 소변의 변화 (색상, 일관성, 냄새)</label><br>
-            
-                <input type="radio" id="symptom9" name="symptom" value="눈, 코, 귀에서 비정상적인 분비물">
-                <label for="symptom9">눈, 코, 귀에서 비정상적인 분비물</label><br>
-            
-                <input type="radio" id="symptom10" name="symptom" value="가려움증, 발적, 털 빠짐과 같은 피부 문제">
-                <label for="symptom10">가려움증, 발진, 털 빠짐과 같은 피부 문제</label><br>
-            
-                <input type="radio" id="symptom11" name="symptom" value="절뚝거림이나 움직임에 어려움">
-                <label for="symptom11">절뚝거림이나 움직임에 어려움</label><br>
-            
-                <input type="radio" id="symptom12" name="symptom" value="행동 변화 (공격성, 우울증, 불안)">
-                <label for="symptom12">행동 변화 (공격성, 우울증, 불안)</label><br>
-            
-                <input type="radio" id="symptom13" name="symptom" value="구취나 치아 문제">
-                <label for="symptom13">구취 또는 치아 문제</label><br>
-            
-                <input type="radio" id="symptom14" name="symptom" value="발열">
-                <label for="symptom14">발열</label><br>
-            
-            
-                <input type="submit" value="Save">
-            </form>
-        </form>
+                <form id="illnessForm">
+                    <input type="radio" id="symptom1" name="symptom" value="식욕 부진">
+                    <label for="symptom1">식욕 부진</label><br>
 
-        <!-- Third Section: Animal Diary -->
+                    <input type="radio" id="symptom2" name="symptom" value="체중 감소 또는 증가">
+                    <label for="symptom2">체중 감소 또는 증가</label><br>
 
-        <label for="animalSelect">Select an Animal:</label>
-        <select id="animalSelect">
-            <!-- Populate the select dropdown dynamically using JavaScript -->
-        </select>
+                    <input type="radio" id="symptom3" name="symptom" value="무기력 또는 활동 감소">
+                    <label for="symptom3">무기력 또는 활동 감소</label><br>
 
-        <br><br>
-        <textarea id="diary" name="diary"></textarea><br><br>
+                    <input type="radio" id="symptom4" name="symptom" value="과도한 갈증 또는 소변을 많이 보는 것">
+                    <label for="symptom4">과도한 갈증 또는 자주 소변을 봄</label><br>
 
-        <button id="saveDiaryBtn">Save Diary</button>
+                    <input type="radio" id="symptom5" name="symptom" value="기침이나 재채기">
+                    <label for="symptom5">기침이나 재채기</label><br>
 
+                    <input type="radio" id="symptom6" name="symptom" value="숨 쉬는 데 어려움">
+                    <label for="symptom6">호흡에 어려움</label><br>
 
+                    <input type="radio" id="symptom7" name="symptom" value="구토 또는 설사">
+                    <label for="symptom7">구토 또는 설사</label><br>
+
+                    <input type="radio" id="symptom8" name="symptom" value="대변이나 소변의 변화 (색상, 일관성, 냄새)">
+                    <label for="symptom8">대변이나 소변의 변화 (색상, 일관성, 냄새)</label><br>
+
+                    <input type="radio" id="symptom9" name="symptom" value="눈, 코, 귀에서 비정상적인 분비물">
+                    <label for="symptom9">눈, 코, 귀에서 비정상적인 분비물</label><br>
+
+                    <input type="radio" id="symptom10" name="symptom" value="가려움증, 발적, 털 빠짐과 같은 피부 문제">
+                    <label for="symptom10">가려움증, 발진, 털 빠짐과 같은 피부 문제</label><br>
+
+                    <input type="radio" id="symptom11" name="symptom" value="절뚝거림이나 움직임에 어려움">
+                    <label for="symptom11">절뚝거림이나 움직임에 어려움</label><br>
+
+                    <input type="radio" id="symptom12" name="symptom" value="행동 변화 (공격성, 우울증, 불안)">
+                    <label for="symptom12">행동 변화 (공격성, 우울증, 불안)</label><br>
+
+                    <input type="radio" id="symptom13" name="symptom" value="구취나 치아 문제">
+                    <label for="symptom13">구취 또는 치아 문제</label><br>
+
+                    <input type="radio" id="symptom14" name="symptom" value="발열">
+                    <label for="symptom14">발열</label><br>
+
+                    <input type="submit" value="Save">
+                </form>
+        </div>
+
+        <div class="bottom-section">
+            <label for="animalSelect">Select an Animal:</label>
+            <select id="animalSelect">
+                <option value="tongtong">통통이</option>
+                <option value="tongtong">팅팅이</option>
+            </select>
+
+            <br><br>
+            <textarea id="diary" name="diary"></textarea><br><br>
+
+            <button id="saveDiaryBtn">Save Diary</button>
+        </div>
+  
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
