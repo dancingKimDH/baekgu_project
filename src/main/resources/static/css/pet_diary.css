@@ -10,6 +10,7 @@
 .a {
     text-decoration: none;
     color:grey;
+    font-weight: bold;
     font-size: large;
 }
 
@@ -34,10 +35,20 @@
     border-collapse: separate;
     border-spacing: 10px;
     padding: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1pm solid black;
+    border: 1px solid black;
 }
+
+
 
 .table_title {
     color: cadetblue;
+    font-weight: bold;
+}
+
+.add_pet {
+
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid black;
+
 }
