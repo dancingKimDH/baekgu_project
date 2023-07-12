@@ -1,0 +1,151 @@
+div.paging {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 50px 0 0 0;
+    position: relative;
+    clear: both;
+}
+
+div.paging a, div.paging strong {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    color: #777;
+    text-align: center;
+    margin: 0;
+    vertical-align: middle;
+}
+
+div.paging a:hover, div.paging .on {
+    display: inline-block;
+    color: #6c89cd;
+    font-weight: 400;
+}
+
+div.paging .direction {
+    display: inline-block;
+    position: relative;
+    text-indent: -9999px;
+    border: #dbdbdb 1px solid;
+}
+
+div.paging .direction:hover {
+    display: inline-block;
+    background-color: #6c89cd;
+    border: #6c89cd 1px solid;
+}
+
+div.paging .direction > span {
+    display: inline-block;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+div.paging .direction.first:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 0px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border: 1px solid #777;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+div.paging .direction.first:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -4px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border: 1px solid #777;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+div.paging .direction.prev:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -4px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border: 1px solid #777;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+div.paging .direction.next:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -4px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border: 1px solid #777;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+div.paging .direction.last:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -8px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border: 1px solid #777;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+div.paging .direction.last:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -4px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border: 1px solid #777;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+div.paging .direction:hover:before, div.paging .direction:hover:after {
+    border-color: #fff;
+}
