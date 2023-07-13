@@ -158,16 +158,16 @@
     margin: 100px auto 50px auto;
     display: grid;
     place-items: center;
-    
+
     align-content: stretch;
     justify-content: space-between;
 
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 2fr 3fr;
     grid-template-areas: "choose stat_title"
-                            "choose stat1"
-                            "stat_footer stat_footer";
-    
+        "choose stat1"
+        "stat_footer stat_footer";
+
 
 }
 
@@ -192,14 +192,16 @@
     border-collapse: collapse;
 }
 
-.th, .td {
+.th,
+.td {
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     padding: 10px
 }
 
-.th:first-child, .td:first-child {
-    border-left:none;
+.th:first-child,
+.td:first-child {
+    border-left: none;
 }
 
 
@@ -207,6 +209,22 @@
     background-color: rgb(15, 30, 30);
 }
 
-.stat_footer{
+.stat_footer {
     background-color: rgb(75, 83, 41);
+}
+
+.member_table {
+    margin: 20px auto 20px auto;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.admin_subject {
+    margin-left: 110px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
