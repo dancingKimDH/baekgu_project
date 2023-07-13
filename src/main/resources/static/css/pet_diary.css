@@ -99,6 +99,7 @@
     margin-right: auto;
     border: 1px solid black;
     padding: 20px;
+    background-color: whitesmoke;
 }
 
 .right-section {
@@ -107,6 +108,7 @@
     margin-right: auto;
     border: 1px solid black;
     padding: 20px;
+    background-color: whitesmoke;
 }
 
 .bottom-section {
@@ -125,4 +127,16 @@
 
 .body {
     background-color: #b3d9eb
+}
+
+.submit-cell {
+
+    display: flex;
+    justify-content: flex-end
+}
+
+.white_table {
+    background-color: whitesmoke;
+    width: 800px;
+    height: 600px;
 }
