@@ -1,79 +1,90 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Write</title>
+    <link rel="stylesheet" href="../css/community_write.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="footer-row">
+            <img src="../images/logoimage.png" alt="logo" width="70" height="70">
+            <h1>이건 내 일기장이 아닐까...?</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-section">
+            <div class="container">
+                <div class="col-md-8">                    
+                    <h3 class="content-title">분류</h3>
+                    <div class="dropdown">
+                        <button class="dropdown-button">?</button>
+                        <div class="dropdown-content">
+                            <a href="#">자랑</a>
+                            <a href="#">병원</a>
+                            <a href="#">사료/간식</a>
+                            <a href="#">기타</a>
+                        </div>
+                    </div>
+                    <h3 class="content-title">제목</h3>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="제목을 입력하세요">
+                    </div>
+                    <!-- <h3 class="content-title">URL</h3>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="URL을 입력하세요">
+                    </div>
+                    <div class="upload-button">
+                        <button class="file-upload-button">파일 추가</button>
+                    </div> -->
+                    <h3 class="content-title">내용</h3>
+                    <div class="textarea-box">
+                        <textarea rows="50" class="textarea-field" placeholder="내용을 입력하세요"></textarea>
+                    </div>
+                    <div class="footer-buttons">
+                        <button class="register-button">등록</button>
+                        <button class="cancel-button">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- <footer>
+        <div class="footer-row">
+            <div class="footer-column">
+                <div class="footer-links">
+                    <ul class="link-list">
+                        <a href="" class="link-item">이용약관</a>
+                        <a href="" class="link-item">개인정보처리방침</a>
+                        <a href="" class="link-item">고객센터</a>
+                        <a href="" class="link-item">공지사항</a>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <ul class="info-list">
+                        <li class="info-item">대표번호: 080-123-4567 (업무시간: 09:00-18:00 월~금) 주말 및 공휴일 휴무</li>
+                        <li class="info-item">대표자: THE GLORY</li>
+                        <li class="info-item">주소: 서울시 구로구</li>
+                        <li class="info-item">법인명: (주)THE GLORY</li>
+                        <li class="info-item">사업자 등록정보: 123-45-6789</li>
+                        <li class="info-item">호스팅: (주)THE GLORY</li>
+                        <li class="info-item">E-MAIL: THE GLORY@THE GLORY.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-row">
+                <img src="../images/logoimage.png" alt="logo" height="80">
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="script.js"></script>
 </body>
-</html> -->
 
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>게시판 글쓰기</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    
-    h1 {
-      text-align: center;
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .form-group label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .form-group input[type="text"],
-    .form-group textarea {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-    }
-    
-    .form-group button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h1>게시판 글쓰기</h1>
-  
-  <form>
-    <div class="form-group">
-      <label for="title">제목:</label>
-      <input type="text" id="title" name="title" required>
-    </div>
-    
-    <div class="form-group">
-      <label for="content">내용:</label>
-      <textarea id="content" name="content" rows="5" required></textarea>
-    </div>
-    
-    <div class="form-group">
-      <button type="submit">작성</button>
-    </div>
-  </form>
-</body>
 </html>

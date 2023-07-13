@@ -1,0 +1,152 @@
+body {
+    margin: 20px;
+    background-color: #b3d9eb;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content-title {
+    color: white;
+    background-color: #b3d9eb;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #b3d9eb;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.input-box {
+    background-color: #b3d9eb;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.input-field {
+    width: 100%;
+    border: none;
+    background-color: #b3d9eb;
+    padding: 5px;
+}
+
+.upload-button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.file-upload-button {
+    background-color: #b3d9eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.textarea-box {
+    background-color: #b3d9eb;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.textarea-field {
+    width: 100%;
+    border: none;
+    background-color: #b3d9eb;
+    padding: 5px;
+}
+
+.footer-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-button, .cancel-button {
+    background-color: #b3d9eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-item {
+    display: inline-block;
+    margin-right: 10px;
+    color: #b3d9eb;
+    text-decoration: none;
+}
+
+.info-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-item {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
