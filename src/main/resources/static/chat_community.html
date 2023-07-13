@@ -18,18 +18,6 @@
             background-color: #b3d9eb;
         }
 
-        /* 메뉴 위아래 흰색 줄 */
-        nav ul li {
-            border-top: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-        }
-
-        /* 맨 오른쪽 'My Diary' 둥근 사각형 테두리 */
-        nav ul li:last-child {
-            border-radius: 20px;
-            border: 1px solid #fff;
-        }
-
         /* 푸터 흰색 배경화면, 글씨 가운데 정렬 */
         footer {
             background-color: #fff;
@@ -119,10 +107,11 @@
                     <p>반려동물 자랑, 병원, 사료 문의 등 자유로운 공간입니다 😄</p>
                     <div class="input-group mb-3">
                         <input type="text" title="검색어 입력" class="form-control rounded-pill" placeholder="" value=""
-                            id="keydownEnter" maxlength="100">
-                        <button class="btn btn-primary" type="button" onclick="communityTableBody()">
-                            <img src="./images/search.png" alt="search image" width="23" height="23">
-                        </button>
+                            id="keydownEnter" maxlength="70">
+                            <button class="rounded-pill" type="button" onclick="communityTableBody()" style="margin-left: 20px; margin-right: 20px;">
+                                <img src="./images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
+                            </button>   
+                                                     
                     </div>
                     <div class="Community_main">
                         <h2></h2>
@@ -259,22 +248,29 @@
                                 </form>
                             </tbody>
                         </table>
-                        <div class="paging">
-                            <a href="/Community/PetTalk/List?page=1" class="direction first">
-                                <img src="./images/angle-double-left.png" alt="previous page" width="15" height="15">
-                            </a>
-                            <a href="#" class="direction prev">
-                                <img src="./images/angle-left.png" alt="previous page" width="15" height="15">
-                            </a>
-                            <a href="#" class="on">1</a>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                            <a href="" class="direction next">
-                                <img src="./images/angle-right.png" alt="next page" width="15" height="15">
-                            </a>
-                            <a href="/Community/PetTalk/List?page=68" class="direction last">
-                                <img src="./images/angle-double-right.png" alt="next page" width="15" height="15">
-                            </a>
+                        <div>
+                            <form class="paging">
+                                <formaction href="./chat_community.html" class="direction first">
+                                    <img src="./images/angle-double-left.png" width="15" height="15" style="background-color: transparent;">
+                                </formaction>
+                                <formaction href="./chat_community.html?page=2" class="direction prev">
+                                    <img src="./images/angle-left.png" alt="previous page" width="15" height="15" style="background-color: transparent;">
+                                </formaction>
+                                <formaction href="./chat_community.html" class="on">1
+                                </formaction>
+                                <formaction href="./chat_community.html?page=2">2
+                                </formaction>
+                                <formaction href="./chat_community.html?page=3">3
+                                </formaction>
+                                <formaction href="./chat_community.html?page=4" class="direction next">
+                                    <img src="./images/angle-right.png" alt="next page" width="15" height="15" style="background-color: transparent;">
+                                </formaction>
+                                <formaction href="./chat_community.html?page=5" class="direction last">
+                                    <img src="./images/angle-double-right.png" alt="next page" width="15" height="15" style="background-color: transparent;">
+                                </formaction>
+                            </form>
+                            
+                            
                         </div>
                     </div>
                 </div>
