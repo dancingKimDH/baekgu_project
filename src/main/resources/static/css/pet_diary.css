@@ -100,6 +100,7 @@
     border: 1px solid black;
     padding: 20px;
     background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 .right-section {
@@ -109,6 +110,7 @@
     border: 1px solid black;
     padding: 20px;
     background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 .bottom-section {
@@ -126,7 +128,7 @@
 }
 
 .body {
-    background-color: #b3d9eb
+    background-color: #b3d9eb;
 }
 
 .submit-cell {
@@ -139,4 +141,14 @@
     background-color: whitesmoke;
     width: 800px;
     height: 600px;
+    border-radius: 10px;
+}
+
+.btn2 {
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.btn3 {
+    border-radius: 5px;
 }
