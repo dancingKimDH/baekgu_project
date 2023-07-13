@@ -33,6 +33,11 @@
             height: 100%;
         }
 
+        .Community_main {
+            justify-content: center;
+            margin: 10px;
+        }
+
         .input-group {
             border-radius: 20px;
         }
@@ -42,7 +47,7 @@
             border-bottom: 10px solid #fff;
         }
 
-        .paging {
+        .pagination {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -66,7 +71,11 @@
 <body>
     <header style="margin: 20px; text-align: right;">
         <!-- My Page -->
-        <a href="#" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">마이 페이지</a>
+        <form class="my-page-link">
+        <a href="./pet_diary/my_pet_manage.html" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">Pet Diary</a>
+        <a style="color: rgb(7, 7, 7);">|</a>
+        <a href="./mainpage.html" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">LogOut</a>
+    </form>
     </header>
     <main>
         <div style="text-align: center;">
@@ -79,19 +88,19 @@
                     <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
                         <ul class="list-unstyled m-0" style="display: inline-block;">
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
                                     사이트 소개</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
                                     다이어리 사용 안내</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="./community_v2.html" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
                                     커뮤니티</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="./pet_diary/my_pet_diary.html" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
                                     펫 다이어리</a>
                             </li>
                         </ul>
@@ -101,14 +110,14 @@
         </div>
 
         <div class="community main">
-            <div class="container mt-4">
-                <div class="col-md-8" >
+            <div class="container" style="display: inline-block; margin: 20px;">
+                <div class="community board" >
                     <h3 class="tit">커뮤니티 게시판</h3>
                     <p>반려동물 자랑, 병원, 사료 문의 등 자유로운 공간입니다 😄</p>
                     <div class="input-group mb-3">
                         <input type="text" title="검색어 입력" class="form-control rounded-pill" placeholder="" value=""
-                            id="keydownEnter" maxlength="70">
-                            <button class="rounded-pill" type="button" onclick="communityTableBody()" style="margin-left: 20px; margin-right: 20px;">
+                            id="keydownEnter" style="margin-left: 80px; margin-right: 80px;">
+                            <button class="rounded-pill" type="button" onclick="" style="margin-left: 10px; margin-right: 10px;">
                                 <img src="./images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
                             </button>   
                                                      
@@ -248,29 +257,22 @@
                                 </form>
                             </tbody>
                         </table>
-                        <div>
-                            <form class="paging">
-                                <formaction href="./chat_community.html" class="direction first">
-                                    <img src="./images/angle-double-left.png" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                                <formaction href="./chat_community.html?page=2" class="direction prev">
-                                    <img src="./images/angle-left.png" alt="previous page" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                                <formaction href="./chat_community.html" class="on">1
-                                </formaction>
-                                <formaction href="./chat_community.html?page=2">2
-                                </formaction>
-                                <formaction href="./chat_community.html?page=3">3
-                                </formaction>
-                                <formaction href="./chat_community.html?page=4" class="direction next">
-                                    <img src="./images/angle-right.png" alt="next page" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                                <formaction href="./chat_community.html?page=5" class="direction last">
-                                    <img src="./images/angle-double-right.png" alt="next page" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                            </form>
-                            
-                            
+                        <div class="pagination">
+                            <a href="./chat_community.html" class="direction first">
+                                <img src="./images/angle-double-left.png" alt="double-left" width="15" height="15">
+                            </a>
+                            <a href="./chat_community.html?page=2" class="direction prev">
+                                <img src="./images/angle-left.png" alt="left" width="15" height="15">
+                            </a>
+                            <a href="./chat_community.html" class="on">1</a>
+                            <a href="./chat_community.html?page=2">2</a>
+                            <a href="./chat_community.html?page=3">3</a>
+                            <a href="./chat_community.html?page=4" class="direction next">
+                                <img src="./images/angle-right.png" alt="right" width="15" height="15">
+                            </a>
+                            <a href="./chat_community.html?page=5" class="direction last">
+                                <img src="./images/angle-double-right.png" alt="double-right" width="15" height="15">
+                            </a>
                         </div>
                     </div>
                 </div>

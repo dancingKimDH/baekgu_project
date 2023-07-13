@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="./css/community.css">
+
+</head>
+
+<body>
+    <header>
+        <form action="./pet_diary/my_pet_manage.html" method="get">
+            <button type="submit" class="petdiary-link">My Diary</button>
+        </form>
+        <span class="divider"> | </span>
+        <form action="./mainpage.html" method="get">
+            <button type="submit" class="petdiary-link">LogOut</button>
+        </form>
+    </header>
+
+    <main>
+        <div class="menu-section">
+            <ul class="menu-all">
+                    <a href="./mainpage.html">
+                        <img src="./images/logoimage.png" alt="logo image" width="100" height="100">
+                        <hr>
+                    </a>
+                    <div class="menu-list">
+                        <ul class="menu-text">
+                            <a href="#" class="menu-link">사이트 소개</a>
+                            <a href="#" class="menu-link">다이어리 사용 안내</a>
+                            <a href="./community_v1.html" class="menu-link">커뮤니티</a>
+                            <a href="./pet_diary/my_pet_manage.html" class="menu-link">펫 다이어리</a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="community-section">
+            <div class="container">
+                <div class="col-md-8">
+                    <h3 class="community-title">커뮤니티 게시판</h3>
+                    <p>반려동물 자랑, 병원, 사료 문의 등 자유로운 공간입니다 😄</p>
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="검색어 입력" maxlength="70">
+                        <button class="search-button">
+                            <img src="./images/search.png" alt="search image" width="23" height="23">
+                        </button>
+                    </div>
+                    <div class="community-table">
+                        <h2></h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="no-border">No</th>
+                                    <th class="no-border">분류</th>
+                                    <th class="no-border">제목</th>
+                                    <th class="no-border">작성자</th>
+                                    <th class="no-border">작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody id="communityTableBody">
+                                <tr>
+                                    <td>1</td>
+                                    <td>자랑</td>
+                                    <td class="subject">
+                                        <a href="../static/testmain.html" class="text-decoration-none">꽃챌린지</a>
+                                    </td>
+                                    <td>ba****</td>
+                                    <td>2023-05-10</td>
+                                </tr>
+                                <!-- ... -->
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <a href="./chat_community.html" class="direction first">
+                                <img src="./images/angle-double-left.png" alt="double-left" width="15" height="15">
+                            </a>
+                            <a href="./chat_community.html?page=2" class="direction prev">
+                                <img src="./images/angle-left.png" alt="left" width="15" height="15">
+                            </a>
+                            <a href="./chat_community.html" class="on">1</a>
+                            <a href="./chat_community.html?page=2">2</a>
+                            <a href="./chat_community.html?page=3">3</a>
+                            <a href="./chat_community.html?page=4" class="direction next">
+                                <img src="./images/angle-right.png" alt="right" width="15" height="15">
+                            </a>
+                            <a href="./chat_community.html?page=5" class="direction last">
+                                <img src="./images/angle-double-right.png" alt="double-right" width="15" height="15">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-column">
+                <div class="footer-links">
+                    <ul class="link-list">
+                        <li><a href="" class="link-item">이용약관</a></li>
+                        <li><a href="" class="link-item">개인정보처리방침</a></li>
+                        <li><a href="" class="link-item">고객센터</a></li>
+                        <li><a href="" class="link-item">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <ul class="info-list">
+                        <li class="info-item">대표번호: 080-123-4567 (업무시간: 09:00-18:00 월~금) 주말 및 공휴일 휴무</li>
+                        <li class="info-item">대표자: THE GLORY</li>
+                        <li class="info-item">주소: 서울시 구로구</li>
+                        <li class="info-item">법인명: (주)THE GLORY</li>
+                        <li class="info-item">사업자 등록정보: 123-45-6789</li>
+                        <li class="info-item">호스팅: (주)THE GLORY</li>
+                        <li class="info-item">E-MAIL: THE GLORY@THE GLORY.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-row">
+                <img src="./images/logoimage.png" alt="logo" height="80">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
