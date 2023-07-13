@@ -214,11 +214,17 @@
 }
 
 .member_table {
-    margin: 50px auto 20px auto;
+    margin: 20px auto 20px auto;
     justify-content: center;
     text-align: center;
     width: 80%;
     border-top: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
+}
+
+.admin_subject {
+    margin-left: 110px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
