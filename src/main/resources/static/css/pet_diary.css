@@ -118,7 +118,7 @@
     margin-right: auto;
     margin-top: 20px;
     width: 70%;
-    
+
 }
 
 .bottom-section textarea {
@@ -151,4 +151,62 @@
 
 .btn3 {
     border-radius: 5px;
+}
+
+.mainbody {
+
+    margin: 100px auto 50px auto;
+    display: grid;
+    place-items: center;
+    
+    align-content: stretch;
+    justify-content: space-between;
+
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "choose stat_title"
+                            "choose stat1"
+                            "stat_footer stat_footer";
+    
+
+}
+
+.stat_title {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20%;
+    border: 1px solid black;
+    margin-left: 30px;
+}
+
+.stat1 {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20%;
+    border: 1px solid black;
+    margin-left: 30px;
+}
+
+.stat1table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.th, .td {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 10px
+}
+
+.th:first-child, .td:first-child {
+    border-left:none;
+}
+
+
+.stat2 {
+    background-color: rgb(15, 30, 30);
+}
+
+.stat_footer{
+    background-color: rgb(75, 83, 41);
 }
