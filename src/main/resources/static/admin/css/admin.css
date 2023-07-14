@@ -5,7 +5,7 @@
     width: 80%;
     border-top: 1px solid black;
     border-collapse: collapse;
-    border-spacing: 0;
+
     padding: 10px;
 }
 
@@ -29,7 +29,6 @@
   .member_list_body tr:last-child td {
     border-bottom: none;
   }
-
 
 .admin_subject {
 position: fixed;
@@ -65,5 +64,23 @@ input {
     right: 40px;
     transform: translateY(60%);
 }
+
+.pagination {
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.page_button {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 5px;
+    border: none;
+    background-color: #b3d9eb;
+    cursor: pointer;
+}
+
 
 
