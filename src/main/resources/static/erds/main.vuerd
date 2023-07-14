@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -246.6666568650144,
-    "scrollLeft": -203.33332525359293,
-    "zoomLevel": 0.8,
+    "scrollTop": -717.4999714891123,
+    "scrollLeft": -231.67709959215492,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -70,7 +70,7 @@
             "id": "e6a8666f-3aff-4c08-9105-79f1814c7fe2"
           },
           {
-            "name": "ID",
+            "name": "Owner_ID",
             "comment": "",
             "dataType": "CHAR",
             "default": "",
@@ -85,7 +85,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 60.51904296875,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -210,9 +210,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 558.3331,
-          "top": 234.3751,
-          "zIndex": 63,
+          "left": 804.1664,
+          "top": 455.2085,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 67
         },
@@ -223,6 +223,52 @@
         "name": "Pet",
         "comment": "애완동물 테이블",
         "columns": [
+          {
+            "name": "Owner_ID",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60.51904296875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "298e50f3-7343-4f9b-9147-2998741b30a8"
+          },
+          {
+            "name": "Pet_ID",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
+          },
           {
             "name": "Pet_Name",
             "comment": "",
@@ -291,9 +337,25 @@
               "widthDefault": 60
             },
             "id": "25041ba0-cb50-4c86-be43-62f25c96b85e"
-          },
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 757.0666,
+          "top": 781.2532,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 96.61181640625
+        },
+        "visible": true,
+        "id": "f880cf95-52a0-49bd-9b62-03957fd8451a"
+      },
+      {
+        "name": "Pet_Food",
+        "comment": "애완동물 식사",
+        "columns": [
           {
-            "name": "ID",
+            "name": "Pet_ID",
             "comment": "",
             "dataType": "CHAR",
             "default": "",
@@ -313,19 +375,235 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "298e50f3-7343-4f9b-9147-2998741b30a8"
+            "id": "c8f0053a-0e93-4d4d-b0ac-6634d1c91375"
+          },
+          {
+            "name": "Date",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4ee44ab4-865f-47e4-9f89-fed317c76261"
+          },
+          {
+            "name": "Meal",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3621e134-933a-4103-bcf6-6fd84c48b146"
+          },
+          {
+            "name": "Snack",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "229fcfd7-7f0e-4a66-bfce-1a6f3829ad8d"
           }
         ],
         "ui": {
           "active": false,
-          "left": 208.1249,
-          "top": 641.0415,
-          "zIndex": 62,
+          "left": 291.033,
+          "top": 1091.7199,
+          "zIndex": 3,
           "widthName": 60,
-          "widthComment": 96.61181640625
+          "widthComment": 83.61181640625
         },
         "visible": true,
-        "id": "f880cf95-52a0-49bd-9b62-03957fd8451a"
+        "id": "b14eef33-8a0f-4d6d-b245-ada7ed4a8109"
+      },
+      {
+        "name": "Pet_Health",
+        "comment": "애완동물 상태",
+        "columns": [
+          {
+            "name": "Pet_ID",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5a49ed3f-a37e-4451-9719-11561916529e"
+          },
+          {
+            "name": "Anomaly",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f79afaac-dd08-4a38-8d79-6fa0556bc426"
+          },
+          {
+            "name": "Date",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "da12d416-d5ad-475d-8cf8-4ded039565e3"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 994.4904,
+          "top": 1016.4412,
+          "zIndex": 4,
+          "widthName": 66.32080078125,
+          "widthComment": 83.61181640625
+        },
+        "visible": true,
+        "id": "9200f9ab-671d-4f27-b1c4-b800c9f40fa6"
+      },
+      {
+        "name": "Community",
+        "comment": "커뮤니티 작성 글",
+        "columns": [
+          {
+            "name": "Owner_ID",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60.51904296875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c94bf799-0900-4169-a144-f1eeec7a859b"
+          },
+          {
+            "name": "Post",
+            "comment": "포스트 내용",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.61181640625,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e192f5d9-f6e6-4dfd-8bd1-1ef3611f61d6"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1346.3893,
+          "top": 600.9262,
+          "zIndex": 5,
+          "widthName": 67.736328125,
+          "widthComment": 100.2236328125
+        },
+        "visible": true,
+        "id": "aa8b8ba4-a123-4385-a54b-61b84ff83c53"
       }
     ],
     "indexes": []
@@ -344,8 +622,8 @@
           "columnIds": [
             "84a948f8-5dc4-4fe9-9b99-5c0b8d75add2"
           ],
-          "x": 732.8321234375,
-          "y": 446.8751,
+          "x": 978.6654234375,
+          "y": 667.7085,
           "direction": "bottom"
         },
         "end": {
@@ -353,13 +631,91 @@
           "columnIds": [
             "298e50f3-7343-4f9b-9147-2998741b30a8"
           ],
-          "x": 567.228415625,
-          "y": 716.5415,
-          "direction": "right"
+          "x": 936.6183578125,
+          "y": 781.2532,
+          "direction": "top"
         },
         "constraintName": "fk_customer_to_pet",
         "visible": true,
         "id": "dadc8bac-9c4e-4716-a81c-6d76e69fde4f"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "f880cf95-52a0-49bd-9b62-03957fd8451a",
+          "columnIds": [
+            "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
+          ],
+          "x": 757.0666,
+          "y": 867.0032,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "b14eef33-8a0f-4d6d-b245-ada7ed4a8109",
+          "columnIds": [
+            "c8f0053a-0e93-4d4d-b0ac-6634d1c91375"
+          ],
+          "x": 638.033,
+          "y": 1167.2199,
+          "direction": "right"
+        },
+        "constraintName": "fk_pet_to_pet_status",
+        "visible": true,
+        "id": "67926dc7-62ab-4d1e-80d7-6d9ce1616572"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "f880cf95-52a0-49bd-9b62-03957fd8451a",
+          "columnIds": [
+            "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
+          ],
+          "x": 936.6183578125,
+          "y": 952.7532,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "9200f9ab-671d-4f27-b1c4-b800c9f40fa6",
+          "columnIds": [
+            "5a49ed3f-a37e-4451-9719-11561916529e"
+          ],
+          "x": 994.4904,
+          "y": 1081.6912,
+          "direction": "left"
+        },
+        "constraintName": "fk_pet_to_pet_health",
+        "visible": true,
+        "id": "7cffdc18-2296-4cda-a4ce-0926d5c1cf64"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "f5fcc997-1e2b-498d-9321-5eafc9ab39ad",
+          "columnIds": [
+            "84a948f8-5dc4-4fe9-9b99-5c0b8d75add2"
+          ],
+          "x": 1153.164446875,
+          "y": 561.4585,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "aa8b8ba4-a123-4385-a54b-61b84ff83c53",
+          "columnIds": [
+            "c94bf799-0900-4169-a144-f1eeec7a859b"
+          ],
+          "x": 1346.3893,
+          "y": 655.9262,
+          "direction": "left"
+        },
+        "constraintName": "fk_customer_to_community",
+        "visible": true,
+        "id": "174c554b-4425-4955-bf81-5f3cbaebd0cd"
       }
     ]
   }
