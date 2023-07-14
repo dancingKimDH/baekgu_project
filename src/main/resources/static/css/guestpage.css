@@ -3,14 +3,14 @@ body {
 }
 
 .background-image {
-    background-image: url("background.jpg");
+    background-image: url("../images/고슴도치.png");
     background-size: cover;
     background-position: center;
     width: 100vw;
     height: 100vh;
 }
 
-.modal {
+.popup {
     display: none;
     position: fixed;
     z-index: 1;
@@ -21,7 +21,13 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.modal-content {
+.show-popup  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +35,7 @@ body {
     height: 100%;
 }
 
-.modal-title {
+.popup-title {
     color: black;
 }
 
