@@ -12,7 +12,7 @@ public class Commons
 {
     public Statement getStatement()
     {
-        String url = "jdbc:mysql://192.168.0.40:3306/db_baekgu";
+        String url = "jdbc:mysql://192.168.0.40:3306/project_baekgu";
         String user = "yojulab";
         String password = "!yojulab*";
 
