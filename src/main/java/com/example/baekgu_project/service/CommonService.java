@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.baekgu_project.commons.Commons;
 import com.example.baekgu_project.dao.SharedDao;
 
 @Service
@@ -15,6 +16,9 @@ import com.example.baekgu_project.dao.SharedDao;
 public class CommonService {
     @Autowired
     SharedDao sharedDao;
+
+    @Autowired
+    Commons commons;
     
     // foreach HashMap.put("COMMON_CODE_ID_LIST", COMMON_CODE_ID_LIST)
     public Object selectInUID(Map dataMap) {
@@ -143,6 +147,19 @@ public class CommonService {
         Object result = sharedDao.insert(sqlMapId, dataMap);
         // error
         result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
+
+    public Object insert_Com(Map dataMap) {
+        Object result = null;
+        String sqlMapId = "CarInfors.insert_com";
+        if (!dataMap.get("COMMON_CODE_ID").equals("")) {
+            result = sharedDao.insert(sqlMapId, dataMap);
+        } else if (dataMap.get("COMMON_CODE_ID").equals("")) {
+            String uuid = commons.generateUUID();
+            dataMap.put("COMMON_CODE_ID", uuid);
+            result = sharedDao.insert(sqlMapId, dataMap);
+        }
         return result;
     }
 
