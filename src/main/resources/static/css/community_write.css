@@ -1,16 +1,16 @@
 body {
     margin: 20px;
     background-color: #b3d9eb;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 50px; */
 }
 
 header {
     text-align: center;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     margin-bottom: 20px;
 }
 
@@ -18,11 +18,11 @@ header {
 
 .content-section {
     background-color: white;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .content-title {
@@ -35,21 +35,26 @@ header {
     font-size: 18px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+.navbar-name {
+    background-color: #b3d9eb;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 .col-md-8 {
     max-width: 200px;
-}
+} */
 
 .dropdown {
     position: relative;
     display: inline-block;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
 }
 
 .dropdown-button {
@@ -83,16 +88,16 @@ header {
 }
 
 .input-box {
-    /* background-color: #b3d9eb;
+    background-color: #b3d9eb;
     border-radius: 5px; */
     margin-top: 10px;
-    /* padding: 5px 10px; */
+    padding: 5px 10px;
 }
 
 .input-field {
     width: 100%;
     border: none;
-    /* background-color: #b3d9eb; */
+    background-color: #b3d9eb;
     padding: 5px;
     /* font-size: 18px; */
 }
@@ -123,7 +128,7 @@ header {
     border: none;
     background-color: #b3d9eb;
     padding: 5px;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 .footer-buttons {
@@ -132,24 +137,25 @@ header {
 }
 
 .register-button, .cancel-button {
-    background-color: #b3d9eb;
+    background-color: #3d75ee;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 18px;
+    text-decoration: none; 
 }
 
 .cancel-button {
-    color: gray;
+    background-color: gray;
 }
 
 .footer-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
 
 .footer-column {
