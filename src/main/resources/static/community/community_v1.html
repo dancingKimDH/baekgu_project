@@ -7,8 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
     <style>
-        헤더 우측 정렬
-        header {
+        헤더 우측 정렬 header {
             text-align: right;
             background-color: #fff;
         }
@@ -33,6 +32,13 @@
             height: 100%;
         }
 
+        .Community_main {
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .dropdown_nav-item {}
+
         .input-group {
             border-radius: 20px;
         }
@@ -42,11 +48,11 @@
             border-bottom: 10px solid #fff;
         }
 
-        .paging {
+        .pagination {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 10px 20px 20px 10px;
+            margin: 30px 20px 20px 20px;
         }
 
         .direction {
@@ -57,6 +63,12 @@
         .direction.last::after {
             content: "";
         }
+
+        .write_button{
+           display: flex;
+           justify-content: center;
+           margin: 30px 20px 20px 10px;
+        }
     </style>
 
     <title>Community</title>
@@ -66,32 +78,39 @@
 <body>
     <header style="margin: 20px; text-align: right;">
         <!-- My Page -->
-        <a href="#" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">마이 페이지</a>
+        <form class="my-page-link">
+            <a href="../pet_diary/my_pet_manage.html"
+                style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">Pet Diary</a>
+            <a style="color: rgb(7, 7, 7);">|</a>
+            <a href="../mainpage.html" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">LogOut</a>
+        </form>
     </header>
     <main>
         <div style="text-align: center;">
             <ul class="list-unstyled m-25" style="display: inline-block; margin: 20px;">
                 <li style="display: inline-block; float: left;">
-                    <a href="./mainpage.html">
-                        <img src="./images/logoimage.png" alt="logo image" width="100" height="100">
+                    <a href="../mainpage.html">
+                        <img src="../images/logoimage.png" alt="logo image" width="100" height="100">
                         <hr>
                     </a>
                     <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
                         <ul class="list-unstyled m-0" style="display: inline-block;">
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
                                     사이트 소개</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
                                     다이어리 사용 안내</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="./community_v2.html" class="text-white text-decoration-none ps-3"
+                                    style="font-size: 1.3rem;">
                                     커뮤니티</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">
+                                <a href="../pet_diary/my_pet_manage.html" class="text-white text-decoration-none ps-3"
+                                    style="font-size: 1.3rem;">
                                     펫 다이어리</a>
                             </li>
                         </ul>
@@ -101,17 +120,29 @@
         </div>
 
         <div class="community main">
-            <div class="container mt-4">
-                <div class="col-md-8" >
+            <div class="container" style="display: inline-block; margin: 20px;">
+                <div class="community board">
                     <h3 class="tit">커뮤니티 게시판</h3>
                     <p>반려동물 자랑, 병원, 사료 문의 등 자유로운 공간입니다 😄</p>
                     <div class="input-group mb-3">
+
+                        <div class="dropdown_nav-item">
+                            <button class="rounded-pill dropdown-toggle" data-bs-toggle="dropdown">분류</button>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">자랑</li>
+                                <li class="dropdown-item">병원</li>
+                                <li class="dropdown-item">사료/간식</li>
+                                <li class="dropdown-item">기타</li>
+                            </ul>
+                        </div>
                         <input type="text" title="검색어 입력" class="form-control rounded-pill" placeholder="" value=""
-                            id="keydownEnter" maxlength="70">
-                            <button class="rounded-pill" type="button" onclick="communityTableBody()" style="margin-left: 20px; margin-right: 20px;">
-                                <img src="./images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
-                            </button>   
-                                                     
+                            id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
+                        <button class="rounded-pill" type="button" onclick=""
+                            style="margin-left: 10px; margin-right: 10px;">
+                            <img src="../images/search.png" alt="search image" width="23" height="23"
+                                style="background-color: transparent;">
+                        </button>
+
                     </div>
                     <div class="Community_main">
                         <h2></h2>
@@ -144,7 +175,8 @@
                                         <td>2</td>
                                         <td>병원</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">신도림역 근처 괜찮은 고양이 병원 있을까요?</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">신도림역 근처 괜찮은
+                                                고양이 병원 있을까요?</a>
                                         </td>
                                         <td>ap***</td>
                                         <td>2023-05-15</td>
@@ -156,7 +188,8 @@
                                         <td>3</td>
                                         <td>병원</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">여의도역 근처에 고슴도치 진료하는 병원 있을까요?</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">여의도역 근처에 고슴도치
+                                                진료하는 병원 있을까요?</a>
                                         </td>
                                         <td>or****</td>
                                         <td>2023-06-02</td>
@@ -168,7 +201,8 @@
                                         <td>4</td>
                                         <td>사료/간식</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">강아지 사료 추천받아요</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">강아지 사료
+                                                추천받아요</a>
                                         </td>
                                         <td>pi*****</td>
                                         <td>2023-06-10</td>
@@ -192,7 +226,8 @@
                                         <td>6</td>
                                         <td>기타</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">펫박람회 추천템!!</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">펫박람회
+                                                추천템!!</a>
                                         </td>
                                         <td>on****</td>
                                         <td>2023-06-16</td>
@@ -204,7 +239,8 @@
                                         <td>7</td>
                                         <td>사료/간식</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">앵무새 간식은 뭐가 좋을까요?</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">앵무새 간식은 뭐가
+                                                좋을까요?</a>
                                         </td>
                                         <td>an*****</td>
                                         <td>2023-06-20</td>
@@ -216,7 +252,8 @@
                                         <td>8</td>
                                         <td>병원</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">홍제역 근처에 유기동물 케어해주는 병원이 있을까요?</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">홍제역 근처에 유기동물
+                                                케어해주는 병원이 있을까요?</a>
                                         </td>
                                         <td>sa***</td>
                                         <td>2023-06-24</td>
@@ -228,7 +265,8 @@
                                         <td>9</td>
                                         <td>자랑</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">취미로 수제간식 만들기</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">취미로 수제간식
+                                                만들기</a>
                                         </td>
                                         <td>co****</td>
                                         <td>2023-06-29</td>
@@ -240,7 +278,8 @@
                                         <td>10</td>
                                         <td>기타</td>
                                         <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">제가 잘때 토끼가 자꾸 머리카락을 먹는데 어떻게해야...??</a>
+                                            <a href="../static/testmain.html" class="text-decoration-none">제가 잘때 토끼가 자꾸
+                                                머리카락을 먹는데 어떻게해야...??</a>
                                         </td>
                                         <td>ra****</td>
                                         <td>2023-07-03</td>
@@ -248,29 +287,28 @@
                                 </form>
                             </tbody>
                         </table>
-                        <div>
-                            <form class="paging">
-                                <formaction href="./chat_community.html" class="direction first">
-                                    <img src="./images/angle-double-left.png" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                                <formaction href="./chat_community.html?page=2" class="direction prev">
-                                    <img src="./images/angle-left.png" alt="previous page" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                                <formaction href="./chat_community.html" class="on">1
-                                </formaction>
-                                <formaction href="./chat_community.html?page=2">2
-                                </formaction>
-                                <formaction href="./chat_community.html?page=3">3
-                                </formaction>
-                                <formaction href="./chat_community.html?page=4" class="direction next">
-                                    <img src="./images/angle-right.png" alt="next page" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                                <formaction href="./chat_community.html?page=5" class="direction last">
-                                    <img src="./images/angle-double-right.png" alt="next page" width="15" height="15" style="background-color: transparent;">
-                                </formaction>
-                            </form>
-                            
-                            
+                        <div class="pagination" style="margin: 20;">
+                            <a href="#" class="direction first">
+                                <img src="../images/angle-double-left.png" alt="double-left" width="15" height="15">
+                            </a>
+                            <a href="#page=2" class="direction prev">
+                                <img src="../images/angle-left.png" alt="left" width="15" height="15">
+                            </a>
+                            <a href="#" class="on">1</a>
+                            <a href="#?page=2">2</a>
+                            <a href="#?page=3">3</a>
+                            <a href="#?page=4" class="direction next">
+                                <img src="../images/angle-right.png" alt="right" width="15" height="15">
+                            </a>
+                            <a href="#?page=5" class="direction last">
+                                <img src="../images/angle-double-right.png" alt="double-right" width="15" height="15">
+                            </a>
+                        </div>
+                        <div class="write_button">
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <a href="#"></a>
+                                   글쓰기   
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -320,7 +358,7 @@
         </div>
 
         <div class="row">
-            <img src="./images/logoimage.png" alt="logo" height="80rem" />
+            <img src="../images/logoimage.png" alt="logo" height="80rem" />
         </div>
     </footer>
 
