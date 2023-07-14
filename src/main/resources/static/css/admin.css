@@ -1,0 +1,29 @@
+.member_table {
+    margin: 20px auto 20px auto;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.admin_subject {
+    margin-left: 300px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.search_bar {
+    position: relative;
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 10px;
+    
+}
