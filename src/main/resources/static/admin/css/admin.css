@@ -88,3 +88,10 @@ td {
     padding-top: 1rem;
 }
 
+.modal-table {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid black;
+    justify-content: center;
+
+}
