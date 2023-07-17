@@ -48,7 +48,6 @@
     <a href="./loginpage.html" style="color: white; text-decoration: none; font-size: 1.1rem;">로그인</a>
     <!-- Register -->
     <a href="../static/getinpage.html" style="color: white; text-decoration: none; font-size: 1.1rem;">회원가입</a>
-    <a href="./admin/admin_main.html" style="color: white; text-decoration: none; font-size: 1.1rem;">관리자홈페이지</a>
   </header>
 </body>
 
@@ -56,7 +55,7 @@
   <div style="text-align: center;">
     <ul class="list-unstyled m-25" style="display: inline-block;">
       <li style="display: inline-block; float: left;">
-        <a href="#">
+        <a href="./mainpage.html">
           <img src="./images/logoimage.png" alt="logo image" width="70" height="70">
           <hr>
         </a>
@@ -73,15 +72,24 @@
                 style="font-size: 1.3rem;">커뮤니티</a>
             </li>
             <li style="display: inline-block;">
-              <a href="./pet_diary/my_pet_manage.html" class="text-white text-decoration-none ps-3"
-                style="font-size: 1.3rem;">펫 다이어리</a>
+              <a href="#" onclick="redirectToPage(); return false;" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">마이 페이지</a>
             </li>
-            <li style="display: inline-block;">
-              <a id="dropdownMenuButton" class="text-white text-decoration-none ps-3 dropdown-toggle"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.3rem;">회원관리</a>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="./loginpage.html">로그인</a>
-                <a class="dropdown-item" href="./loginpage.html">관리자계정</a>
+            
+            <script>
+              function redirectToPage() {
+                // 로그인 상태를 확인하는 로직을 여기에 작성합니다.
+                var isLoggedIn = false; // 실제 로그인 상태를 확인하는 로직으로 대체해주세요.
+            
+                if (isLoggedIn) {
+                  // 사용자가 로그인된 상태일 경우, 원하는 페이지로 리다이렉트합니다.
+                  location.href = './pet_diary/my_pet_manage.html';
+                } else {
+                  // 사용자가 로그인되지 않은 상태일 경우, 로그인 화면으로 리다이렉트합니다.
+                  location.href = './loginpage.html';
+                }
+              }
+            </script>
+            
               </ul>
             </li>
           </ul>
