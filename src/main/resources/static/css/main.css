@@ -33,6 +33,14 @@
     color: gray;
 }
 
+.d {
+    display: flex;
+    align-items: flex-start;
+    font-size: larger;
+    font-weight: bolder;
+    line-height: 50px;
+}
+
 .flex-container {
     display: flex;
     justify-content: end;
