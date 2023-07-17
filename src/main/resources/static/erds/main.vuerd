@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -580.4999714891123,
-    "scrollLeft": -324.67709959215495,
+    "scrollTop": -638.4999714891123,
+    "scrollLeft": -270,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -55,7 +55,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -101,7 +101,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -124,7 +124,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -147,7 +147,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -170,7 +170,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -193,7 +193,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -206,13 +206,59 @@
               "widthDefault": 60
             },
             "id": "29b74a7f-6b43-497d-8227-0019789d5c77"
+          },
+          {
+            "name": "GENDER_ID",
+            "comment": "성별_유니크ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 87.22998046875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "e6aa5191-c26e-44be-bf53-2345ca234559"
+          },
+          {
+            "name": "TELECOM_ID",
+            "comment": "통신사_유니크ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 85.07177734375,
+              "widthComment": 100.22998046875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "cc1a4c9a-ec8e-4cbf-b29b-8a4f6a202f31"
           }
         ],
         "ui": {
           "active": false,
-          "left": 804.1664,
-          "top": 455.2085,
-          "zIndex": 1,
+          "left": 744.9164,
+          "top": 641.7085,
+          "zIndex": 302,
           "widthName": 60,
           "widthComment": 67
         },
@@ -278,7 +324,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -301,7 +347,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -324,7 +370,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -341,9 +387,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 757.0666,
-          "top": 781.2532,
-          "zIndex": 2,
+          "left": 787.5108,
+          "top": 1036.6138,
+          "zIndex": 306,
           "widthName": 60,
           "widthComment": 96.61181640625
         },
@@ -386,7 +432,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -409,7 +455,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -432,7 +478,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -449,9 +495,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 291.033,
-          "top": 1091.7199,
-          "zIndex": 3,
+          "left": 301.0329,
+          "top": 1047.2757,
+          "zIndex": 307,
           "widthName": 60,
           "widthComment": 83.61181640625
         },
@@ -494,7 +540,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -517,7 +563,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -534,9 +580,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 994.4904,
-          "top": 1016.4412,
-          "zIndex": 4,
+          "left": 795.8794,
+          "top": 1360.7462,
+          "zIndex": 308,
           "widthName": 66.32080078125,
           "widthComment": 83.61181640625
         },
@@ -579,7 +625,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -596,14 +642,207 @@
         ],
         "ui": {
           "active": false,
-          "left": 1346.3893,
-          "top": 600.9262,
-          "zIndex": 5,
+          "left": 1329.3893,
+          "top": 712.4262,
+          "zIndex": 305,
           "widthName": 67.736328125,
           "widthComment": 100.2236328125
         },
         "visible": true,
         "id": "aa8b8ba4-a123-4385-a54b-61b84ff83c53"
+      },
+      {
+        "name": "GENDER",
+        "comment": "성별",
+        "columns": [
+          {
+            "name": "MAN",
+            "comment": "남성",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "43ca18fa-71fe-47b1-ab53-138e82821725"
+          },
+          {
+            "name": "WOMAN",
+            "comment": "여성",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "709fd45d-276c-44c9-94c0-75ef16b500e0"
+          },
+          {
+            "name": "GENDER_ID",
+            "comment": "성별_유니크ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 87.22998046875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "0af4a133-ff26-4750-b4d9-59ebe02c5e80"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 182.6771,
+          "top": 703.5,
+          "zIndex": 304,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "336aee45-0dcc-4ddc-893e-f5c88905458d"
+      },
+      {
+        "name": "TELECOM",
+        "comment": "통신사",
+        "columns": [
+          {
+            "name": "SKT",
+            "comment": "SKT",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "9c6e83a5-093b-45a6-9812-d3569f0fa8d5"
+          },
+          {
+            "name": "KT",
+            "comment": "KT",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "7368d277-d1b4-483d-89c1-b26a514c8b7f"
+          },
+          {
+            "name": "LGU",
+            "comment": "LGU",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "c1f44b90-1dff-4d01-8040-ed298cee8e77"
+          },
+          {
+            "name": "TELECOM_ID",
+            "comment": "통신사 _유니크ID",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 85.07177734375,
+              "widthComment": 103.841796875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "31bea0c5-36f2-4c5b-8697-9be3640e7215"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 744,
+          "top": 349.25,
+          "zIndex": 303,
+          "widthName": 64.841796875,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "c50abab8-1525-4eb2-847d-74fd71926812"
       }
     ],
     "indexes": []
@@ -622,8 +861,8 @@
           "columnIds": [
             "84a948f8-5dc4-4fe9-9b99-5c0b8d75add2"
           ],
-          "x": 978.6654234375,
-          "y": 667.7085,
+          "x": 964.92665390625,
+          "y": 895.2085,
           "direction": "bottom"
         },
         "end": {
@@ -631,8 +870,8 @@
           "columnIds": [
             "298e50f3-7343-4f9b-9147-2998741b30a8"
           ],
-          "x": 936.6183578125,
-          "y": 781.2532,
+          "x": 967.0625578125,
+          "y": 1036.6138,
           "direction": "top"
         },
         "constraintName": "fk_customer_to_pet",
@@ -648,8 +887,8 @@
           "columnIds": [
             "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
           ],
-          "x": 757.0666,
-          "y": 867.0032,
+          "x": 787.5108,
+          "y": 1122.3638,
           "direction": "left"
         },
         "end": {
@@ -657,8 +896,8 @@
           "columnIds": [
             "c8f0053a-0e93-4d4d-b0ac-6634d1c91375"
           ],
-          "x": 638.033,
-          "y": 1167.2199,
+          "x": 648.0328999999999,
+          "y": 1122.7757,
           "direction": "right"
         },
         "constraintName": "fk_pet_to_pet_status",
@@ -674,8 +913,8 @@
           "columnIds": [
             "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
           ],
-          "x": 936.6183578125,
-          "y": 952.7532,
+          "x": 967.0625578125,
+          "y": 1208.1138,
           "direction": "bottom"
         },
         "end": {
@@ -683,9 +922,9 @@
           "columnIds": [
             "5a49ed3f-a37e-4451-9719-11561916529e"
           ],
-          "x": 994.4904,
-          "y": 1081.6912,
-          "direction": "left"
+          "x": 969.3794,
+          "y": 1360.7462,
+          "direction": "top"
         },
         "constraintName": "fk_pet_to_pet_health",
         "visible": true,
@@ -700,8 +939,8 @@
           "columnIds": [
             "84a948f8-5dc4-4fe9-9b99-5c0b8d75add2"
           ],
-          "x": 1153.164446875,
-          "y": 561.4585,
+          "x": 1184.9369078125,
+          "y": 768.4585,
           "direction": "right"
         },
         "end": {
@@ -709,13 +948,65 @@
           "columnIds": [
             "c94bf799-0900-4169-a144-f1eeec7a859b"
           ],
-          "x": 1346.3893,
-          "y": 655.9262,
+          "x": 1329.3893,
+          "y": 767.4262,
           "direction": "left"
         },
         "constraintName": "fk_customer_to_community",
         "visible": true,
         "id": "174c554b-4425-4955-bf81-5f3cbaebd0cd"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "336aee45-0dcc-4ddc-893e-f5c88905458d",
+          "columnIds": [
+            "0af4a133-ff26-4750-b4d9-59ebe02c5e80"
+          ],
+          "x": 602.473975,
+          "y": 768.75,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "f5fcc997-1e2b-498d-9321-5eafc9ab39ad",
+          "columnIds": [
+            "e6aa5191-c26e-44be-bf53-2345ca234559"
+          ],
+          "x": 744.9164,
+          "y": 768.4585,
+          "direction": "left"
+        },
+        "constraintName": "fk_gender_to_customer",
+        "visible": true,
+        "id": "4a40c0dc-9ad5-42af-a841-4f7847df208c"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "c50abab8-1525-4eb2-847d-74fd71926812",
+          "columnIds": [
+            "31bea0c5-36f2-4c5b-8697-9be3640e7215"
+          ],
+          "x": 965.816162109375,
+          "y": 500.25,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "f5fcc997-1e2b-498d-9321-5eafc9ab39ad",
+          "columnIds": [
+            "cc1a4c9a-ec8e-4cbf-b29b-8a4f6a202f31"
+          ],
+          "x": 964.92665390625,
+          "y": 641.7085,
+          "direction": "top"
+        },
+        "constraintName": "fk_telecom_to_customer",
+        "visible": true,
+        "id": "25e2d48b-55b8-4383-baf9-9254ac51cc18"
       }
     ]
   }
