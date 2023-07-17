@@ -72,19 +72,19 @@
                 style="font-size: 1.3rem;">커뮤니티</a>
             </li>
             <li style="display: inline-block;">
-              <a href="#" onclick="redirectToPage(); return false;" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">마이 페이지</a>
+              <a href="#" onclick="redirectToPage(); return false;" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">마이페이지</a>
             </li>
             
             <script>
               function redirectToPage() {
-                // 로그인 상태를 확인하는 로직을 여기에 작성합니다.
-                var isLoggedIn = false; // 실제 로그인 상태를 확인하는 로직으로 대체해주세요.
+                // 로그인 상태를 확인하는 로직을 isLoggedIn에 작성
+                var isLoggedIn = false; // 실제 로그인 상태를 확인하는 로직으로 대체
             
                 if (isLoggedIn) {
-                  // 사용자가 로그인된 상태일 경우, 원하는 페이지로 리다이렉트합니다.
+                  // 사용자가 로그인된 상태일 경우, 원하는 페이지로 리다이렉트
                   location.href = './pet_diary/my_pet_manage.html';
                 } else {
-                  // 사용자가 로그인되지 않은 상태일 경우, 로그인 화면으로 리다이렉트합니다.
+                  // 사용자가 로그인되지 않은 상태일 경우, 로그인 화면으로 리다이렉트
                   location.href = './loginpage.html';
                 }
               }
