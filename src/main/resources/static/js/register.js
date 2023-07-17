@@ -46,7 +46,7 @@ const getToken = () =>
     let result = mm + ":" + ss;
     document.getElementById("timeLimit").innerText = result;
     time--;
-  }, 50);
+  }, 60);
 };
 
 function checkCompletion()
