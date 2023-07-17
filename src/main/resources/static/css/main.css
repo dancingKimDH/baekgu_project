@@ -25,6 +25,14 @@
     font-size: large;
 }
 
+.dropbutton {
+text-decoration: none;
+    color: grey;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
 .logoimg {
     display: flex;
     justify-content: center;
@@ -44,12 +52,10 @@
     display: flex;
     justify-content: center;
     margin: 1rem auto 1rem auto;
+    background-color: white;
 
 }
 
-.puppypic {
-    border-radius: 50%;
-}
 
 .mainpage_pic {
 
@@ -63,5 +69,18 @@
     justify-content: center;
     margin: 0 auto;
     background-color: white;
+}
 
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+
+}
+
+.logobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }

@@ -83,6 +83,16 @@ input {
     cursor: pointer;
 }
 
+.page_button2{
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 0px;
+    padding: 5px 5px;
+    border: none;
+    background-color: #b3d9eb;
+    cursor: pointer;
+}
+
 td {
     padding-bottom: 1rem;
     padding-top: 1rem;
@@ -94,4 +104,8 @@ td {
     border: 1px solid black;
     justify-content: center;
 
+}
+
+.small_font {
+    font-size: small;
 }

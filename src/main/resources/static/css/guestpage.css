@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+.background-image {
+    background-image: url("../images/고슴도치.png");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.show-popup  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.popup-title {
+    color: black;
+}
+
+.login-button {
+    background-color: #3d75ee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login-button:hover {
+    background-color: #64aaff;
+}
