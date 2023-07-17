@@ -62,24 +62,27 @@
         <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
           <ul class="list-unstyled m-0" style="display: inline-block;">
             <li style="display: inline-block;">
-              <a href="../static/pet_diary/pet_introduce.html" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">사이트 소개</a>
+              <a href="../static/pet_diary/pet_introduce.html" class="text-white text-decoration-none ps-3"
+                style="font-size: 1.3rem;">사이트 소개</a>
             </li>
             <li style="display: inline-block;">
-              <a href="" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">다이어리 사용 안내</a>
+              <a href="./userGuide.html" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">다이어리 사용
+                안내</a>
             </li>
             <li style="display: inline-block;">
               <a href="./community/community_v1.html" class="text-white text-decoration-none ps-3"
                 style="font-size: 1.3rem;">커뮤니티</a>
             </li>
             <li style="display: inline-block;">
-              <a href="#" onclick="redirectToPage(); return false;" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">마이페이지</a>
+              <a href="#" onclick="redirectToPage(); return false;" class="text-white text-decoration-none ps-3"
+                style="font-size: 1.3rem;">마이페이지</a>
             </li>
-            
+
             <script>
               function redirectToPage() {
                 // 로그인 상태를 확인하는 로직을 isLoggedIn에 작성
                 var isLoggedIn = false; // 실제 로그인 상태를 확인하는 로직으로 대체
-            
+
                 if (isLoggedIn) {
                   // 사용자가 로그인된 상태일 경우, 원하는 페이지로 리다이렉트
                   location.href = './pet_diary/my_pet_manage.html';
@@ -89,12 +92,12 @@
                 }
               }
             </script>
-            
-              </ul>
-            </li>
+
           </ul>
-        </div>
+      </li>
     </ul>
+  </div>
+  </ul>
   </div>
   <div class="container-fluid p-0 picturebox"><!-- carousel container -->
     <div id="controlsId">

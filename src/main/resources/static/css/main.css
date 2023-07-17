@@ -25,6 +25,19 @@
     font-size: large;
 }
 
+.b {
+    font-size: smaller;
+}
+
+.c {
+    color: gray;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: end;
+  }
+
 .dropbutton {
 text-decoration: none;
     color: grey;
