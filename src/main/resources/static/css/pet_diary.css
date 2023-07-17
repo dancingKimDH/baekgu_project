@@ -28,13 +28,29 @@
     justify-content: center;
 }
 
+.white_maintable {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    border-collapse: collpse;
+    border-spacing: 10px;
+    padding: 5px;
+
+}
+
+.white_table th, .white_table td {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
 .maintable table {
     width: 70%;
     text-align: center;
     border-collapse: separate;
     border-spacing: 10px;
-    padding: 10px;
-    border: 1px solid black;
+    padding: 5px;
 }
 
 
