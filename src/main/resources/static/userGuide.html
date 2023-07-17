@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Guide</title>
-</head>
-<body>
-    
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,18 +7,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/userGuide.css">
-    <title>Community</title>
+    <title>User Guide</title>
+</head>
+<header style="margin: 20px; text-align: right;">
+    <!-- My Page -->
+    <form class="my-page-link">
+        <a href="./pet_diary/my_pet_manage.html"
+            style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">Pet Diary</a>
+        <a style="color: rgb(7, 7, 7);">|</a>
+        <a href="./mainpage.html" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">LogOut</a>
+    </form>
+</header>
 </head>
 
 <body>
-    <header style="margin: 20px; text-align: right;">
-        <!-- My Page -->
-        <form class="my-page-link">
-            <a href="./pet_diary/my_pet_manage.html" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">Pet Diary</a>
-            <a style="color: rgb(7, 7, 7);">|</a>
-            <a href="./mainpage.html" style="color: rgb(7, 7, 7); text-decoration: none; font-size: 1.1rem;">LogOut</a>
-        </form>
-    </header>
     <main>
         <div style="text-align: center;">
             <ul class="list-unstyled m-25" style="display: inline-block; margin: 20px;">
@@ -39,217 +29,67 @@
                         <img src="./images/logoimage.png" alt="logo image" width="100" height="100">
                         <hr>
                     </a>
-
-
                     <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
                         <ul class="list-unstyled m-0" style="display: inline-block;">
                             <li style="display: inline-block;">
-                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">사이트 소개</a>
+                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">사이트
+                                    소개</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">다이어리 사용 안내</a>
+                                <a href="#" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">다이어리
+                                    사용 안내</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="./community_v2.html" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">커뮤니티</a>
+                                <a href="./community.html" class="text-white text-decoration-none ps-3"
+                                    style="font-size: 1.3rem;">커뮤니티</a>
                             </li>
                             <li style="display: inline-block;">
-                                <a href="../pet_diary/my_pet_manage.html" class="text-white text-decoration-none ps-3" style="font-size: 1.3rem;">펫 다이어리</a>
+                                <a href="../pet_diary/my_pet_manage.html" class="text-white text-decoration-none ps-3"
+                                    style="font-size: 1.3rem;">펫 다이어리</a>
                             </li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </div>
-<!-- Body -->
-        <div class="community main">
-            <div class="container" style="display: inline-block; margin: 20px;">
-                <div class="community board">
-                    <h3 class="tit">커뮤니티 게시판</h3>
-                    <p>반려동물 자랑, 병원, 사료 문의 등 자유로운 공간입니다 😄</p>
-<!-- 검색창 및 검색 버튼 -->
-                    <div class="input-group mb-3">
-                        <div class="dropdown_nav-item">
-                            <button class="rounded-pill dropdown-toggle" data-bs-toggle="dropdown">분류</button>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">자랑</li>
-                                <li class="dropdown-item">병원</li>
-                                <li class="dropdown-item">사료/간식</li>
-                                <li class="dropdown-item">기타</li>
-                            </ul>
+        <!-- Body -->
+        <div class="content-section">
+            <div class="container_userguide" style="display: inline-block;">
+                <div class="userguide">
+                    <div class="guide-title" style="text-align: center;">이용 안내</div>
+                    <!-- <div class="guide-item"> -->
+                        <div class="guide-image">
+                            <td>펫 등록 방법</td>
                         </div>
-                        <input type="text" title="검색어 입력" class="form-control rounded-pill" placeholder="" value="" id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
-                        <button class="rounded-pill" type="button" onclick="" style="margin-left: 10px; margin-right: 10px;">
-                            <img src="../images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
-                        </button>
-                    </div>
-<!-- 게시글 테이블 보더 -->
-                    <div class="Community_main">
-                        <h2></h2>
-                        <table class="table">
-                            <thead style="text-align: center;">
-                                <tr>
-                                    <th class="noBrd">No</th>
-                                    <th class="noBrd">분류</th>
-                                    <th class="noBrd">제목</th>
-                                    <th class="noBrd">작성자</th>
-                                    <th class="noBrd">작성일</th>
-                                </tr>
-                            </thead>
-<!-- 게시글 테이블 -->
-                            <tbody id="ommunityTableBody">
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>1</td>
-                                        <td>자랑</td>
-                                        <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">꽃챌린지</a>
-                                        </td>
-                                        <td>ba****</td>
-                                        <td>2023-05-10</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>2</td>
-                                        <td>병원</td>
-                                        <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">신도림역 근처 괜찮은 고양이 병원 있을까요?</a>
-                                        </td>
-                                        <td>ap***</td>
-                                        <td>2023-05-15</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>3</td>
-                                    <td>병원</td>
-                                    <td class="subject">
-                                        <a href="../static/testmain.html" class="text-decoration-none">여의도역 근처에 고슴도치
-                                            진료하는 병원 있을까요?</a>
-                                    </td>
-                                    <td>or****</td>
-                                    <td>2023-06-02</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>4</td>
-                                    <td>사료/간식</td>
-                                    <td class="subject">
-                                        <a href="../static/testmain.html" class="text-decoration-none">강아지 사료
-                                            추천받아요</a>
-                                    </td>
-                                    <td>pi*****</td>
-                                    <td>2023-06-10</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>5</td>
-                                    <td>자랑</td>
-                                    <td class="subject">
-                                        <a href="../static/testmain.html" class="text-decoration-none">물속성 고양이</a>
-                                    </td>
-                                    <td>be****</td>
-                                    <td>2023-06-16</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>6</td>
-                                    <td>기타</td>
-                                    <td class="subject">
-                                        <a href="../static/testmain.html" class="text-decoration-none">펫박람회
-                                            추천템!!</a>
-                                    </td>
-                                    <td>on****</td>
-                                    <td>2023-06-16</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>7</td>
-                                        <td>사료/간식</td>
-                                        <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">앵무새 간식은 뭐가
-                                                좋을까요?</a>
-                                        </td>
-                                        <td>an*****</td>
-                                        <td>2023-06-20</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>8</td>
-                                        <td>병원</td>
-                                        <td class="subject">
-                                            <a href="../static/testmain.html" class="text-decoration-none">홍제역 근처에 유기동물
-                                                케어해주는 병원이 있을까요?</a>
-                                        </td>
-                                        <td>sa***</td>
-                                        <td>2023-06-24</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>9</td>
-                                    <td>자랑</td>
-                                    <td class="subject">
-                                        <a href="../static/testmain.html" class="text-decoration-none">취미로 수제간식
-                                            만들기</a>
-                                    </td>
-                                    <td>co****</td>
-                                    <td>2023-06-29</td>
-                                    </tr>
-                                </form>
-                                <form>
-                                    <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                    <tr>
-                                        <td>10</td>
-                                    <td>기타</td>
-                                    <td class="subject">
-                                        <a href="../static/testmain.html" class="text-decoration-none">제가 잘때 토끼가 자꾸
-                                            머리카락을 먹는데 어떻게해야...??</a>
-                                    </td>
-                                    <td>ra****</td>
-                                    <td>2023-07-03</td>
-                                    </tr>
-                                </form>
-<!-- 페이지 넘버링 -->
-                            </tbody>
-                        </table>
-                        <div class="pagination">
-                            <a href="#" class="direction first">
-                                <img src="../images/angle-double-left.png" alt="double-left" width="15" height="15">
-                            </a>
-                            <a href="#page=2" class="direction prev">
-                                <img src="../images/angle-left.png" alt="left" width="15" height="15">
-                            </a>
-                            <a href="#" class="on">1</a>
-                            <a href="#?page=2">2</a>
-                            <a href="#?page=3">3</a>
-                            <a href="#?page=4" class="direction next">
-                                <img src="../images/angle-right.png" alt="right" width="15" height="15">
-                            </a>
-                            <a href="#?page=5" class="direction last">
-                                <img src="../images/angle-double-right.png" alt="double-right" width="15" height="15">
-                            </a>
+                        <div class="guide-content">
+                            <td>1.상단 메뉴</td>
                         </div>
-                        <div class="write_button">
-                            <button type="button" class="btn btn-primary btn-sm">
-                                <a href="../community/community_wirte.html" class="text-white text-decoration-none">글쓰기</a>                                    
-                            </button>
+                        <div class="guide-content">
+                            <img src="./images/문서03.png" alt="Image">
                         </div>
-                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="guide-item"> -->
+                        <div class="guide-image">
+                            <td>관찰일지 등록 방법</td>
+                        </div>
+                        <div class="guide-content">
+                            <td>1.상단 메뉴</td>
+                        </div>
+                        <div class="guide-content">
+                            <img src="./images/문서04.png" alt="Image">
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="guide-item"> -->
+                        <div class="guide-image">
+                            <td>통계 그래프 보기</td>
+                        </div>
+                        <div class="guide-content">
+                            <td>1.상단 메뉴</td>
+                        </div>
+                        <div class="guide-content">
+                            <img src="./images/솜뭉탱까만콩.jpg" alt="Image">
+                        </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -258,8 +98,8 @@
 
 
 
-    
-<!-- footer -->
+
+    <!-- footer -->
     <footer class="p-5 d-flex justify-content-between align-items-center">
         <div class="row">
             <div class="">
@@ -302,7 +142,7 @@
         </div>
 
         <div class="row">
-            <img src="../images/logoimage.png" alt="logo" height="80rem" />
+            <img src="./images/logoimage.png" alt="logo" height="80rem" />
         </div>
     </footer>
 
