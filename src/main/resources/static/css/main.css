@@ -41,6 +41,11 @@
     line-height: 50px;
 }
 
+.e {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
 .flex-container {
     display: flex;
     justify-content: end;
