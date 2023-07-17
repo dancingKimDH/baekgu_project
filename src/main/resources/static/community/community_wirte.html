@@ -20,27 +20,23 @@
     <main>
         <div class="content-section">
             <div class="container">
-                <div class="navbar-nav me-auto">                    
+                <div class="navbar-nav me-auto">
                     <div class="dropdown nav-item">
-                        <button class="btn btn-primary dropdown-button" data-bs-toggle="dropdown">분류</button>
-                        <div class="dropdown-content">
-                            <a href="#">자랑</a>
-                            <a href="#">병원</a>
-                            <a href="#">사료/간식</a>
-                            <a href="#">기타</a>
+                        <div class="row">
+                            <label class="content-title" for="">분류</label>
+                            <select class="form-select" name="browsers" id="">
+                                <option value="-------------">-------------</option>
+                                <option value="자랑">자랑</option>
+                                <option value="병원">병원</option>
+                                <option value="사료/간식">사료/간식</option>
+                                <option value="기타">기타</option>
+                            </select>
                         </div>
                     </div>
                     <h3 class="content-title">제목</h3>
-                    <div class="input-box">
-                        <input type="text" class="input-field" placeholder="제목을 입력하세요">
+                    <div class="input-title-box">
+                        <input class="input-title-field" type="text" placeholder="제목을 입력하세요">
                     </div>
-                    <!-- <h3 class="content-title">URL</h3>
-                    <div class="input-box">
-                        <input type="text" class="input-field" placeholder="URL을 입력하세요">
-                    </div>
-                    <div class="upload-button">
-                        <button class="file-upload-button">파일 추가</button>
-                    </div> -->
                     <h3 class="content-title">내용</h3>
                     <div class="textarea-box">
                         <textarea rows="30" class="textarea-field" placeholder="내용을 입력하세요"></textarea>
