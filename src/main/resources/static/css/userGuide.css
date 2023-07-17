@@ -1,18 +1,80 @@
 header {
     text-align: right;
     background-color: #fff;
+    margin: 20px;
 }
+
+.container {
+        background-color: #b3d9eb;
+        
+}
+
 
 /* 메인에 배경색 적용 */
 main {
     background-color: #b3d9eb;
+    margin-bottom: 20px;
 }
+
+
+
 
 /* 푸터 흰색 배경화면, 글씨 가운데 정렬 */
 footer {
     background-color: #fff;
     text-align: center;
 }
+
+.content-section {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.userguide {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guide-title {
+    text-align: center;
+    background-color: #2d74c4;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.guide-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.guide-image {
+    flex: 1;
+    background-color: #569beb;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.guide-content {
+    flex: 3;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.4rem;
+    width: 100px; /* 이미지의 가로 너비를 200px로 지정 */
+    height: auto; 
+}
+
 
 /* 수정 사항 추가 */
 .community {
@@ -23,13 +85,6 @@ footer {
     height: 100%;
 }
 
-.Community_main {
-    justify-content: center;
-    margin: 10px;
-}
-
-.dropdown_nav-item {}
-
 .input-group {
     border-radius: 20px;
 }
@@ -37,27 +92,4 @@ footer {
 .list-unstyled>.list-unstyled {
     border-top: 10px solid #fff;
     border-bottom: 10px solid #fff;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 20px 20px 20px;
-}
-
-.direction {
-    margin: 0 5px;
-}
-
-.direction.first::before,
-.direction.last::after {
-    content: "";
-}
-
-.write_button {
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin: 30px 20px 20px 10px;
 }
