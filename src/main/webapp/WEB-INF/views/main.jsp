@@ -29,7 +29,7 @@
                     <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
                         <ul class="list-unstyled m-0" style="display: inline-block;">
                             <li style="display: inline-block;">
-                                <a href="../static/pet_diary/pet_introduce.html" class="a text-decoration-none ps-3" style="font-size: 1.3rem;">사이트 소개</a>
+                                <a href="./information.jsp" class="a text-decoration-none ps-3" style="font-size: 1.3rem;">사이트 소개</a>
                             </li>
                             <li style="display: inline-block;">
                                 <a href="./guide.html" class="a text-decoration-none ps-3" style="font-size: 1.3rem;">다이어리 사용안내</a>

@@ -37,6 +37,7 @@
     border-collapse: collpse;
     border-spacing: 10px;
     padding: 5px;
+    background-color: white;
 
 }
 
@@ -154,7 +155,7 @@
 }
 
 .white_table {
-    background-color: whitesmoke;
+    background-color: white;
     width: 800px;
     height: 600px;
     border-radius: 10px;

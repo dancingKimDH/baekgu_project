@@ -5,8 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class MainController
-{
+public class MainController {
     @GetMapping({"/", "/home", "/main"})
     public ModelAndView main(ModelAndView modelAndView)
     {
@@ -14,4 +13,5 @@ public class MainController
         modelAndView.setViewName("/WEB-INF/views/main.jsp");
         return modelAndView;
     }
+
 }
