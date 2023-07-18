@@ -1,4 +1,4 @@
-body {
+.body {
     margin: 20px;
     background-color: #b3d9eb;
     /* display: flex;
@@ -7,7 +7,7 @@ body {
     margin-top: 50px; */
 }
 
-header {
+.header {
     text-align: center;
     /* display: flex;
     align-items: center; */
@@ -96,13 +96,6 @@ header {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.input-title-box {
-    background-color: #b3d9eb;
-    border-radius: 5px; */
-    margin-top: 10px;
-    padding: 5px 10px;
 }
 
 .input-title-field {
@@ -195,7 +188,7 @@ header {
     margin-bottom: 10px;
 }
 
-img {
+.img {
     max-width: 100%;
     height: auto;
 }

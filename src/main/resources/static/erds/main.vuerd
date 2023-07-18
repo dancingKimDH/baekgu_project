@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -742.4999714891123,
-    "scrollLeft": -333,
-    "zoomLevel": 0.8,
+    "scrollTop": -657.2777340566687,
+    "scrollLeft": -485.00521416134274,
+    "zoomLevel": 1,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -208,29 +208,6 @@
             "id": "29b74a7f-6b43-497d-8227-0019789d5c77"
           },
           {
-            "name": "GENDER_ID",
-            "comment": "성별_유니크ID",
-            "dataType": "VARCHAR(50)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 77.84814453125,
-              "widthComment": 87.22998046875,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            },
-            "id": "e6aa5191-c26e-44be-bf53-2345ca234559"
-          },
-          {
             "name": "TELECOM_ID",
             "comment": "통신사_유니크ID",
             "dataType": "VARCHAR(50)",
@@ -256,9 +233,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 744.9164,
-          "top": 641.7085,
-          "zIndex": 4,
+          "left": 843.2497,
+          "top": 685.0422,
+          "zIndex": 38,
           "widthName": 60,
           "widthComment": 67
         },
@@ -269,6 +246,29 @@
         "name": "Pet",
         "comment": "애완동물 테이블",
         "columns": [
+          {
+            "name": "Pet_ID",
+            "comment": "",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
+          },
           {
             "name": "Owner_ID",
             "comment": "",
@@ -293,27 +293,27 @@
             "id": "298e50f3-7343-4f9b-9147-2998741b30a8"
           },
           {
-            "name": "Pet_ID",
+            "name": "Type_ID",
             "comment": "",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
-              "fk": false,
+              "pk": false,
+              "fk": true,
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 64.6005859375,
               "widthDefault": 60
             },
-            "id": "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
+            "id": "52990791-1830-4b21-a9c8-b36612ce2a9c"
           },
           {
             "name": "Pet_Name",
@@ -389,7 +389,7 @@
           "active": false,
           "left": 787.5108,
           "top": 1036.6138,
-          "zIndex": 6,
+          "zIndex": 41,
           "widthName": 60,
           "widthComment": 96.61181640625
         },
@@ -491,13 +491,36 @@
               "widthDefault": 60
             },
             "id": "229fcfd7-7f0e-4a66-bfce-1a6f3829ad8d"
+          },
+          {
+            "name": "Water",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "8dd0e93f-cf42-41ba-a68a-1e29be4ec83b"
           }
         ],
         "ui": {
           "active": false,
           "left": 301.0329,
           "top": 1047.2757,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 83.61181640625
         },
@@ -532,9 +555,9 @@
             "id": "5a49ed3f-a37e-4451-9719-11561916529e"
           },
           {
-            "name": "Anomaly",
+            "name": "Anomaly_ID",
             "comment": "",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -545,14 +568,14 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": false,
+              "fk": true,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 72.80810546875,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 64.6005859375,
               "widthDefault": 60
             },
-            "id": "f79afaac-dd08-4a38-8d79-6fa0556bc426"
+            "id": "3aac36bf-a4b5-4b05-ab79-391df35cd9ae"
           },
           {
             "name": "Date",
@@ -580,9 +603,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 795.8794,
+          "left": 796.7127,
           "top": 1360.7462,
-          "zIndex": 7,
+          "zIndex": 43,
           "widthName": 66.32080078125,
           "widthComment": 83.61181640625
         },
@@ -638,57 +661,41 @@
               "widthDefault": 60
             },
             "id": "e192f5d9-f6e6-4dfd-8bd1-1ef3611f61d6"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1329.3893,
-          "top": 712.4262,
-          "zIndex": 3,
-          "widthName": 67.736328125,
-          "widthComment": 100.2236328125
-        },
-        "visible": true,
-        "id": "aa8b8ba4-a123-4385-a54b-61b84ff83c53"
-      },
-      {
-        "name": "GENDER",
-        "comment": "성별",
-        "columns": [
+          },
           {
-            "name": "GENDER_ID",
-            "comment": "성별_유니크ID",
-            "dataType": "VARCHAR(50)",
+            "name": "Date",
+            "comment": "",
+            "dataType": "VARCHAR",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 77.84814453125,
-              "widthComment": 87.22998046875,
-              "widthDataType": 87.71875,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
               "widthDefault": 60
             },
-            "id": "0af4a133-ff26-4750-b4d9-59ebe02c5e80"
+            "id": "8319fcbb-d41c-4470-8789-e464c6f68775"
           }
         ],
         "ui": {
           "active": false,
-          "left": 182.6771,
-          "top": 703.5,
-          "zIndex": 1,
-          "widthName": 60,
-          "widthComment": 60
+          "left": 1414.7856,
+          "top": 599.0351,
+          "zIndex": 39,
+          "widthName": 67.736328125,
+          "widthComment": 100.2236328125
         },
         "visible": true,
-        "id": "336aee45-0dcc-4ddc-893e-f5c88905458d"
+        "id": "aa8b8ba4-a123-4385-a54b-61b84ff83c53"
       },
       {
         "name": "TELECOM",
@@ -716,18 +723,165 @@
               "widthDefault": 60
             },
             "id": "31bea0c5-36f2-4c5b-8697-9be3640e7215"
+          },
+          {
+            "name": "TELECOM",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64.841796875,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "e2506c51-3e3c-46f0-96d8-fdd2b38740ea"
           }
         ],
         "ui": {
           "active": false,
-          "left": 744,
-          "top": 349.25,
-          "zIndex": 2,
+          "left": 285.6667,
+          "top": 599.25,
+          "zIndex": 36,
           "widthName": 64.841796875,
           "widthComment": 60
         },
         "visible": true,
         "id": "c50abab8-1525-4eb2-847d-74fd71926812"
+      },
+      {
+        "name": "Pet_Type",
+        "comment": "동물 종",
+        "columns": [
+          {
+            "name": "Type_ID",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "36567f3b-b215-44a7-89b6-75d78dffb962"
+          },
+          {
+            "name": "Type_Name",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 72.0908203125,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "c02c29de-de6b-4434-8430-02580a74721a"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1320.7497,
+          "top": 1081.4449,
+          "zIndex": 6,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "22a622cb-88cb-446f-aa2d-e1a2e5734606"
+      },
+      {
+        "name": "Anomaly",
+        "comment": "질병 및 특이사항",
+        "columns": [
+          {
+            "name": "Anomaly_ID",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 72.80810546875,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "e6591c62-8d39-411a-ab8a-110098c42389"
+          },
+          {
+            "name": "Anomaly_Name",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 94.4853515625,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "aeb4943f-ce4a-4f2a-8566-571d32a95f62"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1366.6664,
+          "top": 1390.6105,
+          "zIndex": 44,
+          "widthName": 60,
+          "widthComment": 100.2236328125
+        },
+        "visible": true,
+        "id": "3e3d5e7e-f2ab-4c42-8955-774763da0c7d"
       }
     ],
     "indexes": []
@@ -746,8 +900,8 @@
           "columnIds": [
             "84a948f8-5dc4-4fe9-9b99-5c0b8d75add2"
           ],
-          "x": 964.92665390625,
-          "y": 895.2085,
+          "x": 1063.2599539062498,
+          "y": 918.0422,
           "direction": "bottom"
         },
         "end": {
@@ -773,7 +927,7 @@
             "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
           ],
           "x": 787.5108,
-          "y": 1122.3638,
+          "y": 1132.6138,
           "direction": "left"
         },
         "end": {
@@ -782,7 +936,7 @@
             "c8f0053a-0e93-4d4d-b0ac-6634d1c91375"
           ],
           "x": 675.7516499999999,
-          "y": 1122.7757,
+          "y": 1133.0257,
           "direction": "right"
         },
         "constraintName": "fk_pet_to_pet_status",
@@ -799,7 +953,7 @@
             "4cec2110-39f9-47d9-a45e-d9b7345ddd43"
           ],
           "x": 980.9219328125,
-          "y": 1208.1138,
+          "y": 1228.6138,
           "direction": "bottom"
         },
         "end": {
@@ -807,7 +961,7 @@
           "columnIds": [
             "5a49ed3f-a37e-4451-9719-11561916529e"
           ],
-          "x": 983.238775,
+          "x": 990.476127734375,
           "y": 1360.7462,
           "direction": "top"
         },
@@ -824,8 +978,8 @@
           "columnIds": [
             "84a948f8-5dc4-4fe9-9b99-5c0b8d75add2"
           ],
-          "x": 1184.9369078125,
-          "y": 768.4585,
+          "x": 1283.2702078124998,
+          "y": 801.5422,
           "direction": "right"
         },
         "end": {
@@ -833,8 +987,8 @@
           "columnIds": [
             "c94bf799-0900-4169-a144-f1eeec7a859b"
           ],
-          "x": 1329.3893,
-          "y": 767.4262,
+          "x": 1414.7856,
+          "y": 664.2851,
           "direction": "left"
         },
         "constraintName": "fk_customer_to_community",
@@ -846,52 +1000,78 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "336aee45-0dcc-4ddc-893e-f5c88905458d",
-          "columnIds": [
-            "0af4a133-ff26-4750-b4d9-59ebe02c5e80"
-          ],
-          "x": 602.473975,
-          "y": 748.25,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "f5fcc997-1e2b-498d-9321-5eafc9ab39ad",
-          "columnIds": [
-            "e6aa5191-c26e-44be-bf53-2345ca234559"
-          ],
-          "x": 744.9164,
-          "y": 768.4585,
-          "direction": "left"
-        },
-        "constraintName": "fk_gender_to_customer",
-        "visible": true,
-        "id": "4a40c0dc-9ad5-42af-a841-4f7847df208c"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "c50abab8-1525-4eb2-847d-74fd71926812",
           "columnIds": [
             "31bea0c5-36f2-4c5b-8697-9be3640e7215"
           ],
-          "x": 965.816162109375,
-          "y": 438.75,
-          "direction": "bottom"
+          "x": 729.29902421875,
+          "y": 654.25,
+          "direction": "right"
         },
         "end": {
           "tableId": "f5fcc997-1e2b-498d-9321-5eafc9ab39ad",
           "columnIds": [
             "cc1a4c9a-ec8e-4cbf-b29b-8a4f6a202f31"
           ],
-          "x": 964.92665390625,
-          "y": 641.7085,
-          "direction": "top"
+          "x": 843.2497,
+          "y": 801.5422,
+          "direction": "left"
         },
         "constraintName": "fk_telecom_to_customer",
         "visible": true,
         "id": "25e2d48b-55b8-4383-baf9-9254ac51cc18"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "22a622cb-88cb-446f-aa2d-e1a2e5734606",
+          "columnIds": [
+            "36567f3b-b215-44a7-89b6-75d78dffb962"
+          ],
+          "x": 1320.7497,
+          "y": 1136.4449,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "f880cf95-52a0-49bd-9b62-03957fd8451a",
+          "columnIds": [
+            "52990791-1830-4b21-a9c8-b36612ce2a9c"
+          ],
+          "x": 1174.333065625,
+          "y": 1132.6138,
+          "direction": "right"
+        },
+        "constraintName": "fk_pet_type_to_pet",
+        "visible": true,
+        "id": "4568a028-59f6-4edb-aa57-2137ec5b9056"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "3e3d5e7e-f2ab-4c42-8955-774763da0c7d",
+          "columnIds": [
+            "e6591c62-8d39-411a-ab8a-110098c42389"
+          ],
+          "x": 1366.6664,
+          "y": 1445.6105,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "9200f9ab-671d-4f27-b1c4-b800c9f40fa6",
+          "columnIds": [
+            "3aac36bf-a4b5-4b05-ab79-391df35cd9ae"
+          ],
+          "x": 1184.23955546875,
+          "y": 1425.9962,
+          "direction": "right"
+        },
+        "constraintName": "fk_anomaly_to_pet_health",
+        "visible": true,
+        "id": "e65d9c37-df7d-4e4a-80e6-34636c4d0d8c"
       }
     ]
   }
