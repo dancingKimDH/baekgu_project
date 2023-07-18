@@ -9,8 +9,8 @@
     <div style="text-align: center;">
         <ul class="list-unstyled m-25" style="display: inline-block;">
             <li style="display: inline-block; float: left;">
-                <a href="./main.html">
-                    <img src="./images/logoimage.png" alt="logo image" width="70px" height="70px">
+                <a href="../main.jsp">
+                    <img src="images/logoimage.png" alt="logo image" width="70px" height="70px">
                     <hr>
                 </a>
                 <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
