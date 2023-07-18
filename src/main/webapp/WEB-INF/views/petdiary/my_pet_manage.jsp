@@ -6,10 +6,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap CSS -->
+        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../../../resources/static/css/pet_diary.css">
+        <link rel="stylesheet" href="../../../../resources/static/css/pet_diary.css"> 
         <link rel="stylesheet" href="../../../../resources/static/css/main.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="">
 
         <title>My Pet</title>
     </head>
@@ -24,8 +25,7 @@
             </div>
             
             <!-- 헤더 -->
-            <%@ include file="../baekgu/header.jsp" %>
-
+            <%@ include file="static/css/baekgu/header.jsp" %>
                         <script>
                             function redirectToPage() {
                                 // 로그인 상태를 확인하는 로직을 isLoggedIn에 작성
