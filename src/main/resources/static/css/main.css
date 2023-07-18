@@ -1,112 +1,34 @@
-.body {
-    background-color: #b3d9eb;
+.loginLocation
+{
+    display: flex;
+    justify-content: end;
 }
 
-.container {
+.loginText
+{
+    font-weight: bold;
+    color: grey;
+}
+
+.headerAddress
+{
+    color: grey;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.mainImage
+{
     display: flex;
     justify-content: center;
 }
 
-.main_navbar {
-
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    align-items: center;
-    list-style: none;
-    gap: 30px;
-
-}
-
-.a {
-    text-decoration: none;
-    color: grey;
-    font-weight: bold;
-    font-size: large;
-}
-
-.b {
+.footerText
+{
     font-size: smaller;
 }
 
-.c {
+.grayText
+{
     color: gray;
-}
-
-.d {
-    display: flex;
-    align-items: flex-start;
-    font-size: larger;
-    font-weight: bolder;
-    line-height: 50px;
-}
-
-.e {
-    font-weight: bolder;
-    font-size: 30px;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: end;
-  }
-
-.dropbutton {
-text-decoration: none;
-    color: grey;
-    font-weight: bold;
-    font-size: large;
-    cursor: pointer;
-}
-
-.logoimg {
-    display: flex;
-    justify-content: center;
-    width: 80px;
-    margin: 0 auto
-}
-
-.websitename {
-    display: flex;
-    justify-content: center;
-    margin: 1rem auto 1rem auto
-
-}
-
-.puppy {
-
-    display: flex;
-    justify-content: center;
-    margin: 1rem auto 1rem auto;
-    background-color: white;
-
-}
-
-
-.mainpage_pic {
-
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.picturebox {
-
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    background-color: white;
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-
-}
-
-.logobox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
 }
