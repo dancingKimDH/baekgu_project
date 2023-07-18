@@ -230,4 +230,14 @@
     background-color: rgb(75, 83, 41);
 }
 
+.button_box {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 
+}
+
+.button_box form{
+    margin: 0 30px;
+}
