@@ -1,33 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>MyPage_Diary</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="../css/pet_diary.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./pet_diary.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css">
 </head>
 
-<body class="body">
-    <div class="wrapper">
+<body>
+    <div style="background-color: #b3d9eb;">
 
-        <div class="container">
-            <nav class="mt-5 mb-3 header">
-                <h1 class="name">
-                    마이펫 다이어리
-                </h1>
-                <ul class="main_navbar mt-5">
-                    <li> <img src="../images/logoimage.png" alt="" class="logo"></li>
-                    <li> <a href="../mainpage.html" class="a">메인화면</a></li>
-                    <li> <a href="./my_pet_manage.html" class="a">마이펫 관리</a></li>
-                    <li> <a href="../login.html" class="a">로그인/회원가입</a></li>
-                    <li> <a href="../community/community.html" class="a">커뮤니티</a></li>
-                </ul>
-            </nav>
+
+        <!-- 헤더 리스트 -->
+        <div style="text-align: center;">
+            <ul class="list-unstyled m-25" style="display: inline-block;">
+                <li style="display: inline-block; float: left;">
+                    <a href="./main.html">
+                        <img src="../images/logoimage.png" alt="logo image" width="70px" height="70px">
+                        <hr>
+                    </a>
+                    <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+                        <ul class="list-unstyled m-0" style="display: inline-block;">
+                            <li style="display: inline-block;">
+                                <a href="../static/pet_diary/pet_introduce.html" class="a text-decoration-none ps-3"
+                                    style="font-size: 1.3rem;">사이트 소개</a>
+                            </li>
+                            <li style="display: inline-block;">
+                                <a href="./guide.html" class="a text-decoration-none ps-3"
+                                    style="font-size: 1.3rem;">다이어리 사용안내</a>
+                            </li>
+                            <li style="display: inline-block;">
+                                <a href="./community/community.html" class="a text-decoration-none ps-3"
+                                    style="font-size: 1.3rem;">커뮤니티</a>
+                            </li>
+                            <li style="display: inline-block;">
+                                <a href="#" onclick="redirectToPage(); return false;"
+                                    class="a text-decoration-none ps-3" style="font-size: 1.3rem;">마이페이지</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="main_container">
-            <div class="left-section">
-                <table class="first_table mt-5">
+        <!-- 헤더리스트 끝 -->
+
+        <!-- 애완동물 데일리 정보 -->
+    </div>
+    <div class="container maincontainer">
+        <div class="trycontainer">
+            <div class="daily_pet mt-5">
+                나의 애완동물 하루
+            </div>
+            <div>
+                <!-- 데일리 테이블 -->
+                <table class="first_table mt-3">
                     <form action="">
                         <tr>
                             <td colspan="2">
@@ -65,23 +94,22 @@
                         </tr>
                         <tr>
                             <td>
-                                <button class="mt-3" type="submit">제출하기</button>
+                                <button class="mt-3 btn1" type="submit">제출하기</button>
                             </td>
                         </tr>
                     </form>
                 </table>
-
-
+                <!-- 데일리 테이블 끝-->
             </div>
 
-
-            <!-- Second Section: Common Signs of Illness -->
-            <div class="right-section">
+            <div class="mt-5">
+                나의 애완동물 건강
+            </div>
+            <div class="anomaly_box">
                 <form action="">
-                    <div>
+                    <div class="anomaly_box left">
                         <label for="animalSelect">애완동물을 선택해 주세요: &nbsp;</label>
-
-                        <select class="mt-5 mb-3" id="animalSelect">
+                        <select class="mt-3 mb-3" id="animalSelect">
                             <option value="tongtong">통통이</option>
                             <option value="tongtong">팅팅이</option>
                         </select>
@@ -103,41 +131,39 @@
 
                         <input type="checkbox" id="symptom6" name="symptom" value="숨 쉬는 데 어려움">
                         <label for="symptom6">호흡에 어려움</label><br>
+
+                        <input type="checkbox" id="symptom7" name="symptom" value="구토 또는 설사">
+                        <label for="symptom7">구토 또는 설사</label><br>
+
+                        <input type="checkbox" id="symptom8" name="symptom" value="대변이나 소변의 변화 (색상, 일관성, 냄새)">
+                        <label for="symptom8">대변이나 소변의 변화 (색상, 일관성, 냄새)</label><br>
                     </div>
-                    <div>
-                    <input type="checkbox" id="symptom7" name="symptom" value="구토 또는 설사">
-                    <label for="symptom7">구토 또는 설사</label><br>
+                    <div class="anomaly_box right ">
+                        <input type="checkbox" id="symptom9" name="symptom" value="눈, 코, 귀에서 비정상적인 분비물">
+                        <label for="symptom9">눈, 코, 귀에서 비정상적인 분비물</label><br>
 
-                    <input type="checkbox" id="symptom8" name="symptom" value="대변이나 소변의 변화 (색상, 일관성, 냄새)">
-                    <label for="symptom8">대변이나 소변의 변화 (색상, 일관성, 냄새)</label><br>
+                        <input type="checkbox" id="symptom10" name="symptom" value="가려움증, 발적, 털 빠짐과 같은 피부 문제">
+                        <label for="symptom10">가려움증, 발진, 털 빠짐과 같은 피부 문제</label><br>
 
-                    <input type="checkbox" id="symptom9" name="symptom" value="눈, 코, 귀에서 비정상적인 분비물">
-                    <label for="symptom9">눈, 코, 귀에서 비정상적인 분비물</label><br>
+                        <input type="checkbox" id="symptom11" name="symptom" value="절뚝거림이나 움직임에 어려움">
+                        <label for="symptom11">절뚝거림이나 움직임에 어려움</label><br>
 
-                    <input type="checkbox" id="symptom10" name="symptom" value="가려움증, 발적, 털 빠짐과 같은 피부 문제">
-                    <label for="symptom10">가려움증, 발진, 털 빠짐과 같은 피부 문제</label><br>
+                        <input type="checkbox" id="symptom12" name="symptom" value="행동 변화 (공격성, 우울증, 불안)">
+                        <label for="symptom12">행동 변화 (공격성, 우울증, 불안)</label><br>
 
-                    <input type="checkbox" id="symptom11" name="symptom" value="절뚝거림이나 움직임에 어려움">
-                    <label for="symptom11">절뚝거림이나 움직임에 어려움</label><br>
+                        <input type="checkbox" id="symptom13" name="symptom" value="구취나 치아 문제">
+                        <label for="symptom13">구취 또는 치아 문제</label><br>
 
-                    <input type="checkbox" id="symptom12" name="symptom" value="행동 변화 (공격성, 우울증, 불안)">
-                    <label for="symptom12">행동 변화 (공격성, 우울증, 불안)</label><br>
+                        <input type="checkbox" id="symptom14" name="symptom" value="발열">
+                        <label for="symptom14">발열</label><br>
 
-                    <input type="checkbox" id="symptom13" name="symptom" value="구취나 치아 문제">
-                    <label for="symptom13">구취 또는 치아 문제</label><br>
-
-                    <input type="checkbox" id="symptom14" name="symptom" value="발열">
-                    <label for="symptom14">발열</label><br>
-
-                    <br>
-                    <button type="submit">제출하기</button>
-                </div>
+                        <br>
+                        <button class="btn1" type="submit">제출하기</button>
+                    </div>
                 </form>
             </div>
-
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

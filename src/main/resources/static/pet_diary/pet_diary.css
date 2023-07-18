@@ -21,16 +21,31 @@
     border-radius: 15px;
     text-decoration: none;
     font-weight: bolder;
-    background-color:#77af9c;
-    color: whitesmoke;
+    background-color:#b3d9eb;
+    color:#1e6b7b;
 }
+
 
 .table_title {
     font-size: 20px;
 }
 
+.maincontainer {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.trycontainer {
+    margin-left: 200px;
+}
+
+
 .anomaly_box {
-    width: 100%;
+    position: relative;
+    width: 80%;
     height: 300px;
 }
 .anomaly_box.left {
@@ -43,4 +58,8 @@
     width:50%;
     float:right;
     box-sizing: border-box;
+}
+
+.body {
+    align-items: center;
 }
