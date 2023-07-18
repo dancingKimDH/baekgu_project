@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<link rel="stylesheet" href="/css/pet_diary.css">
+<link rel="stylesheet" href="/css/main">
+
+
 <footer style="background-color: #b3d9eb;" class="b p-5 d-flex justify-content-between align-items-center">
   <div class="row">
     <div class="">
@@ -38,6 +43,6 @@
     </div>
   </div>
   <div class="row">
-    <img src="./images/logoimage.png" alt="logo" height="120rem" />
+    <img src="/images/logo.png" alt="logo" height="120rem" />
   </div>
 </footer>

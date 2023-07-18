@@ -1,4 +1,8 @@
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<link rel="stylesheet" href="/css/pet_diary.css">
 <div style="background-color: #b3d9eb;">
     <div>
         <header class="flex-container">
@@ -10,7 +14,7 @@
         <ul class="list-unstyled m-25" style="display: inline-block;">
             <li style="display: inline-block; float: left;">
                 <a href="../main.jsp">
-                    <img src="images/logoimage.png" alt="logo image" width="70px" height="70px">
+                    <img src="/images/logo.png" alt="logo image" width="70px" height="70px">
                     <hr>
                 </a>
                 <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
