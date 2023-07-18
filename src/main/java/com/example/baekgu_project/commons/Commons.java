@@ -8,8 +8,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Commons
 {
+    @Autowired
     public Statement getStatement()
     {
         String url = "jdbc:mysql://192.168.0.40:3306/db_cars";
@@ -30,6 +33,7 @@ public class Commons
         return statement;
     }
 
+    @Autowired
     public String getGeneratorID()
     {
         Date date = new Date();
@@ -38,6 +42,7 @@ public class Commons
         return strDate;
     }
 
+    @Autowired
     public String generateUUID()
     {
 

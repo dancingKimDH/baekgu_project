@@ -17,7 +17,6 @@ public class CommonService {
     @Autowired
     SharedDao sharedDao;
 
-    @Autowired
     Commons commons;
     
     // foreach HashMap.put("COMMON_CODE_ID_LIST", COMMON_CODE_ID_LIST)
