@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +16,7 @@
             <h1 class="name">
                 마이 펫 통계
             </h1>
-            <ul class="main_navbar mt-5">
-                <li> <img src="../images/logoimage.png" alt="" class="logo"></li>
-                <li> <a href="../mainpage.html" class="a">메인화면</a></li>
-                <li> <a href="./my_pet_manage.html" class="a">마이펫 관리</a></li>
-                <li> <a href="../login.html" class="a">로그인/회원가입</a></li>
-                <li> <a href="../community/community.html" class="a">커뮤니티</a></li>
-            </ul>
+            <%@ include file="../baekgu/header.jsp" %>
         </nav>
     </div>
     <div class="mainbody">
@@ -96,25 +91,7 @@
         <div class="stat_footer"></div>
     </div>
 
-    <div>
-        <div style="text-align: left;">
-            <ul class="list-unstyled m-0">
-              <li class="pt-1">
-                <span class="pe-3">대표자: TEAM BAEKGU</span>
-                <span>주소: 대한민국 서울시</span>
-              </li>
-              <li class="pt-1">
-                <span>법인명: (주) BAEKGU</span>
-                <span>사업자 등록정보: ABC-123 </span>
-              </li>
-              <li class="pt-1">
-                TEL: 080-123-4567 (업무시간: 09:00-18:00 월~금) 주말 및 공휴일 휴무
-                &nbsp;
-                <span>E-MAIL: baekgu@internet.co.kr</span>
-              </li>
-            </ul>
-          </div>
-    </div>
+    <%@ include file="../baekgu/footer.jsp" %>
 </body>
 
 </html>

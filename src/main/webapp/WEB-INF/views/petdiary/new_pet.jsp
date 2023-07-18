@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,18 +12,9 @@
 
 <body class="body">
     <div class="container">
-        <nav class="mt-5 mb-3 header">
-            <h1 class="name">
-                마이 페이지
-            </h1>
-            <ul class="main_navbar mt-5">
-                <li> <img src="../images/logoimage.png" alt="" class="logo"></li>
-                <li> <a href="../mainpage.html" class="a">메인화면</a></li>
-                <li> <a href="" class="a">마이펫 관리</a></li>
-                <li> <a href="../login.html" class="a">로그인/회원가입</a></li>
-                <li> <a href="../community/community.html" class="a">커뮤니티</a></li>
-            </ul>
-        </nav>
+
+        <%@ include file="../baekgu/header.jsp" %>
+        
         <div class="container mt-5">
             <div class="card">
                 <div class="card-body">
@@ -58,7 +50,7 @@
                 </div>
             </div>
         </div>
-
+        <%@ include file="../baekgu/footer.jsp" %>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
