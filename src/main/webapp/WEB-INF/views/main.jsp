@@ -12,10 +12,10 @@
 </head>
 
 <body>
-  <%@ include file="/WEB-INF/views/header.jsp" %>
+  <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
     <div class="container my-5" id="controlsId">
         <img src="./images/dogcat2.png" alt="" style="width: 850px; height: 604px;">
     </div>
 </body>
-  <%@ include file="/WEB-INF/views/footer.jsp" %>
+  <%@ include file="/WEB-INF/views/baekgu/footer.jsp" %>
 </html>
