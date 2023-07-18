@@ -39,16 +39,22 @@ public class CommonController {
         modelAndView.setViewName("/WEB-INF/views/petdiary/new_pet.jsp");
         return modelAndView;
     }
-    
+
     @GetMapping({ "/pet_introduce" })
     public ModelAndView pet_introduce(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/petdiary/pet_introduce.jsp");
         return modelAndView;
     }
 
-        @GetMapping({ "/statistics" })
+    @GetMapping({ "/statistics" })
     public ModelAndView statistics(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/petdiary/statistics.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping({ "/admin_main" })
+    public ModelAndView admin_main(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
         return modelAndView;
     }
 }
