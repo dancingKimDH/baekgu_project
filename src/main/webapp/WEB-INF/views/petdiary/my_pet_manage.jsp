@@ -134,11 +134,11 @@
                                                 </table>
                                             </div>
                                             <div class="modal-footer">
-                                                <button data-bs-dismiss="modal" class="btn btn-secondary">
+                                                <button data-bs-dismiss="modal" class="btn btn2">
                                                     Close
                                                 </button>
                                                 <form action="">
-                                                    <button class="submit">
+                                                    <button class="submit btn2">
                                                         수정하기
                                                     </button>
                                                 </form>
@@ -210,5 +210,5 @@
 
     </body>
     <%@ include file="../baekgu/footer.jsp" %>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </html>
