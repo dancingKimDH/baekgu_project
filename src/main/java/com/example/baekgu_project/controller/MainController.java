@@ -9,9 +9,7 @@ public class MainController {
     @GetMapping({"/", "/home", "/main"})
     public ModelAndView main(ModelAndView modelAndView)
     {
-        modelAndView.addObject("name", "Yojulab!");
         modelAndView.setViewName("/WEB-INF/views/main.jsp");
         return modelAndView;
     }
-
 }
