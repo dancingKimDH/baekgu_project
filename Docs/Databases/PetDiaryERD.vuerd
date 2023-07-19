@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -21,
-    "scrollLeft": -260,
+    "scrollTop": -470.833314624098,
+    "scrollLeft": -135.41666128569182,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -1093,12 +1093,12 @@
         "id": "b2f6cd7b-3b86-42c6-9c15-bc3cb506e850"
       },
       {
-        "value": "○ 글 분류 이름\n\n   - 자랑\n   - 병원\n   - 사료/간식\n   - 기타",
+        "value": "○ 글 분류 이름\n\n   - 자랑\n   - 병원\n   - 사료\n   - 기타",
         "ui": {
           "active": false,
           "left": 1635.5555555555575,
           "top": 372.0000000000005,
-          "zIndex": 4,
+          "zIndex": 33,
           "width": 127,
           "height": 100
         },
@@ -1129,24 +1129,24 @@
         "id": "ab4fbf4a-4638-49aa-926f-2fda16823662"
       },
       {
-        "value": "○ 주요수치 입력\n\n   - 몸무게: __(kg)\n   - 건식: __(g)\n   - 습식: __(g)\n   - 간식: __(g)\n   - 음수량: __(ml)\n   - 중성화 여부\n      □ 했음\n      □ 안했음",
+        "value": "○ 주요수치 입력\n\n   - 몸무게: __(kg)\n   - 식사량: __(g)\n   - 음수량: __(ml)\n   - 중성화 여부\n      □ 했음\n      □ 안했음",
         "ui": {
           "active": false,
           "left": 1133.3703700024446,
           "top": 967.3148147228354,
-          "zIndex": 19,
+          "zIndex": 31,
           "width": 127,
           "height": 170
         },
         "id": "a617a03f-51e0-4258-9ea9-1fa88975f961"
       },
       {
-        "value": "○ 주요수치 이름\n\n   - 몸무게(kg)\n   - 건식(g)\n   - 습식(g)\n   - 간식(g)\n   - 음수량(ml)\n   - 중성화 여부",
+        "value": "○ 주요수치 이름\n\n   - 몸무게(kg)\n   - 식사량(g)\n   - 음수량(ml)\n   - 중성화 여부",
         "ui": {
           "active": false,
           "left": 12.999999999999996,
           "top": 989.5555555555594,
-          "zIndex": 1,
+          "zIndex": 25,
           "width": 127,
           "height": 140
         },
