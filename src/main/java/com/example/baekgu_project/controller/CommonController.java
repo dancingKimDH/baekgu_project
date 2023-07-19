@@ -82,9 +82,6 @@ public class CommonController {
         return modelAndView;
     }
 
-<<<<<<< HEAD
-    @GetMapping({ "/statistics" })
-=======
     @GetMapping("/pet_introduce")
     public ModelAndView pet_introduce(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/petdiary/pet_introduce.jsp");
@@ -92,7 +89,6 @@ public class CommonController {
     }
 
     @GetMapping("/statistics")
->>>>>>> 566073534a907f3dfc2f6fab0ffac84329d59484
     public ModelAndView statistics(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/petdiary/statistics.jsp");
         return modelAndView;
