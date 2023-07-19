@@ -64,39 +64,15 @@ public class CommonController {
         return modelAndView;
     }
 
-    @GetMapping("/my_pet_diary")
-    public ModelAndView my_pet_diary(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/petdiary/my_pet_diary.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping("/my_pet_manage")
-    public ModelAndView my_pet_manage(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/petdiary/my_pet_manage.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping("/new_pet")
-    public ModelAndView new_pet(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/petdiary/new_pet.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping("/pet_introduce")
-    public ModelAndView pet_introduce(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/petdiary/pet_introduce.jsp");
-        return modelAndView;
-    }
-
     @GetMapping("/statistics")
     public ModelAndView statistics(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/petdiary/statistics.jsp");
+        modelAndView.setViewName("/WEB-INF/views/myPage/statistics.jsp");
         return modelAndView;
     }
 
-    @GetMapping("/admin_main")
-    public ModelAndView admin_main(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
+    @GetMapping("/myNewPet")
+    public ModelAndView myNewPet(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/myPage/myNewPet.jsp");
         return modelAndView;
     }
 }
