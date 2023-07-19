@@ -7,9 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
 
-        <link rel="stylesheet" href="/css/pet_diary.css">
-        <link rel="stylesheet" href="/admin/css/admin.css">
+        <link rel="stylesheet" href="/css/myNewPet.css">
+        <link rel="stylesheet" href="/css/admin.css">
+        <link rel="stylesheet" href="/css/myPage.css">
+        <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css">
+        
     </head>
 
     <body class="body">
