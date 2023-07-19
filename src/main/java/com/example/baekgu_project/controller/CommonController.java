@@ -22,6 +22,48 @@ public class CommonController {
     @Autowired
     CommonService commonService;
 
+    @GetMapping({ "/login" })
+    public ModelAndView login(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/login/login.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping({ "/register" })
+    public ModelAndView register(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/login/register.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping({ "/introduce" })
+    public ModelAndView introduce(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/introduce.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping({ "/guide" })
+    public ModelAndView guide(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/guide.jsp");
+        return modelAndView;
+    }
+
+   @GetMapping({ "/community" })
+    public ModelAndView community(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/community/community.jsp");
+        return modelAndView;
+    }
+
+   @GetMapping({ "/community_write" })
+    public ModelAndView community_write(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/community/community_write.jsp");
+        return modelAndView;
+    }
+
+   @GetMapping({ "/myPage" })
+    public ModelAndView myPage(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/myPage/myPage.jsp");
+        return modelAndView;
+    }
+
     @GetMapping({ "/my_pet_diary" })
     public ModelAndView my_pet_diary(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/petdiary/my_pet_diary.jsp");
@@ -37,12 +79,6 @@ public class CommonController {
     @GetMapping({ "/new_pet" })
     public ModelAndView new_pet(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/petdiary/new_pet.jsp");
-        return modelAndView;
-    }
-
-    @GetMapping({ "/pet_introduce" })
-    public ModelAndView pet_introduce(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/petdiary/pet_introduce.jsp");
         return modelAndView;
     }
 
