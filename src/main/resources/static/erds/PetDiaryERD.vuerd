@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -292.33333333333303,
-    "scrollLeft": -198,
-    "zoomLevel": 0.9,
+    "scrollTop": -489.33333333333303,
+    "scrollLeft": -293,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -231,6 +231,29 @@
             "id": "74485798-fe2a-4f01-8cae-152f9c1a299f"
           },
           {
+            "name": "REG-ANI_ID",
+            "comment": "등록 펫_ID",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 76.40087890625,
+              "widthComment": 64.841796875,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "d39c5dcc-b54a-4164-ab4b-9e52cbed2fad"
+          },
+          {
             "name": "MEMBER_ID",
             "comment": "가입회원_ID",
             "dataType": "VARCHAR(500)",
@@ -258,7 +281,7 @@
           "active": false,
           "left": 562.5,
           "top": 261.25,
-          "zIndex": 304,
+          "zIndex": 402,
           "widthName": 60,
           "widthComment": 60,
           "color": "#2196F3"
@@ -583,9 +606,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 269.1065,
-          "top": 633.1273,
-          "zIndex": 241,
+          "left": 655.3565,
+          "top": 638.1273,
+          "zIndex": 405,
           "widthName": 139.24267578125,
           "widthComment": 60,
           "color": "#FFEB3B"
@@ -845,6 +868,29 @@
             "id": "1d8cbb5c-5452-4c65-bfc6-7105ff44eb37"
           },
           {
+            "name": "REG-ANI_ID",
+            "comment": "등록 펫_ID",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 76.40087890625,
+              "widthComment": 64.841796875,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "df7b3e6b-ea85-4178-bb76-c981b17176a2"
+          },
+          {
             "name": "NEUTRALIZATION_ID",
             "comment": "중성화여부_ID",
             "dataType": "INTEGER(500)",
@@ -891,7 +937,7 @@
             "id": "f052b893-5141-4524-b85f-5e8ad990eac9"
           },
           {
-            "name": "PET-D-INF_ID",
+            "name": "DIARY-INF_ID",
             "comment": "펫다이어리정보_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -906,7 +952,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 85.78271484375,
+              "widthName": 85.8017578125,
               "widthComment": 113.22998046875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -918,7 +964,7 @@
           "active": false,
           "left": 679.1385,
           "top": 841.5556,
-          "zIndex": 238,
+          "zIndex": 404,
           "widthName": 163.55419921875,
           "widthComment": 100.2236328125,
           "color": "#CDDC39"
@@ -2325,7 +2371,7 @@
             "1d8cbb5c-5452-4c65-bfc6-7105ff44eb37"
           ],
           "x": 1187.5359609375,
-          "y": 917.0556,
+          "y": 927.3056,
           "direction": "right"
         },
         "constraintName": "fk_pet-information_to_pet-diary-information",
@@ -2403,7 +2449,7 @@
             "7d8bd9c9-83bb-4826-8801-99204c1402cd"
           ],
           "x": 562.5,
-          "y": 388,
+          "y": 398.25,
           "direction": "left"
         },
         "constraintName": "fk_telecom_to_member",
@@ -2455,7 +2501,7 @@
             "0f6de613-7c24-4324-bfcd-c28aa0c88872"
           ],
           "x": 933.33723046875,
-          "y": 992.5556,
+          "y": 1013.0556,
           "direction": "bottom"
         },
         "constraintName": "fk_neutralization_to_pet-diary-information",
@@ -2481,7 +2527,7 @@
             "f052b893-5141-4524-b85f-5e8ad990eac9"
           ],
           "x": 679.1385,
-          "y": 917.0556,
+          "y": 927.3056,
           "direction": "left"
         },
         "constraintName": "fk_key-figure_to_pet-diary-information",
@@ -2602,7 +2648,7 @@
             "568317d5-6d23-403d-8c2a-62556f46b2f0"
           ],
           "x": 983.75048828125,
-          "y": 388,
+          "y": 398.25,
           "direction": "right"
         },
         "end": {
@@ -2643,6 +2689,58 @@
         "constraintName": "fk_writing-group_to_community-list",
         "visible": true,
         "id": "11610c93-1f19-4d85-9fb6-90d5e1a0c7ee"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "db28ae7b-2520-41d2-9ee5-ba152efa6885",
+          "columnIds": [
+            "be716f29-2a84-4162-b13d-72f8ab8327a4"
+          ],
+          "x": 860.202203125,
+          "y": 748.1273,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "651da9de-843a-4f0b-b412-cd9678ff9b79",
+          "columnIds": [
+            "df7b3e6b-ea85-4178-bb76-c981b17176a2"
+          ],
+          "x": 933.33723046875,
+          "y": 841.5556,
+          "direction": "top"
+        },
+        "constraintName": "fk_registered-animal_to_pet-diary-information",
+        "visible": true,
+        "id": "be78c3d7-7567-4839-8632-d92bbeceab91"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "db28ae7b-2520-41d2-9ee5-ba152efa6885",
+          "columnIds": [
+            "be716f29-2a84-4162-b13d-72f8ab8327a4"
+          ],
+          "x": 860.202203125,
+          "y": 638.1273,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "279ef056-1cb5-41bb-9488-2d9d173e5b51",
+          "columnIds": [
+            "d39c5dcc-b54a-4164-ab4b-9e52cbed2fad"
+          ],
+          "x": 773.125244140625,
+          "y": 535.25,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_registered-animal_to_member",
+        "visible": true,
+        "id": "5106f790-8e3c-43a8-8ae4-a0469e710bbc"
       }
     ]
   }
