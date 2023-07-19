@@ -18,6 +18,7 @@
     <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
     <!-- /header -->
     <!-- body -->
+    <form action="">
     <div class="container my-5">
         <div class="mb-3">
             <label for="id" class="form-label">아이디</label>
@@ -69,15 +70,15 @@
         </div>
         <div class="mb-3">
             <label for="number" class="form-label">휴대폰번호</label>
-            <input type="text" class="form-control" id="number" maxlength="13" placeholder="휴대폰번호를 입력하세요." oninput="phoneNumber()">
+            <input type="text" class="form-control" id="number" maxlength="11" placeholder="휴대폰번호를 입력하세요." oninput="phoneNumber()">
         </div>
         <div class="auth button_box">
             <div id="certificationNumber">000000</div>
-            <button class="registerBtn" disabled id="sendMessage" onclick="getToken()">인증번호 전송</button>
+            <button class="registerBtn" disabled id="sendMessage" onclick="getToken(); return false;">인증번호 전송</button>
         </div>
         <div class="timer button_box">
             <div id="timeLimit">03:00</div>
-            <button class="registerBtn" disabled id="completion" onclick="checkCompletion()">인증확인</button>
+            <button class="registerBtn" disabled id="completion" onclick="checkCompletion(); return false;">인증확인</button>
         </div>
         <div class="m-5 form-check registerText">
             <label class="form-check-label" for="accept">회원가입에 동의합니다.</label>
@@ -87,6 +88,7 @@
             <button id="register" class="register_box" disabled onclick="signUpCheck()">회원가입</button>
         </div>
     </div>
+</form>
     <!-- /body -->
 </body>
 
