@@ -36,7 +36,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="pet_weight" class="form-label">체중 (숫자만 입력하세요.)</label>
-                    <input type="text" class="form-control" id="pet_weight" placeholder="10">
+                    <input type="text" class="form-control" id="pet_weight" placeholder="kg">
                 </div>
                 <div class="mb-3">
                     <label for="confirm-password" class="form-label">분류</label>
@@ -56,10 +56,11 @@
         </div>
     </div>
     <!-- /body -->
+    
 </body>
+ 
 
 <!-- footer -->
-<%@ include file="/WEB-INF/views/baekgu/footer.jsp" %>
 <!-- /footer -->
 
 </html>
