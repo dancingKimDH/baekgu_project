@@ -72,8 +72,8 @@
     </delete>
 
 
-    <select id="TelecomSearchAll" ParameterType="Map" resultType="Map">
+    <!-- <select id="TelecomSearchAll" ParameterType="Map" resultType="Map">
         SELECT * FROM animal_try.telecom;
-        </select>
+        </select> -->
 
 </mapper>
