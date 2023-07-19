@@ -27,9 +27,7 @@ public class CommonService {
         return result;
     }
 
-    // public Map selectSearch(Map params) {
-    //     return null;
-    // }
+
 
 
     // 검색(조건-search : YEAR, CAR_NAME)
@@ -42,6 +40,8 @@ public class CommonService {
     // }
     
     // 검색(조건-search : NAME, COMMON_CODE_ID)
+
+
     public Map selectSearch(Map dataMap) {
         // Object getOne(String sqlMapId, Object dataMap)
         String sqlMapId = "CommonsCode.selectSearch";
