@@ -73,7 +73,6 @@ function signUpCheck()
     let passwordCheck = document.getElementById("passwordCheck").value
     let name = document.getElementById("name").value
     let birth = document.getElementById("birth").value
-    let accpet = document.getElementById("accpet").checked
     let check = true;
 
     // 아이디 확인
@@ -160,18 +159,6 @@ function signUpCheck()
     {
       document.getElementById("birthError").innerHTML=""
     }
-
-  // 최종 동의 확인
-  if(!accpet)
-  {
-    document.getElementById("accpetError").innerHTML="동의를 하지 않았습니다."
-    check = false
-  }
-  
-  else
-  {
-    document.getElementById("accpetError").innerHTML=""
-  }
     
     if(check)
     {
@@ -181,7 +168,6 @@ function signUpCheck()
         document.getElementById("passwordCheckError").innerHTML=""
         document.getElementById("nameError").innerHTML=""
         document.getElementById("birthError").innerHTML=""
-        document.getElementById("accpetError").innerHTML=""
       
     //비동기 처리이벤트
     setTimeout(function(){alert("가입이 완료되었습니다.")},0);
