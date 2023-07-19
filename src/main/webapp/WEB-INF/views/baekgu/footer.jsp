@@ -35,6 +35,6 @@
         </ul>
     </div>
     <div class="row">
-        <img src="./images/logo.png" alt="logo" height="120rem" />
+        <img src="/images/logo.png" alt="logo" height="120rem" />
     </div>
 </footer>
