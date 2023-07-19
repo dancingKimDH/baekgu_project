@@ -18,7 +18,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.baekgu_project.service.CommonService;
 
-
 @Controller
 @RequestMapping("/main")
 public class CommonController {
@@ -82,6 +81,12 @@ public class CommonController {
     @GetMapping("/animals")
     public ModelAndView animals(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/animals.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/admin_main")
+    public ModelAndView admin_main(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
         return modelAndView;
     }
 }
