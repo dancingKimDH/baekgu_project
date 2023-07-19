@@ -1,11 +1,6 @@
-/* 푸터 흰색 배경화면, 글씨 가운데 정렬 */
-footer {
-    background-color: #fff;
-    text-align: center;
-}
-
 /* 수정 사항 추가 */
-.community {
+.community
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,41 +8,10 @@ footer {
     height: 100%;
 }
 
-.Community_main {
-    justify-content: center;
-    margin: 10px;
-}
-
-.dropdown_nav-item {}
-
-.input-group {
-    border-radius: 20px;
-}
-
-.list-unstyled>.list-unstyled {
-    border-top: 10px solid #fff;
-    border-bottom: 10px solid #fff;
-}
-
-.pagination {
+.pagination
+{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 30px 20px 20px 20px;
-}
-
-.direction {
-    margin: 0 5px;
-}
-
-.direction.first::before,
-.direction.last::after {
-    content: "";
-}
-
-.write_button {
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin: 30px 20px 20px 10px;
 }

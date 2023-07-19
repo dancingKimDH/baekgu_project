@@ -1,14 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <div style="background-color: #b3d9eb;">
-    <div class="loginLocation">
-        <a class="loginText nav-link" href="./login.html">로그인</a>
-        <a class="loginText nav-link" href="./register.html">회원가입</a>
-    </div>
     <div style="text-align: center;">
         <ul class="list-unstyled m-25" style="display: inline-block;">
             <li style="display: inline-block; float: left;">
                 <a href="./main.html">
-                    <img src="/images/logo.png" alt="logo image" width="70px" height="70px">
+                    <img class="mt-5" src="/images/logo.png" alt="logo image" width="70px" height="70px">
                     <hr>
                 </a>
                 <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">

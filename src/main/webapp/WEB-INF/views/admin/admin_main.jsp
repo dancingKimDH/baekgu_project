@@ -19,7 +19,8 @@
 
                 <div class="search_bar container">
                     <form action="">
-                        <input class="search_box" type="text" name="" id="" placeholder="검색할 회원 이름을 입력하세요">
+                        <input class="search_box" type="text" name="find_membername" id=""
+                            placeholder="검색할 회원 이름을 입력하세요">
                         <a href="">
                             <img class="search_img" src="../images/search.png" alt="">
                         </a>
@@ -30,6 +31,7 @@
                     <h3 class="admin_subject container">
 
                     </h3>
+                    <!-- 리스트 -->
                     <table class="member_table mt-5">
                         <tbody class="member_list_body">
                             <tr class="table_first">
@@ -66,6 +68,8 @@
                                 <td class="member_list_cell">
                                     2020-01-01
                                 </td>
+
+                                <!-- 애완동물 현황 모달창  -->
                                 <td class="member_list_cell">
                                     <a data-bs-toggle="modal" href="#modalTarget-center" class="btn btn1">
                                         애완동물 현황
@@ -116,14 +120,18 @@
                                                     </table>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button data-bs-dismiss="modal" class="btn btn-secondary">
+                                                    <button data-bs-dismiss="modal" class="btn btn1">
                                                         Close
                                                     </button>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
+
+                                <!-- 수정/탈퇴버튼 -->
+
                                 <td class="member_list_cell">
                                     <a data-bs-toggle="modal" href="#modalTarget-second" class="btn btn-primary">
                                         수정/탈퇴
@@ -171,7 +179,8 @@
                                                             </td>
                                                             <td class="member_table_head">
                                                                 <form action="">
-                                                                    <button type="submit small_font">탈퇴</button>
+                                                                    <button class="btn-danger btn-sm"
+                                                                        type="submit">탈퇴</button>
                                                                 </form>
                                                             </td>
                                                         </tr>
@@ -180,11 +189,11 @@
 
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button data-bs-dismiss="modal" class="btn btn-secondary">
+                                                    <button data-bs-dismiss="modal" class="btn btn1">
                                                         Close
                                                     </button>
                                                     <form action="">
-                                                        <button>
+                                                        <button class="btn btn-warning">
                                                             저장
                                                         </button>
                                                     </form>
@@ -196,95 +205,18 @@
                             </tr>
 
                 </div>
+
+
+
+
+
         </div>
-        </div>
-        </td>
-        </tr>
-        <tr>
-
-        </tr>
-        <td class="member_list_cell">
-            김호연
-        </td>
-        <td class="member_list_cell">
-            hy_0101
-        </td>
-        <td class="member_list_cell">
-            hy***
-        </td>
-        <td class="member_list_cell">
-            2020-01-02
-        </td>
-        <td class="member_list_cell">
-            <a data-bs-toggle="modal" href="#modalTarget-center" class="btn btn1">
-                애완동물 현황
-            </a>
-            <div class="modal" id="modalTarget-center">
-                <div class="modal-dialog modal-dialog-centered">
-
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            김진석
-                        </div>
-                        <div class="modal-body">
-                            <table>수
-                                <tr>
-                                    <td>
-                                        애완동물 수
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="modal-footer">
-                            <button data-bs-dismiss="modal" class="btn btn-secondary">
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </td>
-        <td class="member_list_cell">
-            <a data-bs-toggle="modal" href="#modalTarget-center" class="btn btn-primary">
-                수정/탈퇴
-            </a>
-            <div class="modal" id="modalTarget-center">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            김진석
-                        </div>
-                        <div class="modal-body">
-                            <table>
-                                <tr>
-                                    <td>
-                                        No.
-                                    </td>
-                                    <td>
-                                        이름
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="modal-footer">
-                            <button data-bs-dismiss="modal" class="btn btn-secondary">
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </td>
-
-        <tr>
-
-        </tr>
         </tbody>
         </table>
 
         <!-- page button -->
 
-        <div class="container pagination">
+        <div class="container pagination mt-5 mb-5">
             <button class="page_button2">&lt;&lt;</button>
             <button class="page_button">&lt;</button>
             <button class="page_button">1</button>
