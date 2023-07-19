@@ -1,3 +1,5 @@
+package com.example.baekgu_project.restapi;
+
 // package com.example.baekgu_project.restapi;
 
 // import java.util.Map;
@@ -85,4 +87,17 @@
  
 // }
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
 
+import com.example.baekgu_project.service.CommonService;
+
+@RestController
+public class CommonController_api {
+
+   @Autowired
+   CommonService commonservice; 
+
+    
+
+}

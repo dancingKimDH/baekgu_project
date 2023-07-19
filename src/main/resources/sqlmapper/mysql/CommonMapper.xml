@@ -70,4 +70,10 @@
         delete from commons_code
         where COMMON_CODE_ID = #{COMMON_CODE_ID}
     </delete>
+
+
+    <select id="TelecomSearchAll" ParameterType="Map" resultType="Map">
+        SELECT * FROM animal_try.telecom;
+        </select>
+
 </mapper>
