@@ -2,6 +2,7 @@ function loginCheck()
 {
     let id = document.getElementById("id").value
     let password = document.getElementById("password").value
+    let check = true;
 
     // 아이디 확인
     if(id==="")
