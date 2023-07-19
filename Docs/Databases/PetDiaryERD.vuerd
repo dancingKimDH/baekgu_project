@@ -93,7 +93,7 @@
             "id": "3a79abdd-e399-488a-827c-b1bc1d8ee96c"
           },
           {
-            "name": "E-MAIL",
+            "name": "EMAIL",
             "comment": "이메일",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -164,7 +164,7 @@
           {
             "name": "BIRTHDATE",
             "comment": "생년월일",
-            "dataType": "INTEGER(500)",
+            "dataType": "INTEGER(250)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -208,9 +208,9 @@
             "id": "7d8bd9c9-83bb-4826-8801-99204c1402cd"
           },
           {
-            "name": "PHONE-NUM",
+            "name": "PHONENUM",
             "comment": "휴대폰번호",
-            "dataType": "INTEGER(500)",
+            "dataType": "INTEGER(250)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -223,7 +223,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 82.16455078125,
+              "widthName": 77.83544921875,
               "widthComment": 67,
               "widthDataType": 90.130859375,
               "widthDefault": 60
@@ -231,7 +231,7 @@
             "id": "74485798-fe2a-4f01-8cae-152f9c1a299f"
           },
           {
-            "name": "REG-ANI_ID",
+            "name": "REGANI_ID",
             "comment": "등록 펫_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -244,9 +244,9 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
+              "fk": false,
               "pfk": false,
-              "widthName": 76.40087890625,
+              "widthName": 72.07177734375,
               "widthComment": 64.841796875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -281,7 +281,7 @@
           "active": false,
           "left": 603.6103,
           "top": 255.6955,
-          "zIndex": 389,
+          "zIndex": 13,
           "widthName": 60,
           "widthComment": 60,
           "color": "#2196F3"
@@ -317,7 +317,7 @@
             "id": "7b07d669-f08f-4ca2-be81-cf6c46da87b1"
           },
           {
-            "name": "GENDER NAME",
+            "name": "GENDER_NAME",
             "comment": "성별 이름",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -332,7 +332,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 98.7890625,
+              "widthName": 102.4072265625,
               "widthComment": 60,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -342,9 +342,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 301.0279,
-          "top": 6.3058,
-          "zIndex": 385,
+          "left": 343.2503,
+          "top": 54.0831,
+          "zIndex": 16,
           "widthName": 60,
           "widthComment": 60,
           "color": "#03A9F4"
@@ -380,7 +380,7 @@
             "id": "c22c5748-5a2b-46ae-965c-4e322ae772ee"
           },
           {
-            "name": "TELECOM NAME",
+            "name": "TELECOM_NAME",
             "comment": "통신사 이름",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -395,7 +395,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 106.0126953125,
+              "widthName": 109.630859375,
               "widthComment": 70.61181640625,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -405,9 +405,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 6.5009,
-          "top": 250.9717,
-          "zIndex": 387,
+          "left": 64.2785,
+          "top": 280.9716,
+          "zIndex": 12,
           "widthName": 64.841796875,
           "widthComment": 60,
           "color": "#607D8B"
@@ -416,74 +416,11 @@
         "id": "bb533d00-5fdb-46e6-a07d-884937807949"
       },
       {
-        "name": "REGISTERED-ANIMAL",
-        "comment": "등록 펫",
-        "columns": [
-          {
-            "name": "REG-ANI_ID",
-            "comment": "등록 펫_ID",
-            "dataType": "VARCHAR(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 76.40087890625,
-              "widthComment": 64.841796875,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            },
-            "id": "be716f29-2a84-4162-b13d-72f8ab8327a4"
-          },
-          {
-            "name": "REG-ANIMAL",
-            "comment": "등록 펫",
-            "dataType": "VARCHAR(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 82.90087890625,
-              "widthComment": 60,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            },
-            "id": "eaeda579-cecd-4f52-8375-14a858026810"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 609.8017,
-          "top": 772.5714,
-          "zIndex": 429,
-          "widthName": 139.24267578125,
-          "widthComment": 60,
-          "color": "#FFEB3B"
-        },
-        "visible": true,
-        "id": "db28ae7b-2520-41d2-9ee5-ba152efa6885"
-      },
-      {
-        "name": "PET-INFORMATION",
+        "name": "PET_INFORMATION",
         "comment": "펫 별 정보",
         "columns": [
           {
-            "name": "PET-INF_ID",
+            "name": "PETINF_ID",
             "comment": "펫별정보_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -498,7 +435,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 72.0654296875,
+              "widthName": 68.45361328125,
               "widthComment": 74.22998046875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -552,7 +489,7 @@
             "id": "9a41e4a4-e6d1-4567-95a0-488ea8ddd2cd"
           },
           {
-            "name": "PET-GEN_ID",
+            "name": "PETGEN_ID",
             "comment": "펫 성별_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -567,7 +504,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 79.29541015625,
+              "widthName": 75.68359375,
               "widthComment": 64.841796875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -575,9 +512,9 @@
             "id": "20de0d1e-5bf6-4d65-8d5a-73071aef8f8b"
           },
           {
-            "name": "PET-INF NAME",
+            "name": "PETINF_NAME",
             "comment": "펫 별 정보 이름",
-            "dataType": "INTEGER(500)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -590,9 +527,9 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 93.00634765625,
+              "widthName": 93.0126953125,
               "widthComment": 90.83544921875,
-              "widthDataType": 90.130859375,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
             "id": "1315cdbd-2e18-4117-ab2e-19f3235f346a"
@@ -600,10 +537,10 @@
         ],
         "ui": {
           "active": false,
-          "left": 1210.141,
-          "top": 771.3586,
-          "zIndex": 400,
-          "widthName": 120.92333984375,
+          "left": 589.9252,
+          "top": 654.4135,
+          "zIndex": 8,
+          "widthName": 124.54150390625,
           "widthComment": 61.2236328125,
           "color": "#FF9800"
         },
@@ -611,11 +548,11 @@
         "id": "1e375add-0dd6-41bf-b84e-a88fa91d8da9"
       },
       {
-        "name": "PET-DIARY-INFORMATION",
+        "name": "PET_DIARY_INFORMATION",
         "comment": "펫 다이어리 정보",
         "columns": [
           {
-            "name": "PET-INF_ID",
+            "name": "PETINF_ID",
             "comment": "펫별정보_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -630,7 +567,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 72.0654296875,
+              "widthName": 68.45361328125,
               "widthComment": 74.22998046875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -638,8 +575,8 @@
             "id": "1d8cbb5c-5452-4c65-bfc6-7105ff44eb37"
           },
           {
-            "name": "REG-ANI_ID",
-            "comment": "등록 펫_ID",
+            "name": "KEYFIGURE_ID",
+            "comment": "주요수치_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
@@ -653,61 +590,61 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 76.40087890625,
-              "widthComment": 64.841796875,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            },
-            "id": "df7b3e6b-ea85-4178-bb76-c981b17176a2"
-          },
-          {
-            "name": "NEUTRALIZATION_ID",
-            "comment": "중성화여부_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 133.21875,
-              "widthComment": 87.22998046875,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "0f6de613-7c24-4324-bfcd-c28aa0c88872"
-          },
-          {
-            "name": "KEY-FIGURE_ID",
-            "comment": "주요수치_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 100.490234375,
+              "widthName": 97.3544921875,
               "widthComment": 74.22998046875,
-              "widthDataType": 90.130859375,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
             "id": "f052b893-5141-4524-b85f-5e8ad990eac9"
           },
           {
-            "name": "DIARY-INF_ID",
+            "name": "KEYFIGUREINPUT",
+            "comment": "주요수지 입력",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 116.12451171875,
+              "widthComment": 83.61181640625,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "0f6de613-7c24-4324-bfcd-c28aa0c88872"
+          },
+          {
+            "name": "DIARYDATEOFPREPARATION",
+            "comment": "다이어리 작성일자",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 184.5078125,
+              "widthComment": 109.61181640625,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "87b719b8-d2a7-479a-bfb1-5c00b2f887cf"
+          },
+          {
+            "name": "DIARYINF_ID",
             "comment": "펫다이어리정보_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -722,7 +659,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 85.8017578125,
+              "widthName": 82.666015625,
               "widthComment": 113.22998046875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -732,10 +669,10 @@
         ],
         "ui": {
           "active": false,
-          "left": 458.0307,
-          "top": 1209.3283,
-          "zIndex": 428,
-          "widthName": 163.55419921875,
+          "left": 569.6967,
+          "top": 975.2857,
+          "zIndex": 9,
+          "widthName": 171.2666015625,
           "widthComment": 100.2236328125,
           "color": "#CDDC39"
         },
@@ -743,11 +680,11 @@
         "id": "651da9de-843a-4f0b-b412-cd9678ff9b79"
       },
       {
-        "name": "PET-GENDER",
+        "name": "PET_GENDER",
         "comment": "펫 성별",
         "columns": [
           {
-            "name": "PET-GEN_ID",
+            "name": "PETGEN_ID",
             "comment": "펫 성별_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -762,7 +699,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 79.29541015625,
+              "widthName": 75.68359375,
               "widthComment": 64.841796875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -770,7 +707,7 @@
             "id": "30f86f6e-ae51-4f3f-a80f-ec776a83f11b"
           },
           {
-            "name": "PET-GENDER NAME",
+            "name": "PETGENDER_NAME",
             "comment": "펫성별 이름",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -785,7 +722,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 127.68359375,
+              "widthName": 127.68994140625,
               "widthComment": 70.61181640625,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -795,10 +732,10 @@
         ],
         "ui": {
           "active": false,
-          "left": 1254.1417,
-          "top": 536.4163,
-          "zIndex": 450,
-          "widthName": 86.5126953125,
+          "left": 1167.4752,
+          "top": 643.0828,
+          "zIndex": 11,
+          "widthName": 90.130859375,
           "widthComment": 60,
           "color": "#FFC107"
         },
@@ -833,7 +770,7 @@
             "id": "3a5e011f-f6bc-4466-a535-745940dfb112"
           },
           {
-            "name": "SPECIES NAME",
+            "name": "SPECIES_NAME",
             "comment": "펫 종 이름",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -848,7 +785,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 99.525390625,
+              "widthName": 103.1435546875,
               "widthComment": 61.2236328125,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -858,9 +795,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1564.5933,
-          "top": 1484.6117,
-          "zIndex": 405,
+          "left": 1135.7681,
+          "top": 830.6922,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60,
           "color": "#8BC34A"
@@ -869,76 +806,13 @@
         "id": "fd7aa8d4-2b78-4dd1-8325-2a1321f5cdf1"
       },
       {
-        "name": "NEUTRALIZATION",
-        "comment": "중성화 여부",
-        "columns": [
-          {
-            "name": "NEUTRALIZATION_ID",
-            "comment": "중성화여부_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 133.21875,
-              "widthComment": 87.22998046875,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "bfc4fde2-48c4-459c-b52a-d21935b383ac"
-          },
-          {
-            "name": "NEUTRALIZATION NAME",
-            "comment": "중성화여부 이름",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 154.15966796875,
-              "widthComment": 96.61181640625,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "e84c2692-5be0-4de5-97f0-0b55370a4801"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 309.1468,
-          "top": 1474.9996,
-          "zIndex": 454,
-          "widthName": 112.98876953125,
-          "widthComment": 70.61181640625,
-          "color": "#4CAF50"
-        },
-        "visible": true,
-        "id": "104f28ac-b34b-4069-833d-46564c5d4038"
-      },
-      {
-        "name": "KEY-FIGURE",
+        "name": "KEY_FIGURE",
         "comment": "주요수치",
         "columns": [
           {
-            "name": "KEY-FIGURE_ID",
+            "name": "KEYFIGURE_ID",
             "comment": "주요수치_ID",
-            "dataType": "INTEGER(500)",
+            "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -951,56 +825,16 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 100.490234375,
+              "widthName": 97.3544921875,
               "widthComment": 74.22998046875,
-              "widthDataType": 90.130859375,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
             "id": "2078afed-2220-4fd0-9ef5-231ff20854f8"
           },
           {
-            "name": "KEY-FIGURE NAME",
+            "name": "KEYFIGURE_NAME",
             "comment": "주요수치 이름",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 121.43115234375,
-              "widthComment": 83.61181640625,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "a3698caf-2d69-4e7a-82d0-a85c813f4517"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 4.1955,
-          "top": 875.3604,
-          "zIndex": 430,
-          "widthName": 80.26025390625,
-          "widthComment": 60,
-          "color": "#009688"
-        },
-        "visible": true,
-        "id": "5aebc22f-c34f-411d-9202-d14c89d1509d"
-      },
-      {
-        "name": "PET-STATISTICS",
-        "comment": "펫 통계",
-        "columns": [
-          {
-            "name": "PET-INF_ID",
-            "comment": "펫별정보_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
@@ -1012,252 +846,34 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
+              "fk": false,
               "pfk": false,
-              "widthName": 72.0654296875,
-              "widthComment": 74.22998046875,
+              "widthName": 121.91357421875,
+              "widthComment": 83.61181640625,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
-            "id": "3d697cb5-ddcd-4422-b232-4c20062fe837"
-          },
-          {
-            "name": "AKF_ID",
-            "comment": "평균 주요수치_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 103.841796875,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "a3372095-e1ba-4b80-9f6f-1f7298328de7"
-          },
-          {
-            "name": "PERIOD_ID",
-            "comment": "기간_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 72.07177734375,
-              "widthComment": 60,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "ace54c91-8ed6-470a-b33e-3f39c4637ab0"
-          },
-          {
-            "name": "PET-ST_ID",
-            "comment": "펫 통계_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 67.736328125,
-              "widthComment": 64.841796875,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "624abebc-9d04-470f-8702-a105f35226f8"
+            "id": "a3698caf-2d69-4e7a-82d0-a85c813f4517"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1035.0021,
-          "top": 1518.1953,
-          "zIndex": 432,
-          "widthName": 104.0830078125,
+          "left": 4.1955,
+          "top": 875.3604,
+          "zIndex": 10,
+          "widthName": 84.3544921875,
           "widthComment": 60,
-          "color": "#F44336"
+          "color": "#009688"
         },
         "visible": true,
-        "id": "594581f0-5e99-443e-a1e1-ca3d5a9c64b2"
+        "id": "5aebc22f-c34f-411d-9202-d14c89d1509d"
       },
       {
-        "name": "AVERAGE-KEY-FIGURE",
-        "comment": "평균 주요수치",
-        "columns": [
-          {
-            "name": "AKF_ID",
-            "comment": "평균 주요수치_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 103.841796875,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "ef38f503-53a2-47c3-bab6-000a2218bb0f"
-          },
-          {
-            "name": "KEY-FIGURE_ID",
-            "comment": "주요수치_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 100.490234375,
-              "widthComment": 74.22998046875,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "97256974-e215-4cc1-83dc-43d8276fe465"
-          },
-          {
-            "name": "AKF NAME",
-            "comment": "평균 주요수치 이름",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 68.45361328125,
-              "widthComment": 113.2236328125,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "d02f397a-1df3-48e2-be92-867ff29e7c11"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 11.111,
-          "top": 1764.9166,
-          "zIndex": 441,
-          "widthName": 146.47900390625,
-          "widthComment": 83.61181640625,
-          "color": "#9C27B0"
-        },
-        "visible": true,
-        "id": "b855fbcc-54a9-40f5-9360-06b52f00b6f8"
-      },
-      {
-        "name": "PERIOD",
-        "comment": "기간",
-        "columns": [
-          {
-            "name": "PERIOD_ID",
-            "comment": "기간_ID",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 72.07177734375,
-              "widthComment": 60,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "4b3ef26f-8ad5-46c2-b089-62fe92161112"
-          },
-          {
-            "name": "PERIOD NAME",
-            "comment": "기간 이름",
-            "dataType": "INTEGER(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 93.0126953125,
-              "widthComment": 60,
-              "widthDataType": 90.130859375,
-              "widthDefault": 60
-            },
-            "id": "eb6c6fb4-dd30-4f47-b6d2-d709d302a2e0"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1050.0283,
-          "top": 1821.9725,
-          "zIndex": 435,
-          "widthName": 60,
-          "widthComment": 60,
-          "color": "#673AB7"
-        },
-        "visible": true,
-        "id": "e3ef3427-efb6-4c17-bec0-8126c70092a4"
-      },
-      {
-        "name": "COMMUNITY-LIST",
+        "name": "COMMUNITY_LIST",
         "comment": "커뮤니티 글 목록",
         "columns": [
           {
-            "name": "WRITING-GROUP_ID",
+            "name": "WRITINGGROUP_ID",
             "comment": "글분류_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -1272,7 +888,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 130.552734375,
+              "widthName": 126.2236328125,
               "widthComment": 61.22998046875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -1326,9 +942,9 @@
             "id": "f45465c5-969c-4627-a5ad-e872dc428fa3"
           },
           {
-            "name": "DATE-OF-PREPARATION",
+            "name": "DATEOFPREPARATION",
             "comment": "글 작성일자",
-            "dataType": "INTEGER(500)",
+            "dataType": "TIMESTAMP",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1341,15 +957,15 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 153.6708984375,
+              "widthName": 145.0126953125,
               "widthComment": 70.61181640625,
-              "widthDataType": 90.130859375,
+              "widthDataType": 76.87060546875,
               "widthDefault": 60
             },
             "id": "fe8828d1-85cc-4a65-b210-3cb9527be55b"
           },
           {
-            "name": "COM-LIST_ID",
+            "name": "COMLIST_ID",
             "comment": "커뮤니티 글 목록_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -1364,7 +980,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 84.341796875,
+              "widthName": 80.0126953125,
               "widthComment": 120,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -1374,10 +990,10 @@
         ],
         "ui": {
           "active": false,
-          "left": 1128.7781,
-          "top": 9.7788,
-          "zIndex": 390,
-          "widthName": 112.74755859375,
+          "left": 1121.0004,
+          "top": 88.667,
+          "zIndex": 15,
+          "widthName": 116.841796875,
           "widthComment": 100.2236328125,
           "color": "#9E9E9E"
         },
@@ -1385,11 +1001,11 @@
         "id": "98dd511e-b4a5-4bab-8c30-032a62c8f418"
       },
       {
-        "name": "WRITING-GROUP",
+        "name": "WRITING_GROUP",
         "comment": "글 분류",
         "columns": [
           {
-            "name": "WRITING-GROUP_ID",
+            "name": "WRITINGGROUP_ID",
             "comment": "글분류_ID",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -1404,7 +1020,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 130.552734375,
+              "widthName": 126.2236328125,
               "widthComment": 61.22998046875,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -1412,7 +1028,7 @@
             "id": "30eda96e-118c-4e1f-bdcd-e023d06cf681"
           },
           {
-            "name": "WRITING-GROUP NAME",
+            "name": "WRITINGGROUP_NAME",
             "comment": "글분류 이름",
             "dataType": "VARCHAR(500)",
             "default": "",
@@ -1427,7 +1043,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 151.49365234375,
+              "widthName": 150.78271484375,
               "widthComment": 70.61181640625,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
@@ -1437,10 +1053,10 @@
         ],
         "ui": {
           "active": false,
-          "left": 1154.1131,
-          "top": 277.6666,
-          "zIndex": 392,
-          "widthName": 110.32275390625,
+          "left": 1144.1132,
+          "top": 398.7769,
+          "zIndex": 14,
+          "widthName": 113.2236328125,
           "widthComment": 60,
           "color": "#795548"
         },
@@ -1456,9 +1072,9 @@
         "value": "○ 성별 이름\n\n  - 남성\n  - 여성",
         "ui": {
           "active": false,
-          "left": 137.7777777777777,
-          "top": 4.444444444444443,
-          "zIndex": 51,
+          "left": 185.55555555555557,
+          "top": 53.33333333333336,
+          "zIndex": 3,
           "width": 127,
           "height": 100
         },
@@ -1468,9 +1084,9 @@
         "value": "○통신사 이름\n\n   - SK 텔레콤\n   - KT\n   - LG U+\n   - SK 텔레콤 알뜰폰\n   - KT 알뜰폰\n   - LG U+ 알뜰폰 ",
         "ui": {
           "active": false,
-          "left": 4.444444444444439,
-          "top": 371.22222222222223,
-          "zIndex": 388,
+          "left": 322.2222222222219,
+          "top": 393.4444444444451,
+          "zIndex": 2,
           "width": 151,
           "height": 131
         },
@@ -1480,9 +1096,9 @@
         "value": "○ 글 분류 이름\n\n   - 자랑\n   - 병원\n   - 사료/간식\n   - 기타",
         "ui": {
           "active": false,
-          "left": 1645.5555555555572,
-          "top": 240.88888888888937,
-          "zIndex": 393,
+          "left": 1635.5555555555575,
+          "top": 372.0000000000005,
+          "zIndex": 4,
           "width": 127,
           "height": 100
         },
@@ -1492,9 +1108,9 @@
         "value": "○ 펫 성별 이름\n\n   - 수컷\n   - 암컷",
         "ui": {
           "active": false,
-          "left": 1717.555555555557,
-          "top": 516.1111111111129,
-          "zIndex": 451,
+          "left": 1629.7777777777803,
+          "top": 617.2222222222242,
+          "zIndex": 18,
           "width": 127,
           "height": 100
         },
@@ -1504,73 +1120,61 @@
         "value": "○ 펫 종 이름\n\n   - 개(강아지)\n   - 고양이\n   - 햄스터\n   - 슈가글라이더\n   - 고슴도치\n   - 기니피그\n   - 카멜레온\n   - 다람쥐\n   - 도마뱀\n   - 거북이\n   - 미어캣\n   - 오리\n   - 친칠라\n   - 라쿤\n   - 토끼\n   - 앵무새",
         "ui": {
           "active": false,
-          "left": 1824.4444444444423,
-          "top": 1120.44444444445,
-          "zIndex": 406,
+          "left": 1567.7777777777762,
+          "top": 804.8888888888947,
+          "zIndex": 17,
           "width": 127,
           "height": 310
         },
         "id": "ab4fbf4a-4638-49aa-926f-2fda16823662"
       },
       {
-        "value": "○ 기간 이름\n\n   - 1주일\n   - 1개월\n   - 3개월\n   - 6개월",
+        "value": "○ 주요수치 입력\n\n   - 몸무게: __(kg)\n   - 건식: __(g)\n   - 습식: __(g)\n   - 간식: __(g)\n   - 음수량: __(ml)\n   - 중성화 여부\n      □ 했음\n      □ 안했음",
         "ui": {
           "active": false,
-          "left": 1464.555555555558,
-          "top": 1801.3333333333355,
-          "zIndex": 436,
+          "left": 1133.3703700024446,
+          "top": 967.3148147228354,
+          "zIndex": 19,
           "width": 127,
-          "height": 100
-        },
-        "id": "b5575022-cb14-467b-ab91-718c882a586e"
-      },
-      {
-        "value": "○ 중성과 여부 이름\n\n   - 했음\n   - 안했음",
-        "ui": {
-          "active": false,
-          "left": 818.5555555555591,
-          "top": 1436.1111111111131,
-          "zIndex": 455,
-          "width": 127,
-          "height": 100
+          "height": 170
         },
         "id": "a617a03f-51e0-4258-9ea9-1fa88975f961"
       },
       {
-        "value": "○ 주요수치 이름\n\n   - 몸무게(kg)\n   - 건식(g)\n   - 습식(g)\n   - 간식(g)\n   - 음수량(ml)",
+        "value": "○ 주요수치 이름\n\n   - 몸무게(kg)\n   - 건식(g)\n   - 습식(g)\n   - 간식(g)\n   - 음수량(ml)\n   - 중성화 여부",
         "ui": {
           "active": false,
           "left": 12.999999999999996,
           "top": 989.5555555555594,
-          "zIndex": 377,
+          "zIndex": 1,
           "width": 127,
-          "height": 124
+          "height": 140
         },
         "id": "3856bf7c-c3f2-482b-8b72-15db770e227a"
-      },
-      {
-        "value": "○ 평균 주요수치 이름\n\n   - 평균 몸무게(kg)\n   - 평균 사료양(g)\n   - 평균 음수량(ml)",
-        "ui": {
-          "active": false,
-          "left": 487.77777777777703,
-          "top": 1838.4444444444455,
-          "zIndex": 442,
-          "width": 127,
-          "height": 100
-        },
-        "id": "0272115d-bf3a-42cb-b959-a08c2f00707d"
       },
       {
         "value": "○ 펫 별 정보 이름\n\n   - 아이디\n   - 이름\n   - 펫 이름\n   - 펫 나이\n   - 펫 생일\n   - 펫 정보 작성 일자",
         "ui": {
           "active": false,
-          "left": 1660.2222222222258,
-          "top": 763.6666666666687,
-          "zIndex": 403,
+          "left": 414.6666666666703,
+          "top": 633.6666666666684,
+          "zIndex": 5,
           "width": 146,
           "height": 139
         },
         "id": "fc956cd9-bdd8-42fb-9240-ba6a9902f974"
+      },
+      {
+        "value": "☆ 다이어리 작성은 하루에 1번만 가능하게 해야함 ☆",
+        "ui": {
+          "active": false,
+          "left": 671.4444444444451,
+          "top": 1152.444444444445,
+          "zIndex": 6,
+          "width": 321,
+          "height": 100
+        },
+        "id": "5662f7ce-640f-4c0c-86fc-b2c2c6d7a3f4"
       }
     ]
   },
@@ -1585,18 +1189,18 @@
           "columnIds": [
             "02b58a02-9763-45ec-ab7b-5c24c2fae9e9"
           ],
-          "x": 1210.141,
-          "y": 899.9836,
-          "direction": "left"
+          "x": 812.8236375,
+          "y": 825.9135,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "651da9de-843a-4f0b-b412-cd9678ff9b79",
           "columnIds": [
             "1d8cbb5c-5452-4c65-bfc6-7105ff44eb37"
           ],
-          "x": 966.4281609375,
-          "y": 1295.0783,
-          "direction": "right"
+          "x": 849.53996171875,
+          "y": 975.2857,
+          "direction": "top"
         },
         "constraintName": "fk_pet-information_to_pet-diary-information",
         "visible": true,
@@ -1611,18 +1215,18 @@
           "columnIds": [
             "30f86f6e-ae51-4f3f-a80f-ec776a83f11b"
           ],
-          "x": 1484.2637703125,
-          "y": 646.4163,
-          "direction": "bottom"
+          "x": 1167.4752,
+          "y": 698.0828,
+          "direction": "left"
         },
         "end": {
           "tableId": "1e375add-0dd6-41bf-b84e-a88fa91d8da9",
           "columnIds": [
             "20de0d1e-5bf6-4d65-8d5a-73071aef8f8b"
           ],
-          "x": 1433.036263671875,
-          "y": 771.3586,
-          "direction": "top"
+          "x": 1035.7220750000001,
+          "y": 697.2885,
+          "direction": "right"
         },
         "constraintName": "fk_pet-gender_to_pet-information",
         "visible": true,
@@ -1637,8 +1241,8 @@
           "columnIds": [
             "7b07d669-f08f-4ca2-be81-cf6c46da87b1"
           ],
-          "x": 721.76569296875,
-          "y": 61.3058,
+          "x": 767.6062570312499,
+          "y": 109.0831,
           "direction": "right"
         },
         "end": {
@@ -1663,8 +1267,8 @@
           "columnIds": [
             "c22c5748-5a2b-46ae-965c-4e322ae772ee"
           ],
-          "x": 445.0741421875,
-          "y": 305.9717,
+          "x": 506.46990625,
+          "y": 335.9716,
           "direction": "right"
         },
         "end": {
@@ -1689,8 +1293,8 @@
           "columnIds": [
             "3a5e011f-f6bc-4466-a535-745940dfb112"
           ],
-          "x": 1564.5933,
-          "y": 1539.6117,
+          "x": 1135.7681,
+          "y": 885.6922,
           "direction": "left"
         },
         "end": {
@@ -1698,9 +1302,9 @@
           "columnIds": [
             "9a41e4a4-e6d1-4567-95a0-488ea8ddd2cd"
           ],
-          "x": 1544.4838955078126,
-          "y": 942.8586,
-          "direction": "bottom"
+          "x": 1035.7220750000001,
+          "y": 783.0385,
+          "direction": "right"
         },
         "constraintName": "fk_species_to_pet-information",
         "visible": true,
@@ -1711,37 +1315,11 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "104f28ac-b34b-4069-833d-46564c5d4038",
-          "columnIds": [
-            "bfc4fde2-48c4-459c-b52a-d21935b383ac"
-          ],
-          "x": 563.097971875,
-          "y": 1474.9996,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "651da9de-843a-4f0b-b412-cd9678ff9b79",
-          "columnIds": [
-            "0f6de613-7c24-4324-bfcd-c28aa0c88872"
-          ],
-          "x": 712.22943046875,
-          "y": 1380.8283,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_neutralization_to_pet-diary-information",
-        "visible": true,
-        "id": "ef625e41-3b28-432a-8265-26e8873248b6"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "5aebc22f-c34f-411d-9202-d14c89d1509d",
           "columnIds": [
             "2078afed-2220-4fd0-9ef5-231ff20854f8"
           ],
-          "x": 466.369328125,
+          "x": 471.66962109375,
           "y": 930.3604,
           "direction": "right"
         },
@@ -1750,8 +1328,8 @@
           "columnIds": [
             "f052b893-5141-4524-b85f-5e8ad990eac9"
           ],
-          "x": 458.0307,
-          "y": 1295.0783,
+          "x": 569.6967,
+          "y": 1061.0357,
           "direction": "left"
         },
         "constraintName": "fk_key-figure_to_pet-diary-information",
@@ -1763,116 +1341,12 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "1e375add-0dd6-41bf-b84e-a88fa91d8da9",
-          "columnIds": [
-            "02b58a02-9763-45ec-ab7b-5c24c2fae9e9"
-          ],
-          "x": 1321.5886318359376,
-          "y": 942.8586,
-          "direction": "bottom"
-        },
-        "end": {
-          "tableId": "594581f0-5e99-443e-a1e1-ca3d5a9c64b2",
-          "columnIds": [
-            "3d697cb5-ddcd-4422-b232-4c20062fe837"
-          ],
-          "x": 1253.93325234375,
-          "y": 1518.1953,
-          "direction": "top"
-        },
-        "constraintName": "fk_pet-information_to_pet-statistics",
-        "visible": true,
-        "id": "5cfe1d37-101f-406d-a21a-48ad61503425"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "5aebc22f-c34f-411d-9202-d14c89d1509d",
-          "columnIds": [
-            "2078afed-2220-4fd0-9ef5-231ff20854f8"
-          ],
-          "x": 235.2824140625,
-          "y": 985.3604,
-          "direction": "bottom"
-        },
-        "end": {
-          "tableId": "b855fbcc-54a9-40f5-9360-06b52f00b6f8",
-          "columnIds": [
-            "97256974-e215-4cc1-83dc-43d8276fe465"
-          ],
-          "x": 246.53336328125,
-          "y": 1764.9166,
-          "direction": "top"
-        },
-        "constraintName": "fk_key-figure_to_average-key-figure",
-        "visible": true,
-        "id": "c99790d1-4816-42b0-a621-821a28d64a6d"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "b855fbcc-54a9-40f5-9360-06b52f00b6f8",
-          "columnIds": [
-            "ef38f503-53a2-47c3-bab6-000a2218bb0f"
-          ],
-          "x": 481.9557265625,
-          "y": 1830.1666,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "594581f0-5e99-443e-a1e1-ca3d5a9c64b2",
-          "columnIds": [
-            "a3372095-e1ba-4b80-9f6f-1f7298328de7"
-          ],
-          "x": 1035.0021,
-          "y": 1593.6953,
-          "direction": "left"
-        },
-        "constraintName": "fk_average-key-figure_to_pet-statistics",
-        "visible": true,
-        "id": "8db07a96-7f7f-44b6-b22c-d4a64910d31c"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "e3ef3427-efb6-4c17-bec0-8126c70092a4",
-          "columnIds": [
-            "4b3ef26f-8ad5-46c2-b089-62fe92161112"
-          ],
-          "x": 1255.10007734375,
-          "y": 1821.9725,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "594581f0-5e99-443e-a1e1-ca3d5a9c64b2",
-          "columnIds": [
-            "ace54c91-8ed6-470a-b33e-3f39c4637ab0"
-          ],
-          "x": 1253.93325234375,
-          "y": 1669.1953,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_period_to_pet-statistics",
-        "visible": true,
-        "id": "7afe8051-4c38-4256-9cc4-745ff9eaa078"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "279ef056-1cb5-41bb-9488-2d9d173e5b51",
           "columnIds": [
             "568317d5-6d23-403d-8c2a-62556f46b2f0"
           ],
           "x": 1024.86078828125,
-          "y": 324.19550000000004,
+          "y": 392.69550000000004,
           "direction": "right"
         },
         "end": {
@@ -1880,8 +1354,8 @@
           "columnIds": [
             "f45465c5-969c-4627-a5ad-e872dc428fa3"
           ],
-          "x": 1128.7781,
-          "y": 95.5288,
+          "x": 1121.0004,
+          "y": 174.417,
           "direction": "left"
         },
         "constraintName": "fk_member_to_community-list",
@@ -1897,8 +1371,8 @@
           "columnIds": [
             "30eda96e-118c-4e1f-bdcd-e023d06cf681"
           ],
-          "x": 1396.140199609375,
-          "y": 277.6666,
+          "x": 1385.784830859375,
+          "y": 398.7769,
           "direction": "top"
         },
         "end": {
@@ -1906,8 +1380,8 @@
           "columnIds": [
             "b6579b1d-53be-495f-9223-bba0e2c2befc"
           ],
-          "x": 1396.587914453125,
-          "y": 181.2788,
+          "x": 1384.481112890625,
+          "y": 260.16700000000003,
           "direction": "bottom"
         },
         "constraintName": "fk_writing-group_to_community-list",
@@ -1919,74 +1393,22 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "db28ae7b-2520-41d2-9ee5-ba152efa6885",
-          "columnIds": [
-            "be716f29-2a84-4162-b13d-72f8ab8327a4"
-          ],
-          "x": 814.647403125,
-          "y": 882.5714,
-          "direction": "bottom"
-        },
-        "end": {
-          "tableId": "651da9de-843a-4f0b-b412-cd9678ff9b79",
-          "columnIds": [
-            "df7b3e6b-ea85-4178-bb76-c981b17176a2"
-          ],
-          "x": 712.22943046875,
-          "y": 1209.3283,
-          "direction": "top"
-        },
-        "constraintName": "fk_registered-animal_to_pet-diary-information",
-        "visible": true,
-        "id": "be78c3d7-7567-4839-8632-d92bbeceab91"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "db28ae7b-2520-41d2-9ee5-ba152efa6885",
-          "columnIds": [
-            "be716f29-2a84-4162-b13d-72f8ab8327a4"
-          ],
-          "x": 814.647403125,
-          "y": 772.5714,
-          "direction": "top"
-        },
-        "end": {
-          "tableId": "279ef056-1cb5-41bb-9488-2d9d173e5b51",
-          "columnIds": [
-            "d39c5dcc-b54a-4164-ab4b-9e52cbed2fad"
-          ],
-          "x": 814.235544140625,
-          "y": 529.6955,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_registered-animal_to_member",
-        "visible": true,
-        "id": "5106f790-8e3c-43a8-8ae4-a0469e710bbc"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "279ef056-1cb5-41bb-9488-2d9d173e5b51",
           "columnIds": [
             "568317d5-6d23-403d-8c2a-62556f46b2f0"
           ],
-          "x": 1024.86078828125,
-          "y": 461.19550000000004,
-          "direction": "right"
+          "x": 814.235544140625,
+          "y": 529.6955,
+          "direction": "bottom"
         },
         "end": {
           "tableId": "1e375add-0dd6-41bf-b84e-a88fa91d8da9",
           "columnIds": [
             "cee5d789-9ee6-4a2d-adb0-f864c2e7f52f"
           ],
-          "x": 1210.141,
-          "y": 814.2336,
-          "direction": "left"
+          "x": 812.8236375,
+          "y": 654.4135,
+          "direction": "top"
         },
         "constraintName": "fk_member_to_pet-information",
         "visible": true,
