@@ -73,9 +73,9 @@ public class UserService
     }
 
     // 입력
-    public Object insert(Map dataMap)
+    public Object createUser(Map dataMap)
     {
-        String sqlMapId = "User.insert";
+        String sqlMapId = "User.create";
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }

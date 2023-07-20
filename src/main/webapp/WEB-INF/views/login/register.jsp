@@ -18,7 +18,7 @@
     <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
     <!-- /header -->
     <!-- body -->
-    <form action="/user/insert" method="post">
+    <form action="/user/create" method="post">
     <div class="container my-5">
         <div class="mb-3">
             <label for="id" class="form-label">아이디</label>
