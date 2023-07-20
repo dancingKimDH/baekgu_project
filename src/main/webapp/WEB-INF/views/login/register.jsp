@@ -93,10 +93,7 @@
                         <input type="checkbox" class="form-check-input" id="accept">
                     </div>
                     <div class="d-grid gap-2">
-                        <button type="submit" class="register_box">회원가입</button>
-                    </div>
-                    <div>
-                        <input type="text" name="MEMBER_ID">
+                        <button id="myButton" type="submit" class="register_box" name="MEMBER_ID" onclick="member()">회원가입</button>
                     </div>
                 </div>
             </form>
