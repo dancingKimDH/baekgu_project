@@ -65,7 +65,7 @@
                             
                             <div> <input type="text" name="PETINF_ID"></div>
                             <div> <input type="text" name="MEMBER_ID"></div>
-                            <div> <input type="text" name="PETBIRTHDAY"></div>
+
                         </div>
                     </div>
                 </div>
