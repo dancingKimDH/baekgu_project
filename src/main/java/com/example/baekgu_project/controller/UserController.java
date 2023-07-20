@@ -15,31 +15,13 @@ import com.example.baekgu_project.service.UserService;
 @RequestMapping("/user")
 public class UserController
 {
-    int memNum = 1;
-
     @Autowired
     UserService UserService;
 
-    @PostMapping("/insert")
-    public ResponseEntity insert(@RequestBody Map paramMap)
+    @PostMapping("/create")
+    public ResponseEntity createUserInformation(@RequestBody Map paramMap)
     {
-        String member = "M-";
-
-        String id = (String) paramMap.get("id");
-        String password = (String) paramMap.get("password");
-        String email = (String) paramMap.get("email");
-        String name = (String) paramMap.get("name");
-        String gender = (String) paramMap.get("gender");
-        String birth = (String) paramMap.get("birth");
-        String telecom = (String) paramMap.get("telecom");
-        String number = (String) paramMap.get("number");
-        String stringNumber = Integer.toString(memNum);
-        member = member+stringNumber;
-        member = (String) paramMap.get("MEMBER_ID");
-
-        memNum = memNum + 1;
-
-        Object result = UserService.insert(paramMap);
+        Object result = UserService.createUser(paramMap);
         return ResponseEntity.ok().body(result);
     }
 }
