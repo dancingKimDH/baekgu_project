@@ -180,6 +180,6 @@ function member()
 {
   let stringNumber = number.toString();
   let member_ID = "M-" + stringNumber;
-  document.getElementById('myButton').value = member_ID;
+  document.getElementById('register').value = member_ID;
   number = number + 1;
 }
