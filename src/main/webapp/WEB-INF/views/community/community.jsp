@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/community.css">
+    <script src="/resources/static/js/community.js"></script>
     <title>My Pet Community</title>
 </head>
 
@@ -16,6 +17,8 @@
     <!-- header -->
     <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
     <!-- /header -->
+    <% HashMap params=(HashMap)request.getAttribute("params"); String searchStr=(String)params.getOrDefault("search", ""
+        ); HashMap result=(HashMap)request.getAttribute("result"); %>
     <!-- body -->
     <div class="community main">
         <div class="container" style="display: inline-block; margin: 20px;">
@@ -33,8 +36,13 @@
                             <li class="dropdown-item">기타</li>
                         </ul>
                     </div>
-                    <input type="text" title="검색어 입력" class="form-control rounded-pill" placeholder="" value="" id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
-                    <button class="rounded-pill" type="button" onclick="" style="margin-left: 10px; margin-right: 10px;">
+                    <select class="form-select" name="search">
+                        <option>Select an option...</option>
+                        <option value="TITLE" <%=(searchStr.equals("YEAR")) ? "selected" : "" %>>TITLE</option>
+                        <option value="NAME" <%=(searchStr.equals("CAR_NAME")) ? "selected" : "" %>>CAR_NAME</option>
+                    </select>
+                    <input type="text" name="words" class="form-control rounded-pill" placeholder="Search..." value='<%= params.getOrDefault("words", "") %>' id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
+                    <button class="rounded-pill" formmethod="get" type="button" formaction="/community/map/selectSearch" style="margin-left: 10px; margin-right: 10px;">
                         <img src="/images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
                     </button>
                 </div>
@@ -53,148 +61,43 @@
                         </thead>
 <!-- 게시글 테이블 -->
                         <tbody id="ommunityTableBody">
-                            <form>
+                            <% ArrayList resultList=(ArrayList)result.get("resultList"); 
+                            for(int i=0; i < resultList.size(); i=i+1){
+                                HashMap record=(HashMap)resultList.get(i); %>
                                 <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
                                 <tr>
-                                    <td>1</td>
-                                    <td>자랑</td>
+                                    <td>No.</td>
+                                    <td><%= record.get("WRITINGGROUP_NAME") %></td>
                                     <td class="subject">
-                                        <a href="" class="text-decoration-none">꽃챌린지</a>
+                                    <a href="" class="text-decoration-none"><%= record.get("TITLE") %></a>
                                     </td>
-                                    <td>ba****</td>
-                                    <td>2023-05-10</td>
+                                    <td><%= record.get("NAME") %></td>
+                                    <td><%= record.get("DATEOFPREPARATION") %></td>
                                 </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>2</td>
-                                    <td>병원</td>
-                                    <td class="subject">
-                                        <a href="" class="text-decoration-none">신도림역 근처 괜찮은 고양이 병원 있을까요?</a>
-                                    </td>
-                                    <td>ap***</td>
-                                    <td>2023-05-15</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>3</td>
-                                <td>병원</td>
-                                <td class="subject">
-                                    <a href="" class="text-decoration-none">여의도역 근처에 고슴도치
-                                        진료하는 병원 있을까요?</a>
-                                </td>
-                                <td>or****</td>
-                                <td>2023-06-02</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>4</td>
-                                <td>사료/간식</td>
-                                <td class="subject">
-                                    <a href="" class="text-decoration-none">강아지 사료
-                                        추천받아요</a>
-                                </td>
-                                <td>pi*****</td>
-                                <td>2023-06-10</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>5</td>
-                                <td>자랑</td>
-                                <td class="subject">
-                                    <a href="" class="text-decoration-none">물속성 고양이</a>
-                                </td>
-                                <td>be****</td>
-                                <td>2023-06-16</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>6</td>
-                                <td>기타</td>
-                                <td class="subject">
-                                    <a href="" class="text-decoration-none">펫박람회
-                                        추천템!!</a>
-                                </td>
-                                <td>on****</td>
-                                <td>2023-06-16</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>7</td>
-                                    <td>사료/간식</td>
-                                    <td class="subject">
-                                        <a href="" class="text-decoration-none">앵무새 간식은 뭐가
-                                            좋을까요?</a>
-                                    </td>
-                                    <td>an*****</td>
-                                    <td>2023-06-20</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>8</td>
-                                    <td>병원</td>
-                                    <td class="subject">
-                                        <a href="" class="text-decoration-none">홍제역 근처에 유기동물
-                                            케어해주는 병원이 있을까요?</a>
-                                    </td>
-                                    <td>sa***</td>
-                                    <td>2023-06-24</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>9</td>
-                                <td>자랑</td>
-                                <td class="subject">
-                                    <a href="" class="text-decoration-none">취미로 수제간식
-                                        만들기</a>
-                                </td>
-                                <td>co****</td>
-                                <td>2023-06-29</td>
-                                </tr>
-                            </form>
-                            <form>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
-                                    <td>10</td>
-                                <td>기타</td>
-                                <td class="subject">
-                                    <a href="" class="text-decoration-none">제가 잘때 토끼가 자꾸
-                                        머리카락을 먹는데 어떻게해야...??</a>
-                                </td>
-                                <td>ra****</td>
-                                <td>2023-07-03</td>
-                                </tr>
-                            </form>
+                                <% } %>
 <!-- 페이지 넘버링 -->
                         </tbody>
                     </table>
+                    <%
+                    Paginations paginations = (Paginations)result.get("paginations"); 
+                    %>
+                    <div>총 갯수 : <%= paginations.getTotalCount() %></div>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
-                            <li style="width: 180px;"></li>
-                            <li class="page-item"><a class="page-link" href="">First</a></li>
-                            <li class="page-item"><a class="page-link" href="">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="">1</a></li>
-                            <li class="page-item"><a class="page-link" href="">2</a></li>
-                            <li class="page-item"><a class="page-link" href="">3</a></li>
-                            <li class="page-item"><a class="page-link" href="">Next</a></li>
-                            <li class="page-item"><a class="page-link" href="">Last</a></li>
-                            <li style="width: 180px;"></li>
-                            <li><a href="/main/community_write" class="page-link text-decoration-none" style="background-color: #0d6efd; color: white">글 작성</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+
+                            <%
+                            for(int i=paginations.getBlockStart();i <= paginations.getBlockEnd(); i=i+1){
+                            %>
+                            <li class="page-item">
+                                <a class="page-link" href="/community/map/selectSearch?currentPage=<%= i %>"><%= i %></a>
+                            </li>
+                            <%
+                            }
+                            %>
+                            <li class="page-item">
+                                <a class="page-link" href="/community/map/selectSearch?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>

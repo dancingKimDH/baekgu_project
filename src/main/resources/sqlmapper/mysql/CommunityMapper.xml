@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Community">
+    <!-- 검색 with pagination -->
+	<select id="selectSearch" parameterType="Map" resultType="Map">
+        SELECT WRITINGGROUP_NAME, TITLE, NAME , DATEOFPREPARATION
+        FROM ((COMMUNITY_LIST
+        INNER JOIN WRITING_GROUP
+        ON COMMUNITY_LIST.WRITINGGROUP_ID = WRITING_GROUP.WRITINGGROUP_ID)
+        INNER JOIN MEMBER
+        ON COMMUNITY_LIST.MEMBER_ID = MEMBER.MEMBER_ID)
+        ORDER BY DATEOFPREPARATION DESC;
+        <choose>
+            <when test="search == 'TITLE'">
+            and TITLE like CONCAT(#{words}, '%')
+            </when>
+            <when test="search == 'NAME'">
+            and NAME like CONCAT(#{words}, '%')
+            </when>
+        </choose>  
+        limit #{pageBegin}, #{pageScale} 
+        ;
+	</select>
+
+    <!-- total count -->
+	<select id="selectTotal" parameterType="Map" resultType="int">
+        SELECT COUNT(*)
+        FROM ((COMMUNITY_LIST
+        INNER JOIN WRITING_GROUP
+        ON COMMUNITY_LIST.WRITINGGROUP_ID = WRITING_GROUP.WRITINGGROUP_ID)
+        INNER JOIN MEMBER
+        ON COMMUNITY_LIST.MEMBER_ID = MEMBER.MEMBER_ID)
+        ORDER BY DATEOFPREPARATION DESC;
+	</select>
+</mapper>

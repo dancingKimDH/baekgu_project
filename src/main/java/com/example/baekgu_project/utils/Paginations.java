@@ -1,4 +1,4 @@
-package com.example.baekgu_project.util;
+package com.example.baekgu_project.utils;
 
 public class Paginations {
 	private int pageScale = 10; // 페이지당 게시물 수

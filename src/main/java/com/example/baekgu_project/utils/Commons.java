@@ -1,4 +1,4 @@
-package com.example.baekgu_project.util;
+package com.example.baekgu_project.utils;
 
 import java.util.UUID;
 
