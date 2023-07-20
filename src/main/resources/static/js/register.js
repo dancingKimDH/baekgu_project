@@ -2,7 +2,7 @@
 function phoneNumber()
 {
     const number = document.getElementById("number").value
-    if(number.length === 11)
+    if(number.length === 13)
     {
       document.getElementById("sendMessage").focus();
       document.getElementById("sendMessage");
