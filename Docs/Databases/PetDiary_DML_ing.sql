@@ -44,11 +44,9 @@ VALUES
 INSERT INTO KEY_FIGURE (KEYFIGURE_ID, KEYFIGURE_NAME)
 VALUES
   ('FN-01', '몸무게(kg)'),
-  ('FN-02', '건식(g)'),
-  ('FN-03', '습식(g)'),
-  ('FN-04', '간식(g)'),
-  ('FN-05', '음수량(ml)'),
-  ('FN-06', '중성화 여부');
+  ('FN-02', '식사량(g)'),
+  ('FN-03', '음수량(ml)'),
+  ('FN-04', '중성화 여부');
 
 -- WRITING_GROUP 테이블 데이터 
 INSERT INTO WRITING_GROUP (WRITINGGROUP_ID, WRITINGGROUP_NAME)
@@ -59,10 +57,24 @@ VALUES
   ('C-04', '기타');
 
 -- MEMBER 테이블 데이터
-INSERT INTO MEMBER (ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM, REGANI_ID, MEMBER_ID)
+----- GENDER_ID는 GENDER 테이블, TELECOM_ID는 TELECOM 테이블, MEMBER_ID=UNIQUE_ID
+INSERT INTO MEMBER (ID, PW, EMAIL, `NAME`, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM, REGANI_ID, MEMBER_ID)
 VALUES
-  ('user123', 'password123', 'user123@example.com', '홍길동', '1', 19900101, '1', 01012345678, 'pet123', 'mem001'),
-  ('user456', 'password456', 'user456@example.com', '김영희', '2', 19851205, '2', 01098765432, 'pet456', 'mem002');
+  ('SparkleGazer89', 'KpW4$9s!', 'SparkleGazer89@email.com', '김영수', '남성', '19850712',	'SK텔레콤', '010-1234-5678', 'M-01'), 
+  ('MidnightWhisper21',	'TrL7@2h#',	'MidnightWhisper21@email.com	이지현	여성	1992년 3월 25일	KT	010-2345-6789	M-02'), 
+  ('SapphireSkywalker', 'HnY6%5r@',	'SapphireSkywalker@email.com	박민준	남성	1988년 9월 5일	LG유플러스	010-3456-7890	M-03'), 
+  ('LunaTideSurfer', 'WqB3!8f$', 'LunaTideSurfer@email.com	최서영	여성	1995년 12월 18일	SK텔레콤	010-4567-8901	M-04'), 
+  ('StarlightDreamer77', 'SdF2@4a#',  'StarlightDreamer77@email.com	허승희	여성	1989년 2월 1일	KT	010-5678-9012	M-05'), 
+  ('CrimsonPhoenix22', 'GbE7!9q#', 'CrimsonPhoenix22@email.com	이민우	남성	1991년 11월 9일	LG유플러스	010-6789-0123	M-06'), 
+  ('AquaMistWanderer', 'OpP5$2j!', 'AquaMistWanderer@email.com	장지현	여성	1987년 4월 29일	SK텔레콤	010-7890-1234	M-07'), 
+  ('EmberEclipse55', 'VnM1$6l@', 'EmberEclipse55@email.com	정민석	남성	1994년 8월 14일	KT	010-8901-2345	M-08'), 
+  ('VelvetMystery33', 'XwR9%7z!', 'VelvetMystery33@email.com	윤지영	여성	1997년 6월 7일	LG유플러스	010-9012-3456	M-09'), 
+  ('AzureMysticBlaze', 'QbT4@3e!', 'AzureMysticBlaze@email.com	김민재	남성	1990년 10월 3일	SK텔레콤	010-0123-4567	M-10');
+
+
+
+
+
 
 
 -- community_list 테이블 데이터 
