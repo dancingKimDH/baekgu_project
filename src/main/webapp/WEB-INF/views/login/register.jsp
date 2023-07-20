@@ -18,48 +18,48 @@
     <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
     <!-- /header -->
     <!-- body -->
-    <form action="">
+    <form action="/user/insert" method="post">
     <div class="container my-5">
         <div class="mb-3">
             <label for="id" class="form-label">아이디</label>
-            <input type="text" class="form-control" id="id" placeholder="아이디를 입력하세요.">
+            <input type="text" name="ID" class="form-control" id="id" placeholder="아이디를 입력하세요.">
             <div id="idError" class="error"></div>
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">비밀번호</label>
-            <input type="password" class="form-control" id="password" placeholder="비밀번호를 입력하세요.">
+            <input type="password" name="PW" class="form-control" id="password" placeholder="비밀번호를 입력하세요.">
             <div id="passwordError" class="error"></div>
         </div>
         <div class="mb-3">
             <label for="passwordCheck" class="form-label">비밀번호 재입력</label>
-            <input type="passwordCheck" class="form-control" id="passwordCheck" placeholder="비밀번호를 다시 입력하세요.">
+            <input type="password" class="form-control" id="passwordCheck" placeholder="비밀번호를 다시 입력하세요.">
             <div id="passwordCheckError" class="error"></div>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">이메일</label>
-            <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요.">
+            <input type="email" name="EMAIL" class="form-control" id="email" placeholder="이메일을 입력하세요.">
             <div id="emailError" class="error"></div>
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">이름</label>
-            <input type="text" class="form-control" id="name" placeholder="이름을 입력하세요.">
+            <input type="text" name="NAME" class="form-control" id="name" placeholder="이름을 입력하세요.">
             <div id="nameError" class="error"></div>
         </div>
         <div class="mb-3">
             <label for="gender" class="form-label">성별</label>
-            <select class="form-select" id="gender">
+            <select class="form-select" id="gender" name="GENDER_ID">
                 <option value="male">남성</option>
                 <option value="female">여성</option>
             </select>
         </div>
         <div class="mb-3">
             <label for="birth" class="form-label">생년월일</label>
-            <input type="text" class="form-control" id="birth" value maxlength="8" placeholder="생년월일 8자리">
+            <input type="text" name="BIRTHDATE" class="form-control" id="birth" value maxlength="8" placeholder="생년월일 8자리">
             <div id="birthError" class="error"></div>
         </div>
         <div class="mb-3">
             <label for="telecom" class="form-label">통신사</label>
-            <select class="form-select" id="telecom">
+            <select class="form-select" name="TELECOM_ID" id="telecom">
                 <option value="skt">SKT</option>
                 <option value="kt">KT</option>
                 <option value="lgu">LG U+</option>
@@ -70,7 +70,7 @@
         </div>
         <div class="mb-3">
             <label for="number" class="form-label">휴대폰번호</label>
-            <input type="text" class="form-control" id="number" maxlength="11" placeholder="휴대폰번호를 입력하세요." oninput="phoneNumber()">
+            <input type="text" name="PHONENUM" class="form-control" id="number" maxlength="11" placeholder="휴대폰번호를 입력하세요." oninput="phoneNumber()">
         </div>
         <div class="auth button_box">
             <div id="certificationNumber">000000</div>
