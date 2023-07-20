@@ -70,7 +70,7 @@
         </div>
         <div class="mb-3">
             <label for="number" class="form-label">휴대폰번호</label>
-            <input type="text" name="PHONENUM" class="form-control" id="number" maxlength="11" placeholder="휴대폰번호를 입력하세요." oninput="phoneNumber()">
+            <input type="text" name="PHONENUM" class="form-control" id="number" maxlength="13" placeholder="휴대폰번호를 입력하세요." oninput="phoneNumber()">
         </div>
         <div class="auth button_box">
             <div id="certificationNumber">000000</div>
