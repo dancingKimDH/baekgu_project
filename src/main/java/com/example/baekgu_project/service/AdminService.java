@@ -1,5 +1,6 @@
 package com.example.baekgu_project.service;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,16 +11,15 @@ import com.example.baekgu_project.dao.SharedDao;
 
 @Service
 @Transactional
-public class UserService
-{
+public class AdminService {
+
     @Autowired
     SharedDao sharedDao;
 
-    // 입력
-    public Object createUser(Map dataMap)
-    {
-        String sqlMapId = "User.create";
-        Object result = sharedDao.insert(sqlMapId, dataMap);
+    public Object selectAllMember(Map dataMap) {
+        String sqlMapId = "AdminMapper.selectTotal";
+        Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
+
 }

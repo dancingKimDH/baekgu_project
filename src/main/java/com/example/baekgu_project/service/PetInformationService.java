@@ -16,7 +16,7 @@ public class PetInformationService {
     SharedDao sharedDao;
 
     public Object insertPetInformation(Map dataMap) {
-        String sqlMapId = "MemberManage.newpetinsert";
+        String sqlMapId = "MemberManageMapper.newpetinsert";
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }

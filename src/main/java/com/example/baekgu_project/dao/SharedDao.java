@@ -37,5 +37,7 @@ public class SharedDao {
     public Object delete(String sqlMapId, Object dataMap){
         Object result = sqlSessionTemplate.delete(sqlMapId, dataMap);
         return result;
-    }    
+    } 
+    
+
 }
