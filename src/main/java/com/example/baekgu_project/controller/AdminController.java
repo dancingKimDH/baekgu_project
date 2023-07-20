@@ -19,7 +19,7 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
-    @GetMapping("/admin_main.jsp") 
+    @GetMapping("/admin_main") 
     public ResponseEntity showMemberList(@RequestParam Map paramMap) {
     Object result = adminService.selectAllMember(paramMap);
     return ResponseEntity.ok().body(result);

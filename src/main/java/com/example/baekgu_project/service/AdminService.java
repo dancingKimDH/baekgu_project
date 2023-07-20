@@ -1,5 +1,6 @@
 package com.example.baekgu_project.service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +19,9 @@ public class AdminService {
 
     public Object selectAllMember(Map dataMap) {
         String sqlMapId = "AdminMapper.selectTotal";
-        Object result = sharedDao.getList(sqlMapId, dataMap);
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+             
         return result;
     }
 
