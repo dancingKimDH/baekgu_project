@@ -30,7 +30,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="gender" class="form-label">성별</label>
-                                <select class="form-select" id="gender">
+                                <select class="form-select" id="gender" name="PETGENDER_NAME">
                                     <option value="PG-01" >남자</option>
                                     <option value="PG-02" >여자</option>
                                 </select>

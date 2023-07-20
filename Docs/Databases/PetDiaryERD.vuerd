@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -159,
-    "scrollLeft": -5,
+    "scrollTop": 0,
+    "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -49,7 +49,7 @@
           {
             "name": "ID",
             "comment": "아이디",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -72,7 +72,7 @@
           {
             "name": "PW",
             "comment": "비밀번호",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -95,7 +95,7 @@
           {
             "name": "EMAIL",
             "comment": "이메일",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -118,7 +118,7 @@
           {
             "name": "NAME",
             "comment": "이름",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -141,7 +141,7 @@
           {
             "name": "GENDER_ID",
             "comment": "성별_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -164,7 +164,7 @@
           {
             "name": "BIRTHDATE",
             "comment": "생년월일",
-            "dataType": "INTEGER(250)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -179,7 +179,7 @@
               "pfk": false,
               "widthName": 74.47119140625,
               "widthComment": 60,
-              "widthDataType": 90.130859375,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
             "id": "31e2ed2c-9e64-476d-802e-909f1fcdd525"
@@ -187,7 +187,7 @@
           {
             "name": "TELECOM_ID",
             "comment": "통신사_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -210,7 +210,7 @@
           {
             "name": "PHONENUM",
             "comment": "휴대폰번호",
-            "dataType": "INTEGER(250)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -225,7 +225,7 @@
               "pfk": false,
               "widthName": 77.83544921875,
               "widthComment": 67,
-              "widthDataType": 90.130859375,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
             "id": "74485798-fe2a-4f01-8cae-152f9c1a299f"
@@ -233,7 +233,7 @@
           {
             "name": "MEMBER_ID",
             "comment": "가입회원_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -258,7 +258,7 @@
           "active": false,
           "left": 603.6103,
           "top": 255.6955,
-          "zIndex": 20,
+          "zIndex": 17,
           "widthName": 60,
           "widthComment": 60,
           "color": "#2196F3"
@@ -273,7 +273,7 @@
           {
             "name": "GENDER_ID",
             "comment": "성별_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -321,7 +321,7 @@
           "active": false,
           "left": 343.2503,
           "top": 54.0831,
-          "zIndex": 14,
+          "zIndex": 11,
           "widthName": 60,
           "widthComment": 60,
           "color": "#03A9F4"
@@ -336,7 +336,7 @@
           {
             "name": "TELECOM_ID",
             "comment": "통신사_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -384,7 +384,7 @@
           "active": false,
           "left": 64.2785,
           "top": 280.9716,
-          "zIndex": 10,
+          "zIndex": 8,
           "widthName": 64.841796875,
           "widthComment": 60,
           "color": "#607D8B"
@@ -422,7 +422,7 @@
           {
             "name": "MEMBER_ID",
             "comment": "가입회원_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -489,8 +489,8 @@
             "id": "20de0d1e-5bf6-4d65-8d5a-73071aef8f8b"
           },
           {
-            "name": "PETINF_NAME",
-            "comment": "펫 별 정보 이름",
+            "name": "PETNAME",
+            "comment": "펫 이름",
             "dataType": "VARCHAR(500)",
             "default": "",
             "option": {
@@ -504,19 +504,65 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 93.0126953125,
-              "widthComment": 90.83544921875,
+              "widthName": 64.841796875,
+              "widthComment": 60,
               "widthDataType": 94.94873046875,
               "widthDefault": 60
             },
             "id": "1315cdbd-2e18-4117-ab2e-19f3235f346a"
+          },
+          {
+            "name": "PETAGE",
+            "comment": "펫 나이",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "c4841561-21a2-4d64-a88a-bb18f8463005"
+          },
+          {
+            "name": "PETBIRTHDAY",
+            "comment": "펫생일",
+            "dataType": "VARCHAR(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 91.81298828125,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "45302327-56f9-4c02-ae33-0d0cfae8aef9"
           }
         ],
         "ui": {
           "active": false,
           "left": 589.9252,
           "top": 654.4135,
-          "zIndex": 6,
+          "zIndex": 19,
           "widthName": 124.54150390625,
           "widthComment": 61.2236328125,
           "color": "#FF9800"
@@ -648,7 +694,7 @@
           "active": false,
           "left": 569.6967,
           "top": 975.2857,
-          "zIndex": 7,
+          "zIndex": 5,
           "widthName": 171.2666015625,
           "widthComment": 100.2236328125,
           "color": "#CDDC39"
@@ -711,7 +757,7 @@
           "active": false,
           "left": 1167.4752,
           "top": 643.0828,
-          "zIndex": 9,
+          "zIndex": 7,
           "widthName": 90.130859375,
           "widthComment": 60,
           "color": "#FFC107"
@@ -774,7 +820,7 @@
           "active": false,
           "left": 1135.7681,
           "top": 830.6922,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60,
           "color": "#8BC34A"
@@ -837,7 +883,7 @@
           "active": false,
           "left": 4.1955,
           "top": 875.3604,
-          "zIndex": 8,
+          "zIndex": 6,
           "widthName": 84.3544921875,
           "widthComment": 60,
           "color": "#009688"
@@ -898,7 +944,7 @@
           {
             "name": "MEMBER_ID",
             "comment": "가입회원_ID",
-            "dataType": "VARCHAR(500)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -969,7 +1015,7 @@
           "active": false,
           "left": 1121.0004,
           "top": 88.667,
-          "zIndex": 13,
+          "zIndex": 10,
           "widthName": 116.841796875,
           "widthComment": 100.2236328125,
           "color": "#9E9E9E"
@@ -1032,7 +1078,7 @@
           "active": false,
           "left": 1144.1132,
           "top": 398.7769,
-          "zIndex": 12,
+          "zIndex": 9,
           "widthName": 113.2236328125,
           "widthComment": 60,
           "color": "#795548"
@@ -1075,7 +1121,7 @@
           "active": false,
           "left": 1635.5555555555575,
           "top": 372.0000000000005,
-          "zIndex": 19,
+          "zIndex": 16,
           "width": 127,
           "height": 100
         },
@@ -1087,7 +1133,7 @@
           "active": false,
           "left": 1629.7777777777803,
           "top": 617.2222222222242,
-          "zIndex": 16,
+          "zIndex": 13,
           "width": 127,
           "height": 100
         },
@@ -1099,7 +1145,7 @@
           "active": false,
           "left": 1567.7777777777762,
           "top": 804.8888888888947,
-          "zIndex": 15,
+          "zIndex": 12,
           "width": 127,
           "height": 310
         },
@@ -1111,7 +1157,7 @@
           "active": false,
           "left": 1133.3703700024446,
           "top": 967.3148147228354,
-          "zIndex": 18,
+          "zIndex": 15,
           "width": 127,
           "height": 170
         },
@@ -1123,21 +1169,21 @@
           "active": false,
           "left": 12.999999999999996,
           "top": 989.5555555555594,
-          "zIndex": 17,
+          "zIndex": 14,
           "width": 127,
           "height": 140
         },
         "id": "3856bf7c-c3f2-482b-8b72-15db770e227a"
       },
       {
-        "value": "○ 펫 별 정보 이름\n\n   - 아이디\n   - 이름\n   - 펫 이름\n   - 펫 나이\n   - 펫 생일\n   - 펫 정보 작성 일자",
+        "value": "○ 펫 별 정보 이름\n\n   - 아이디\n   - 이름\n   - 펫 이름\n   - 펫 나이\n   - 펫 생일",
         "ui": {
           "active": false,
-          "left": 414.6666666666703,
-          "top": 633.6666666666684,
-          "zIndex": 3,
+          "left": 415.6666666666703,
+          "top": 646.6666666666684,
+          "zIndex": 18,
           "width": 146,
-          "height": 139
+          "height": 126
         },
         "id": "fc956cd9-bdd8-42fb-9240-ba6a9902f974"
       },
@@ -1147,7 +1193,7 @@
           "active": false,
           "left": 671.4444444444451,
           "top": 1152.444444444445,
-          "zIndex": 4,
+          "zIndex": 3,
           "width": 321,
           "height": 100
         },
@@ -1166,8 +1212,8 @@
           "columnIds": [
             "02b58a02-9763-45ec-ab7b-5c24c2fae9e9"
           ],
-          "x": 812.8236375,
-          "y": 825.9135,
+          "x": 803.921049609375,
+          "y": 866.9135,
           "direction": "bottom"
         },
         "end": {
@@ -1201,8 +1247,8 @@
           "columnIds": [
             "20de0d1e-5bf6-4d65-8d5a-73071aef8f8b"
           ],
-          "x": 1035.7220750000001,
-          "y": 697.2885,
+          "x": 1017.91689921875,
+          "y": 707.5385,
           "direction": "right"
         },
         "constraintName": "fk_pet-gender_to_pet-information",
@@ -1279,8 +1325,8 @@
           "columnIds": [
             "9a41e4a4-e6d1-4567-95a0-488ea8ddd2cd"
           ],
-          "x": 1035.7220750000001,
-          "y": 783.0385,
+          "x": 1017.91689921875,
+          "y": 813.7885,
           "direction": "right"
         },
         "constraintName": "fk_species_to_pet-information",
@@ -1383,7 +1429,7 @@
           "columnIds": [
             "cee5d789-9ee6-4a2d-adb0-f864c2e7f52f"
           ],
-          "x": 812.8236375,
+          "x": 803.921049609375,
           "y": 654.4135,
           "direction": "top"
         },

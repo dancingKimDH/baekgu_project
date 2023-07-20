@@ -6,4 +6,5 @@
     INSERT INTO pet_information(PETINF_ID, MEMBER_ID, SPECIES_ID, PETGEN_ID, PETINF_NAME)
     VALUES(#{PETINF_ID}, #{MEMBER_ID}, #{SPECIES_ID}, #{PETGEN_ID}, #{PETINF_NAME});
     </insert>
+    
 </mapper>
