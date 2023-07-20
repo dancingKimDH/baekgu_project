@@ -20,7 +20,7 @@ public class NewPetController {
 
     @PostMapping({"/add"})
     public ResponseEntity addPetInformation(@RequestParam Map paramMap) {
-         Object result = petInformationService.insertPetInformation(paramMap);
+        Object result = petInformationService.insertPetInformation(paramMap);
         return ResponseEntity.ok().body(result);
     }
 }
