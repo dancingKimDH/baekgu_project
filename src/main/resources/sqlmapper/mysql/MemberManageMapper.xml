@@ -6,8 +6,8 @@
 <!-- com.example.baekgu_project.dao.SharedDao -->
 
     <insert id="newpetinsert" parameterType="Map">
-    INSERT INTO pet_information(PETINF_ID, MEMBER_ID, SPECIES_ID, PETGEN_ID, PETNAME, PETAGE, PETBIRTHDAY)
-    VALUES(#{PETINF_ID}, #{MEMBER_ID}, #{SPECIES_ID}, #{PETGEN_ID}, #{PETNAME}, #{PETAGE}, #{PETBIRTHDAY});
+    INSERT INTO pet_information(PETINF_ID, MEMBER_ID, SPECIES_ID, PETGEN_ID, PETNAME, PETAGE)
+    VALUES(#{PETINF_ID}, #{MEMBER_ID}, #{SPECIES_ID}, #{PETGEN_ID}, #{PETNAME}, #{PETAGE});
     </insert>
 
 </mapper>
