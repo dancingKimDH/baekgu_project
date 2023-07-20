@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="pet_name" class="form-label">애완동물의 이름</label>
-                                <input type="text" class="form-control" id="pet_name" name="PETINF_NAME" placeholder="이름을 입력하세요." value="${PETINF_NAME}">
+                                <input type="text" class="form-control" id="pet_name" name="PETINF_NAME" placeholder="이름을 입력하세요.">
                             </div>
                             <div class="mb-3">
                                 <label for="gender" class="form-label">성별</label>
@@ -33,11 +33,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="pet_weight" class="form-label" >나이 (숫자만 입력하세요.)</label>
-                                <input type="text" name="PETAGE" value="${PETINF_AGE}" class="form-control" id="pet_weight" placeholder="나이">
+                                <input type="text" name="PETAGE" class="form-control" id="pet_weight" placeholder="나이">
                             </div>
                             <div class="mb-3">
                                 <label for="pet_weight" class="form-label">체중 (숫자만 입력하세요.)</label>
-                                <input type="text" name="PETWEIGHT" value="${PETINF_WEIGHT}" class="form-control" id="pet_weight" placeholder="gram">
+                                <input type="text" name="PETWEIGHT" class="form-control" id="pet_weight" placeholder="gram">
                             </div>
                             <div class="mb-3">
                                 <label for="confirm-password" class="form-label">분류</label>
@@ -65,9 +65,9 @@
                             </div>
                             <div class="fs3 my-3">중성화 여부</div>
                             <div class="my-3">
-                                <input type="radio" name="FN-04" value="YES" class="form-check-input" id="neuterY" value="${PETGEN_ID}">
+                                <input type="radio" name="FN-04" value="YES" class="form-check-input" id="neuterY">
                                 <label for="neuterY" class="form-check-label">네</label>
-                                <input type="radio" name="FN-04" value="NO" class="form-check-input" id="neuterY" value="${PETGEN_ID}">
+                                <input type="radio" name="FN-04" value="NO" class="form-check-input" id="neuterY">
                                 <label for="neuterN" class="form-check-label">아니오</label>
                             </div>
                             <div class="d-grid gap-2">
