@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="pet_name" class="form-label">애완동물의 이름</label>
-                                <input type="text" class="form-control" id="pet_name" name="PETINF_NAME" placeholder="이름을 입력하세요.">
+                                <input type="text" class="form-control" id="pet_name" name="PETNAME" placeholder="이름을 입력하세요.">
                             </div>
                             <div class="mb-3">
                                 <label for="gender" class="form-label">성별</label>
@@ -34,10 +34,6 @@
                             <div class="mb-3">
                                 <label for="pet_weight" class="form-label" >나이 (숫자만 입력하세요.)</label>
                                 <input type="text" name="PETAGE" class="form-control" id="pet_weight" placeholder="나이">
-                            </div>
-                            <div class="mb-3">
-                                <label for="pet_weight" class="form-label">체중 (숫자만 입력하세요.)</label>
-                                <input type="text" name="PETWEIGHT" class="form-control" id="pet_weight" placeholder="gram">
                             </div>
                             <div class="mb-3">
                                 <label for="confirm-password" class="form-label">분류</label>
@@ -63,19 +59,16 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="fs3 my-3">중성화 여부</div>
-                            <div class="my-3">
-                                <input type="radio" name="FN-04" value="YES" class="form-check-input" id="neuterY">
-                                <label for="neuterY" class="form-check-label">네</label>
-                                <input type="radio" name="FN-04" value="NO" class="form-check-input" id="neuterY">
-                                <label for="neuterN" class="form-check-label">아니오</label>
-                            </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary">등록하기</button>
+                            </div>
+                            <div name="MEMBER_ID" value="0">
+                            <div name="PETBIRTHDAY" value="0"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+            
                 <!-- /body -->
             </form>
         </body>
