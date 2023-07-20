@@ -258,7 +258,7 @@
           "active": false,
           "left": 603.6103,
           "top": 255.6955,
-          "zIndex": 17,
+          "zIndex": 16,
           "widthName": 60,
           "widthComment": 60,
           "color": "#2196F3"
@@ -321,7 +321,7 @@
           "active": false,
           "left": 343.2503,
           "top": 54.0831,
-          "zIndex": 11,
+          "zIndex": 10,
           "widthName": 60,
           "widthComment": 60,
           "color": "#03A9F4"
@@ -384,7 +384,7 @@
           "active": false,
           "left": 64.2785,
           "top": 280.9716,
-          "zIndex": 8,
+          "zIndex": 7,
           "widthName": 64.841796875,
           "widthComment": 60,
           "color": "#607D8B"
@@ -533,36 +533,13 @@
               "widthDefault": 60
             },
             "id": "c4841561-21a2-4d64-a88a-bb18f8463005"
-          },
-          {
-            "name": "PETBIRTHDAY",
-            "comment": "펫생일",
-            "dataType": "VARCHAR(500)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 91.81298828125,
-              "widthComment": 60,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            },
-            "id": "45302327-56f9-4c02-ae33-0d0cfae8aef9"
           }
         ],
         "ui": {
           "active": false,
           "left": 589.9252,
           "top": 654.4135,
-          "zIndex": 19,
+          "zIndex": 20,
           "widthName": 124.54150390625,
           "widthComment": 61.2236328125,
           "color": "#FF9800"
@@ -757,7 +734,7 @@
           "active": false,
           "left": 1167.4752,
           "top": 643.0828,
-          "zIndex": 7,
+          "zIndex": 6,
           "widthName": 90.130859375,
           "widthComment": 60,
           "color": "#FFC107"
@@ -883,7 +860,7 @@
           "active": false,
           "left": 4.1955,
           "top": 875.3604,
-          "zIndex": 6,
+          "zIndex": 19,
           "widthName": 84.3544921875,
           "widthComment": 60,
           "color": "#009688"
@@ -1015,7 +992,7 @@
           "active": false,
           "left": 1121.0004,
           "top": 88.667,
-          "zIndex": 10,
+          "zIndex": 9,
           "widthName": 116.841796875,
           "widthComment": 100.2236328125,
           "color": "#9E9E9E"
@@ -1078,7 +1055,7 @@
           "active": false,
           "left": 1144.1132,
           "top": 398.7769,
-          "zIndex": 9,
+          "zIndex": 8,
           "widthName": 113.2236328125,
           "widthComment": 60,
           "color": "#795548"
@@ -1121,7 +1098,7 @@
           "active": false,
           "left": 1635.5555555555575,
           "top": 372.0000000000005,
-          "zIndex": 16,
+          "zIndex": 15,
           "width": 127,
           "height": 100
         },
@@ -1133,7 +1110,7 @@
           "active": false,
           "left": 1629.7777777777803,
           "top": 617.2222222222242,
-          "zIndex": 13,
+          "zIndex": 12,
           "width": 127,
           "height": 100
         },
@@ -1145,7 +1122,7 @@
           "active": false,
           "left": 1567.7777777777762,
           "top": 804.8888888888947,
-          "zIndex": 12,
+          "zIndex": 11,
           "width": 127,
           "height": 310
         },
@@ -1157,7 +1134,7 @@
           "active": false,
           "left": 1133.3703700024446,
           "top": 967.3148147228354,
-          "zIndex": 15,
+          "zIndex": 14,
           "width": 127,
           "height": 170
         },
@@ -1169,7 +1146,7 @@
           "active": false,
           "left": 12.999999999999996,
           "top": 989.5555555555594,
-          "zIndex": 14,
+          "zIndex": 13,
           "width": 127,
           "height": 140
         },
@@ -1181,7 +1158,7 @@
           "active": false,
           "left": 415.6666666666703,
           "top": 646.6666666666684,
-          "zIndex": 18,
+          "zIndex": 17,
           "width": 146,
           "height": 126
         },
@@ -1212,8 +1189,8 @@
           "columnIds": [
             "02b58a02-9763-45ec-ab7b-5c24c2fae9e9"
           ],
-          "x": 803.921049609375,
-          "y": 866.9135,
+          "x": 797.65908671875,
+          "y": 846.4135,
           "direction": "bottom"
         },
         "end": {
@@ -1247,8 +1224,8 @@
           "columnIds": [
             "20de0d1e-5bf6-4d65-8d5a-73071aef8f8b"
           ],
-          "x": 1017.91689921875,
-          "y": 707.5385,
+          "x": 1005.3929734375,
+          "y": 702.4135,
           "direction": "right"
         },
         "constraintName": "fk_pet-gender_to_pet-information",
@@ -1325,39 +1302,13 @@
           "columnIds": [
             "9a41e4a4-e6d1-4567-95a0-488ea8ddd2cd"
           ],
-          "x": 1017.91689921875,
-          "y": 813.7885,
+          "x": 1005.3929734375,
+          "y": 798.4135,
           "direction": "right"
         },
         "constraintName": "fk_species_to_pet-information",
         "visible": true,
         "id": "386e77a3-37a8-4a44-af56-ec7f0400cc8d"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "5aebc22f-c34f-411d-9202-d14c89d1509d",
-          "columnIds": [
-            "2078afed-2220-4fd0-9ef5-231ff20854f8"
-          ],
-          "x": 471.66962109375,
-          "y": 930.3604,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "651da9de-843a-4f0b-b412-cd9678ff9b79",
-          "columnIds": [
-            "f052b893-5141-4524-b85f-5e8ad990eac9"
-          ],
-          "x": 569.6967,
-          "y": 1061.0357,
-          "direction": "left"
-        },
-        "constraintName": "fk_key-figure_to_pet-diary-information",
-        "visible": true,
-        "id": "bce0474d-b336-4061-a42e-8e19a463f690"
       },
       {
         "identification": false,
@@ -1429,13 +1380,39 @@
           "columnIds": [
             "cee5d789-9ee6-4a2d-adb0-f864c2e7f52f"
           ],
-          "x": 803.921049609375,
+          "x": 797.65908671875,
           "y": 654.4135,
           "direction": "top"
         },
         "constraintName": "fk_member_to_pet-information",
         "visible": true,
         "id": "2125eddb-af7e-4720-8576-802b04b91fec"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "5aebc22f-c34f-411d-9202-d14c89d1509d",
+          "columnIds": [
+            "2078afed-2220-4fd0-9ef5-231ff20854f8"
+          ],
+          "x": 471.66962109375,
+          "y": 930.3604,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "651da9de-843a-4f0b-b412-cd9678ff9b79",
+          "columnIds": [
+            "f052b893-5141-4524-b85f-5e8ad990eac9"
+          ],
+          "x": 569.6967,
+          "y": 1061.0357,
+          "direction": "left"
+        },
+        "constraintName": "fk_key-figure_to_pet-diary-information",
+        "visible": true,
+        "id": "bce0474d-b336-4061-a42e-8e19a463f690"
       }
     ]
   }
