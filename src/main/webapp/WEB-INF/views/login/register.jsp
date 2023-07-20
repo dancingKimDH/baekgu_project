@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.util.HashMap, java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +17,6 @@
     <!-- header -->
     <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
     <!-- /header -->
-    <%
-    HashMap params = (HashMap)request.getAttribute("params");
-    String searchStr = (String)params.getOrDefault("search", "");
-    %>
     <!-- body -->
     <form action="">
     <div class="container my-5">
