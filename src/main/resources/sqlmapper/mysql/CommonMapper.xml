@@ -76,4 +76,5 @@
         SELECT * FROM animal_try.telecom;
         </select>
 
+
 </mapper>
