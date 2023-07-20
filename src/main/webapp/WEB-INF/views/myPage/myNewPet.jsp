@@ -26,7 +26,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="gender" class="form-label">성별</label>
-                                <select class="form-select" id="gender" name="PETGENDER_NAME">
+                                <select class="form-select" id="gender" name="PETGEN_ID">
                                     <option value="PG-01" >남자</option>
                                     <option value="PG-02" >여자</option>
                                 </select>
@@ -62,9 +62,10 @@
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary">등록하기</button>
                             </div>
-                            <div name="MEMBER_ID" value="0">
-                            <div name="PETBIRTHDAY" value="0"></div>
-                            </div>
+                            
+                            <div> <input type="text" name="PETINF_ID"></div>
+                            <div> <input type="text" name="MEMBER_ID"></div>
+                            <div> <input type="text" name="PETBIRTHDAY"></div>
                         </div>
                     </div>
                 </div>
