@@ -1,3 +1,5 @@
+let number = 1;
+
 // 휴대폰 번호 입력 부분
 function phoneNumber()
 {
@@ -172,4 +174,12 @@ function signUpCheck()
     //비동기 처리이벤트
     setTimeout(function(){alert("가입이 완료되었습니다.")},0);
     }
+}
+
+function member()
+{
+  let stringNumber = number.toString();
+  let member_ID = "M-" + stringNumber;
+  document.getElementById('myButton').value = member_ID;
+  number = number + 1;
 }
