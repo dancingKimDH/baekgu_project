@@ -36,9 +36,9 @@
     <!-- insert id="부여하는 이름"-->
     <insert id="insert" parameterType="Map">
     INSERT INTO MEMBER
-    (ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM, REGANI_ID, MEMBER_ID)
+    (ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM, MEMBER_ID)
     values
-    (#{ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM}, #{REGANI_ID}, #{MEMBER_ID})
+    (#{ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM}, #{MEMBER_ID})
     </insert>
 
     <!-- 수정 -->
