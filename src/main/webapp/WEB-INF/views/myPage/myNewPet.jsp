@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="pet_name" class="form-label">애완동물의 이름</label>
-                                <input type="text" class="form-control" id="pet_name" name="pet_name" placeholder="이름을 입력하세요." value="${PETINF_NAME}">
+                                <input type="text" class="form-control" id="pet_name" name="PETINF_NAME" placeholder="이름을 입력하세요." value="${PETINF_NAME}">
                             </div>
                             <div class="mb-3">
                                 <label for="pet_age" class="form-label">애완동물의 나이</label>
@@ -46,7 +46,7 @@
                             <div class="mb-3">
                                 <label for="confirm-password" class="form-label">분류</label>
                                 <div class="custom-select">
-                                    <select class="form-select" name="" id="" value="${SPECIES_ID}">
+                                    <select class="form-select" name="SPECIES_ID" id="">
                                         <option value="" selected>선택하기</option>
                                         <option value="PS-01">개(강아지)</option>
                                         <option value="PS-02">고양이</option>
