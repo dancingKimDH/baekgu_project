@@ -16,12 +16,12 @@ import com.example.baekgu_project.service.UserService;
 @Controller
 @RequestMapping("/pets")
 public class NewPetController {
+    
     @Autowired
     PetInformationService petInformationService;
 
     @PostMapping("/add")
     public ResponseEntity addPetInformation(@RequestParam Map paramMap) {
-
          Object result = petInformationService.insertPetInformation(paramMap);
         return ResponseEntity.ok().body(result);
     }
