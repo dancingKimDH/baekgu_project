@@ -38,9 +38,29 @@
 
                             </h3>
                             <!-- 리스트 -->
-                            <table class="member_table mt-5">
+                            <table class="member_table mt-5 table_row_apply">
                                 <tbody class="member_list_body">
 
+                                    <tr class="table_headline">
+                                        <td>
+                                            이름
+                                        </td>
+                                        <td>
+                                            ID
+                                        </td>
+                                        <td>
+                                            PASSWORD
+                                        </td>
+                                        <td>
+                                            EMAIL
+                                        </td>
+                                        <td>
+                                            애완동물 현황
+                                        </td>
+                                        <td>
+                                            수정/탈퇴
+                                        </td>
+                                    </tr>
 
 
 
@@ -67,10 +87,6 @@
                                             <td class="member_list_cell">
                                                 <%= record.get("EMAIL") %>
                                             </td>
-                                        </tr>
-                                        <% } %>
-
-
                                             <!-- 애완동물 현황 모달창  -->
                                             <td class="member_list_cell">
                                                 <a data-bs-toggle="modal" href="#modalTarget-center" class="btn btn1">
@@ -135,9 +151,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-
                                             <!-- 수정/탈퇴버튼 -->
-
                                             <td class="member_list_cell">
                                                 <a data-bs-toggle="modal" href="#modalTarget-second"
                                                     class="btn btn-primary">
@@ -209,7 +223,8 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            </tr>
+                                        </tr>
+                                        <% } %>
 
                         </div>
 

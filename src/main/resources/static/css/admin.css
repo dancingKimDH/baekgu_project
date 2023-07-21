@@ -109,3 +109,23 @@ td {
 .small_font {
     font-size: small;
 }
+
+.table_row_apply {
+
+        width: 80%;
+        border-top: 1px solid #444444;
+        border-collapse: collapse;
+}
+
+.table_row_apply td {
+    
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+}
+
+.table_headline {
+
+    background-color: whitesmoke;
+    font-weight: bold;
+
+}

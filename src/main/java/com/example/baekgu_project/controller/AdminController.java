@@ -21,19 +21,6 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
-    // @GetMapping("/admin_main") 
-    // public ResponseEntity showMemberList(@RequestParam Map paramMap) {
-    // Object result = adminService.selectAllMember(paramMap);
-    // return ResponseEntity.ok().body(result);
-    // }
-
-    // @GetMapping("/admin_main")
-    // public String admin(@RequestParam Map paramMap, Model model) {
-    //     Object result = adminService.selectAllMember(paramMap);
-    //     model.addAttribute("data", result);
-    //     return "admin/admin_main.jsp";
-    // }
- 
     @GetMapping("/admin_main")
     public ModelAndView adminMain(@RequestParam Map params, ModelAndView modelAndView) {
         Object result = adminService.selectAllMember(params);
@@ -42,6 +29,20 @@ public class AdminController {
         modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
         return modelAndView;
     }
+
+    // @GetMapping("/admin_main")
+    // public ModelAndView selectAnimal(@RequestParam Map params, ModelAndView modelAndView) {
+
+    //     Object animalresult = adminService.selectAnimal(params);
+    //     modelAndView.addObject("params", params);
+    //     modelAndView.addObject("result", animalresult);
+    //     modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
+
+    //     return modelAndView;
+
+    // }
+
+
 
     }
 
