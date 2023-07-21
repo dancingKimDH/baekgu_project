@@ -25,4 +25,15 @@ public class AdminService {
         return result;
     }
 
+    // Animal LIst
+    // public Object selectAnimal(Map dataMap) {
+
+    //     String sqlMapId = "AdminMapper.selectAnimal";
+    //     HashMap animalresult = new HashMap<>();
+    //     animalresult.put("animalresultList", sharedDao.getOne(sqlMapId, dataMap));
+
+    //     return animalresult;
+    // }
+
+
 }
