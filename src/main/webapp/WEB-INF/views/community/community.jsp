@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList, com.example.baekgu_project.utils.Paginations" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/community.css">
-    <script src="/resources/static/js/community.js"></script>
+    <script src="/js/community.js"></script>
     <title>My Pet Community</title>
 </head>
 
@@ -38,11 +39,11 @@
                     </div>
                     <select class="form-select" name="search">
                         <option>Select an option...</option>
-                        <option value="TITLE" <%=(searchStr.equals("YEAR")) ? "selected" : "" %>>TITLE</option>
-                        <option value="NAME" <%=(searchStr.equals("CAR_NAME")) ? "selected" : "" %>>CAR_NAME</option>
+                        <option value="TITLE" <%=(searchStr.equals("TITLE")) ? "selected" : "" %>>제목</option>
+                        <option value="NAME">작성자</option>
                     </select>
                     <input type="text" name="words" class="form-control rounded-pill" placeholder="Search..." value='<%= params.getOrDefault("words", "") %>' id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
-                    <button class="rounded-pill" formmethod="get" type="button" formaction="/community/map/selectSearch" style="margin-left: 10px; margin-right: 10px;">
+                    <button class="rounded-pill" type="button" formaction="/community/communityList" formmethod="get" style="margin-left: 10px; margin-right: 10px;">
                         <img src="/images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
                     </button>
                 </div>
@@ -60,43 +61,51 @@
                             </tr>
                         </thead>
 <!-- 게시글 테이블 -->
-                        <tbody id="ommunityTableBody">
-                            <% ArrayList resultList=(ArrayList)result.get("resultList"); 
+                        <tbody id="communityTableBody">
+                            <% ArrayList resultList=(ArrayList)result.get("resultList");
+                            int j = 1;
                             for(int i=0; i < resultList.size(); i=i+1){
                                 HashMap record=(HashMap)resultList.get(i); %>
                                 <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
                                 <tr>
-                                    <td>No.</td>
-                                    <td><%= record.get("WRITINGGROUP_NAME") %></td>
-                                    <td class="subject">
-                                    <a href="" class="text-decoration-none"><%= record.get("TITLE") %></a>
+                                    <td>
+                                        <%= j %>
                                     </td>
-                                    <td><%= record.get("NAME") %></td>
-                                    <td><%= record.get("DATEOFPREPARATION") %></td>
+                                    <td>
+                                        <%= record.get("WRITINGGROUP_NAME") %>
+                                    </td>
+                                    <td>
+                                        <%= record.get("TITLE") %>
+                                    </td>
+                                    <td>
+                                        <%= record.get("NAME") %>
+                                    </td>
+                                    <td>
+                                        <%= record.get("DATE_FORMAT(DATEOFPREPARATION, '%Y-%m-%d')") %>
+                                    </td>
                                 </tr>
-                                <% } %>
+                                <% j = j + 1; } %>
 <!-- 페이지 넘버링 -->
                         </tbody>
                     </table>
+
                     <%
                     Paginations paginations = (Paginations)result.get("paginations"); 
                     %>
-                    <div>총 갯수 : <%= paginations.getTotalCount() %></div>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-
                             <%
                             for(int i=paginations.getBlockStart();i <= paginations.getBlockEnd(); i=i+1){
                             %>
                             <li class="page-item">
-                                <a class="page-link" href="/community/map/selectSearch?currentPage=<%= i %>"><%= i %></a>
+                                <a class="page-link" href="/community/communityList?currentPage=<%= i %>"><%= i %></a>
                             </li>
                             <%
                             }
                             %>
                             <li class="page-item">
-                                <a class="page-link" href="/community/map/selectSearch?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                                <a class="page-link" href="/community/communityList?currentPage=<%= paginations.getNextPage() %>">Next</a>
                             </li>
                         </ul>
                     </nav>

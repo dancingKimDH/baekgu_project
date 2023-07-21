@@ -1,8 +1,12 @@
-let number = 1;
-
-function myNewPet()
+function number()
 {
+  let number = 1;
   number = number.toString();
-  document.getElementById('number').value = number;
+  document.getElementById('number').innerText = number;
   number = number + 1;
 }
+
+window.onload = function()
+{
+  number();
+};
