@@ -41,30 +41,18 @@
                             <table class="member_table mt-5">
                                 <tbody class="member_list_body">
 
-                                    <% ArrayList resultList=(ArrayList) request.getAttribute("result"); for (int i=0; i
-                                        < resultList.size(); i++) { HashMap record=(HashMap) resultList.get(i); %>
 
 
-                                        <tr class="table_first">
-                                            <td class="member_table_head">
-                                                이름
-                                            </td>
-                                            <td class="member_table_head">
-                                                ID
-                                            </td>
-                                            <td class="member_table_head">
-                                                Password
-                                            </td>
-                                            <td class="member_table_head">
-                                                Email
-                                            </td>
-                                            <td class="member_table_head">
-                                                애완동물
-                                            </td>
-                                            <td class="member_table_head">
-                                                수정/탈퇴
-                                            </td>
 
+                                    <% HashMap result= (HashMap) request.getAttribute("result"); 
+                                    
+                                    ArrayList resultList = (ArrayList) result.get("resultList");
+
+                                    for (int i=0; i
+                                        < resultList.size(); i++) { HashMap record= (HashMap) resultList.get(i); %>
+
+
+                                        
                                         </tr>
                                         <tr>
                                             <td class="member_list_cell">

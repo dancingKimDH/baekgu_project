@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Auths">  
+<mapper namespace="AdminMapper">  
 
 <!-- total member list -->
 <select id = "selectTotal" parameterType = "Map" resultType = "Map">
-SELECT *
-FROM member
-where 1 = 1;
+SELECT NAME, ID, PW, EMAIL
+FROM member;
+<!-- where 1 = 1; -->
 </select>
 
 </mapper>
