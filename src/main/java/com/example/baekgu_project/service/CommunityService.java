@@ -17,27 +17,34 @@ public class CommunityService
     @Autowired
     SharedDao sharedDao;
 
-    // 검색(조건-search : TITLE, NAME)
     public Map selectSearch(Map dataMap)
     {
-        // 페이지 형성 위한 계산
+        String sqlMapId = "Community.selectSearch";
+        
+        HashMap result = new HashMap<>();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+    }
+    
+    public Map selectSearchWithPagination(Map dataMap)
+    {
         int totalCount = (int) this.selectTotal(dataMap);
         
         int currentPage = 1;
-        if(dataMap.get("currentPage") != null) {
-            currentPage = Integer.parseInt((String)dataMap.get("currentPage"));    // from client in param
+        if(dataMap.get("currentPage") != null)
+        {
+            currentPage = Integer.parseInt((String)dataMap.get("currentPage"));
         }
 
         Paginations paginations = new Paginations(totalCount, currentPage);
         HashMap result = new HashMap<>();
-        result.put("paginations", paginations); // 페이지에 대한 정보
+        result.put("paginations", paginations);
 
-        // page record 수
-        String sqlMapId = "Community.selectSearch";
+        String sqlMapId = "Community.selectSearchWithPagination";
         dataMap.put("pageScale", paginations.getPageScale());
         dataMap.put("pageBegin", paginations.getPageBegin());
         
-        result.put("resultList", sharedDao.getList(sqlMapId, dataMap)); // 표현된 레코드 정보
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
 
@@ -47,5 +54,5 @@ public class CommunityService
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
-    } 
+    }    
 }
