@@ -55,6 +55,7 @@ public class Paginations
 			nextPage = totalPage;
 		}
 	}
+
     public void setPageRange()
     {
         // pageBegin = (this.currentPage - 1) * this.pageScale + 1;
@@ -131,9 +132,16 @@ public class Paginations
         this.blockScale = blockScale;
     }
 
-    public int getPreviousPage()
+    public int getFirstPage()
     {
         return previousPage;
+    }
+
+    public int getPreviousPage()
+    {
+        // 이전 페이지 번호를 계산하여 반환
+        int previousPage = currentPage - 1;
+        return previousPage >= 1 ? previousPage : 1;
     }
 
     public void setPreviousPage(int previousPage)
@@ -141,9 +149,16 @@ public class Paginations
         this.previousPage = previousPage;
     }
 
-    public int getNextPage()
+    public int getLastPage()
     {
         return nextPage;
+    }
+
+    public int getNextPage()
+    {
+        // 다음 페이지 번호를 계산하여 반환
+        int nextPage = currentPage + 1;
+        return nextPage <= totalPage ? nextPage : totalPage;
     }
 
     public void setNextPage(int nextPage)
@@ -190,6 +205,4 @@ public class Paginations
     {
         this.blockEnd = blockEnd;
     }
-
-    
 }

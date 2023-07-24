@@ -1,4 +1,4 @@
-package com.example.baekgu_project.restapi;
+package com.example.baekgu_project.restapis;
 
 import java.util.Map;
 

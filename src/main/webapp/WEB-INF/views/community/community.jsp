@@ -14,7 +14,7 @@
     <title>My Pet Community</title>
 </head>
 
-<body>
+<body style="height: 800px;">
     <!-- header -->
     <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
     <!-- /header -->
@@ -27,28 +27,37 @@
                 <h3 class="tit">커뮤니티 게시판</h3>
                 <p>반려동물 자랑, 병원, 사료 문의 등 자유로운 공간입니다 😄</p>
 <!-- 검색창 및 검색 버튼 -->
-                <div class="input-group mb-3">
-                    <div class="dropdown_nav-item">
-                        <button class="rounded-pill dropdown-toggle" data-bs-toggle="dropdown">분류</button>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">자랑</li>
-                            <li class="dropdown-item">병원</li>
-                            <li class="dropdown-item">사료/간식</li>
-                            <li class="dropdown-item">기타</li>
-                        </ul>
+<form action="" method="">
+                <div class="input-group mb-3" style="width: 800px;">
+                    <div>
+                    <select class="form-select rounded-pill" name="search">
+                        <option value="TITLE" <%=(searchStr.equals("TITLE")) ? "selected" : "" %>>제목</option>
+                        <option value="ID" <%=(searchStr.equals("ID")) ? "selected" : "" %>>글 작성자</option>
+                    </select>
                     </div>
-                    <input type="text" name="words" class="form-control rounded-pill" placeholder="Search..." value='<%= params.getOrDefault("words", "") %>' id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
-                    <button class="rounded-pill" type="button" formaction="/community/communityList" formmethod="get" style="margin-left: 10px; margin-right: 10px;">
+                    <input type="text" name="words" class="form-control rounded-pill" value='<%= params.getOrDefault("words", "") %>' id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
+                    <button class="rounded-pill" type="submit" formaction="/community/communityDetail" formmethod="get" style="margin-left: 10px; margin-right: 10px;">
                         <img src="/images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
                     </button>
                 </div>
                 <hr>
 <!-- 게시글 테이블 보더 -->
                 <div>
-                    <table class="table">
+                    <table class="table" style="width: 800px;">
                         <thead style="text-align: center;">
                             <tr>
-                                <th class="noBrd">분류</th>
+                                <th class="noBrd">
+                                    <div class="dropdown_nav-item">
+                                    <button class="rounded-pill dropdown-toggle" data-bs-toggle="dropdown">분류</button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item" data-category="all">전체</li>
+                                        <li class="dropdown-item" data-category="자랑">자랑</li>
+                                        <li class="dropdown-item" data-category="병원">병원</li>
+                                        <li class="dropdown-item" data-category="사료/간식">사료/간식</li>
+                                        <li class="dropdown-item" data-category="기타">기타</li>
+                                    </ul>
+                                    </div>
+                                </th>
                                 <th class="noBrd">제목</th>
                                 <th class="noBrd">작성자</th>
                                 <th class="noBrd">작성일</th>
@@ -60,13 +69,13 @@
                             int j = 1;
                             for(int i=0; i < resultList.size(); i=i+1){
                                 HashMap record=(HashMap)resultList.get(i); %>
-                                <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
-                                <tr>
+                                <input type="hidden" value="" id="">
+                                <tr class="category-row" data-category="<%= record.get("WRITINGGROUP_NAME") %>">
                                     <td>
                                         <%= record.get("WRITINGGROUP_NAME") %>
                                     </td>
                                     <td>
-                                        <%= record.get("TITLE") %>
+                                        <a class="community_title" href=""><%= record.get("TITLE") %></a>
                                     </td>
                                     <td>
                                         <script>document.write(maskingName('<%= record.get("ID") %>'));</script>
@@ -76,18 +85,18 @@
                                     </td>
                                 </tr>
                                 <% } %>
-<!-- 페이지 넘버링 -->
                         </tbody>
                     </table>
-
                     <%
                     Paginations paginations = (Paginations)result.get("paginations"); 
                     %>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="/community/communityList?currentPage=<%= paginations.getFirstPage() %>">First</a></li>
+                            <li class="page-item"><a class="page-link" href="/community/communityList?currentPage=<%= paginations.getPreviousPage() %>">Previous</a></li>
                             <%
-                            for(int i=paginations.getBlockStart();i <= paginations.getBlockEnd(); i=i+1){
+                            for(int i=paginations.getBlockStart();i <= paginations.getBlockEnd(); i=i+1)
+                            {
                             %>
                             <li class="page-item">
                                 <a class="page-link" href="/community/communityList?currentPage=<%= i %>"><%= i %></a>
@@ -95,18 +104,19 @@
                             <%
                             }
                             %>
-                            <li class="page-item">
-                                <a class="page-link" href="/community/communityList?currentPage=<%= paginations.getNextPage() %>">Next</a>
-                            </li>
+                            <li class="page-item"><a class="page-link" href="/community/communityList?currentPage=<%= paginations.getNextPage() %>">Next</a></li>
+                            <li class="page-item"><a class="page-link" href="/community/communityList?currentPage=<%= paginations.getLastPage() %>">Last</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
+</form>
     <!-- /body -->
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.js"></script>
+<script>applyDropdownMenu();</script>
 <!-- footer -->
 <%@ include file="/WEB-INF/views/baekgu/footer.jsp" %>
 <!-- /footer -->

@@ -15,3 +15,15 @@
     align-items: center;
     margin: 30px 20px 20px 20px;
 }
+
+.dropdown_nav-item
+{
+    cursor: pointer;
+}
+
+.community_title
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}

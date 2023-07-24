@@ -20,6 +20,17 @@ public class CommunityController
     @Autowired
     CommunityService communityService;
 
+    @GetMapping("/communityDetail")
+    public ModelAndView selectDetail(@RequestParam Map params, ModelAndView modelAndView)
+    {
+        Object result = communityService.selectSearchWithPagination(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        
+        modelAndView.setViewName("/WEB-INF/views/community/community.jsp");
+        return modelAndView;
+    }
+
     @GetMapping("/communityList") 
     public ModelAndView selectSearch(@RequestParam Map params, ModelAndView modelAndView)
     {

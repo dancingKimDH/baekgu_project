@@ -23,7 +23,7 @@
                     <div class="mb-3">
                         <label for="id" class="form-label">아이디</label>
                         <input type="text" name="ID" class="form-control" id="id" placeholder="아이디를 입력하세요."
-                            value="${ID}">
+                            value="${ID}" value maxlength="12">
                         <div id="idError" class="error"></div>
                     </div>
                     <div class="mb-3">
