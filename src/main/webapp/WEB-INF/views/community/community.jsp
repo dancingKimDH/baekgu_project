@@ -37,11 +37,6 @@
                             <li class="dropdown-item">기타</li>
                         </ul>
                     </div>
-                    <select class="form-select" name="search">
-                        <option>Select an option...</option>
-                        <option value="TITLE" <%=(searchStr.equals("TITLE")) ? "selected" : "" %>>제목</option>
-                        <option value="NAME">작성자</option>
-                    </select>
                     <input type="text" name="words" class="form-control rounded-pill" placeholder="Search..." value='<%= params.getOrDefault("words", "") %>' id="keydownEnter" style="margin-left: 10px; margin-right: 10px;">
                     <button class="rounded-pill" type="button" formaction="/community/communityList" formmethod="get" style="margin-left: 10px; margin-right: 10px;">
                         <img src="/images/search.png" alt="search image" width="23" height="23" style="background-color: transparent;">
@@ -53,7 +48,6 @@
                     <table class="table">
                         <thead style="text-align: center;">
                             <tr>
-                                <th class="noBrd">No</th>
                                 <th class="noBrd">분류</th>
                                 <th class="noBrd">제목</th>
                                 <th class="noBrd">작성자</th>
@@ -69,22 +63,19 @@
                                 <input type="hidden" name="COMMUNITY_PETTALK_ID" value="" id="">
                                 <tr>
                                     <td>
-                                        <%= j %>
-                                    </td>
-                                    <td>
                                         <%= record.get("WRITINGGROUP_NAME") %>
                                     </td>
                                     <td>
                                         <%= record.get("TITLE") %>
                                     </td>
                                     <td>
-                                        <%= record.get("NAME") %>
+                                        <script>document.write(maskingName('<%= record.get("ID") %>'));</script>
                                     </td>
                                     <td>
                                         <%= record.get("DATE_FORMAT(DATEOFPREPARATION, '%Y-%m-%d')") %>
                                     </td>
                                 </tr>
-                                <% j = j + 1; } %>
+                                <% } %>
 <!-- 페이지 넘버링 -->
                         </tbody>
                     </table>
