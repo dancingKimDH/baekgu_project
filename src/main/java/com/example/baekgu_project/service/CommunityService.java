@@ -26,6 +26,7 @@ public class CommunityService
         return result;
     }
     
+
     public Map selectSearchWithPagination(Map dataMap)
     {
         int totalCount = (int) this.selectTotal(dataMap);
@@ -48,6 +49,7 @@ public class CommunityService
         return result;
     }
 
+    
     public Object selectTotal(Map dataMap)
     {
         String sqlMapId = "Community.selectTotal";

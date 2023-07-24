@@ -38,6 +38,11 @@ public class SharedDao {
         Object result = sqlSessionTemplate.delete(sqlMapId, dataMap);
         return result;
     } 
-    
+
+     // 전체
+    public Object select(String sqlMapId, Object dataMap){
+        Object result = sqlSessionTemplate.selectList(sqlMapId, dataMap);
+        return result;
+    }     
 
 }
