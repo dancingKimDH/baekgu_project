@@ -64,15 +64,13 @@
 
 
 
-                                    <% HashMap result= (HashMap) request.getAttribute("result"); 
-                                    
-                                    ArrayList resultList = (ArrayList) result.get("resultList");
-
-                                    for (int i=0; i
-                                        < resultList.size(); i++) { HashMap record= (HashMap) resultList.get(i); %>
+                                    <% HashMap result=(HashMap) request.getAttribute("result"); ArrayList
+                                        resultList=(ArrayList) result.get("resultList"); ArrayList
+                                        resultList2=(ArrayList) result.get("resultList2"); for (int i=0; i <
+                                        resultList.size(); i++) { HashMap record=(HashMap) resultList.get(i); %>
 
 
-                                        
+
                                         </tr>
                                         <tr>
                                             <td class="member_list_cell">
@@ -132,11 +130,14 @@
                                                                             1
                                                                         </td>
                                                                         <td class="member_table_head">
-
+                                                                            1
                                                                         </td>
                                                                         <td class="member_table_head">
                                                                             예방접종 필요
                                                                         </td>
+
+
+
                                                                     </tr>
 
                                                                 </table>
