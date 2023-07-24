@@ -2,8 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="User">
 
-    <!-- 입력 -->
-    <!-- insert id="부여하는 이름"-->
+	<select id="selectByUID" parameterType="Map" resultType="Map">
+        SELECT * 
+        FROM users
+        where UNIQUE_ID = #{USERNAME}
+	</select>
+    
     <insert id="create" parameterType="Map">
     INSERT INTO MEMBER
     (ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM, MEMBER_ID)

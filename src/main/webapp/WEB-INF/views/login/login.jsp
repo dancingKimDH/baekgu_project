@@ -19,7 +19,11 @@
     <!-- /header -->
     <!-- body -->
     <div class="container my-5">
+        <% if ("true".equals(fail)) { %>            
+            <div><font color="red"> Login Fail ! </font></div>
+            <% } %>
         <div class="mx-5">
+            <% String fail = request.getParameter("fail"); %>
             <label for="username" class="form-label">아이디</label>
             <input type="text" class="form-control" id="id" placeholder="아이디를 입력하세요">
             <div id="idError" class="error"></div>

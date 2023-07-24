@@ -1,4 +1,4 @@
-package com.example.baekgu_project.restapi;
+package com.example.baekgu_project.restapis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
