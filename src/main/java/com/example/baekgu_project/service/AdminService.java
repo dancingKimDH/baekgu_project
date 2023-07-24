@@ -19,21 +19,30 @@ public class AdminService {
 
     public Object selectAllMember(Map dataMap) {
         String sqlMapId = "AdminMapper.selectTotal";
+
         HashMap result = new HashMap<>();
+
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
-             
+        return result;
+    }
+
+    public Object selectAnimal(String memberId) {
+        String sqlMapId = "AdminMapper.selectAnimal";
+
+        HashMap result = new HashMap<>();
+        
+        result.put("animalList", sharedDao.getOne(sqlMapId, memberId));
         return result;
     }
 
     // Animal LIst
     // public Object selectAnimal(Map dataMap) {
 
-    //     String sqlMapId = "AdminMapper.selectAnimal";
-    //     HashMap animalresult = new HashMap<>();
-    //     animalresult.put("animalresultList", sharedDao.getOne(sqlMapId, dataMap));
+    // String sqlMapId = "AdminMapper.selectAnimal";
+    // HashMap animalresult = new HashMap<>();
+    // animalresult.put("animalresultList", sharedDao.getOne(sqlMapId, dataMap));
 
-    //     return animalresult;
+    // return animalresult;
     // }
-
 
 }

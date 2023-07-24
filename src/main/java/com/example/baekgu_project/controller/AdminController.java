@@ -1,5 +1,6 @@
 package com.example.baekgu_project.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,10 +24,24 @@ public class AdminController {
 
     @GetMapping("/admin_main")
     public ModelAndView adminMain(@RequestParam Map params, ModelAndView modelAndView) {
+       
+        try {
+
         Object result = adminService.selectAllMember(params);
+        
+        
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
+        
         modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
+        
+        
+            
+        } catch (Exception e) { 
+            System.out.println(e.getMessage());
+            // TODO: handle exception
+        }
+        
         return modelAndView;
     }
 
