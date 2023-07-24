@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<footer style="background-color: #b3d9eb;" class="footerText p-5 d-flex justify-content-between">
+<footer style="height: 170px; background-color: #b3d9eb;" class="footerText p-5 d-flex justify-content-between">
     <div class="row">
         <ul class="list-unstyled d-flex">
             <li>
