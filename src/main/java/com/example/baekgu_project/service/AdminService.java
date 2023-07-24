@@ -26,12 +26,12 @@ public class AdminService {
         return result;
     }
 
-    public Object selectAnimal(String memberId) {
+    public Object selectAnimal(Map memberId) {
         String sqlMapId = "AdminMapper.selectAnimal";
 
         HashMap result = new HashMap<>();
         
-        result.put("animalList", sharedDao.getOne(sqlMapId, memberId));
+        result.put("animalList", sharedDao.getList(sqlMapId, memberId));
         return result;
     }
 

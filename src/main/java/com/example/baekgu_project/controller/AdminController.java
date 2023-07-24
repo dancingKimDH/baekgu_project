@@ -32,7 +32,6 @@ public class AdminController {
         
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
-        
         modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
         
         
@@ -43,6 +42,7 @@ public class AdminController {
         }
         
         return modelAndView;
+        
     }
 
     // @GetMapping("/admin_main")

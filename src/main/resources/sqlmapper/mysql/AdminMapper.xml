@@ -9,5 +9,16 @@ FROM member;
 <!-- where 1 = 1; -->
 </select>
 
+<select id = "selectAnimal" parameterType = "Map" resultType = "Map">
+
+SELECT FIRST.NAME, species.SPECIES_NAME, FIRST.AGE
+FROM
+(SELECT pet_information.PETNAME AS NAME, pet_information.SPECIES_ID AS SPE, pet_information.PETAGE AS AGE
+FROM pet_information
+INNER JOIN member ON pet_information.MEMBER_ID = member.MEMBER_ID
+AND pet_information.MEMBER_ID = #{memberId}) AS FIRST
+INNER JOIN species ON FIRST.SPE = species.SPECIES_ID;
+
+</select>
 
 </mapper>

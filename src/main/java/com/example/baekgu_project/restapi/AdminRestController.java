@@ -1,5 +1,7 @@
 package com.example.baekgu_project.restapi;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +17,7 @@ public class AdminRestController {
     AdminService adminService;
     
     @GetMapping("/memberId/{memberId}")
-    public ResponseEntity selectAnimal(@PathVariable String memberId){
+    public ResponseEntity selectAnimal(@PathVariable Map memberId){
         Object result = adminService.selectAnimal(memberId);
         return ResponseEntity.ok().body(result);
     }

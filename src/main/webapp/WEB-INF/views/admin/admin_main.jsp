@@ -87,7 +87,7 @@
                                             </td>
                                             <!-- 애완동물 현황 모달창  -->
                                             <td class="member_list_cell">
-                                                <a data-bs-toggle="modal" href="#modalTarget-center" class="btn btn1">
+                                                <a data-bs-toggle="modal" href="#modalTarget-center" onclick="selectAnimal" id="keydown" class="btn btn1">
                                                     애완동물 현황
                                                 </a>
                                                 <div class="modal" id="modalTarget-center">
@@ -117,26 +117,9 @@
                                                                             특이사항
                                                                         </td>
                                                                     </tr>
-                                                                    <tr>
 
-
-                                                                        <td class="member_table_head">
-                                                                            1
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            1
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            1
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            1
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            예방접종 필요
-                                                                        </td>
-
-
+                                                                    <!-- fetch -->
+                                                                    <tr id="animalTable">
 
                                                                     </tr>
 
@@ -254,6 +237,7 @@
                 <%@ include file="../baekgu/footer.jsp" %>
 
             </body>
+            <script src="../../../../resources/static/js/admin.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
             </html>
