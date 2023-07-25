@@ -94,8 +94,8 @@
                                                 </a>
 
                                                 <script>
-                                                    function clickSomeButton(param, selectAnimal) {
-                                                        console.log(`Button clicked with parameter: ${param}`);
+                                                    function selectAnimal (param) {
+                                                        // console.log(`Button clicked with parameter: ${param}`);
                                                     }
                                                     function callbackWithModal(param, callbackFunc) {
                                                         let modal = document.querySelector("#modalTarget-center");
