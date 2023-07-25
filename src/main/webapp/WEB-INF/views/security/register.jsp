@@ -18,52 +18,52 @@
         <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
             <!-- /header -->
             <!-- body -->
-            <form action="/user/create" method="post">
+            <form class="form-signin" action="/joinProc" method="post">
                 <div class="container my-5">
                     <div class="mb-3">
-                        <label for="id" class="form-label">아이디</label>
-                        <input type="text" name="ID" class="form-control" id="id" placeholder="아이디를 입력하세요."
+                        <label for="id" class="form-label sr-only">아이디</label>
+                        <input type="text" name="UNIQUE_ID" class="form-control" id="id" placeholder="아이디를 입력하세요."
                             value="${ID}" value maxlength="12">
                         <div id="idError" class="error"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">비밀번호</label>
+                        <label for="password" class="form-label sr-only">비밀번호</label>
                         <input type="password" name="PW" class="form-control" id="password" placeholder="비밀번호를 입력하세요."
                             value="${PW}">
                         <div id="passwordError" class="error"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="passwordCheck" class="form-label">비밀번호 재입력</label>
+                        <label for="passwordCheck" class="form-label sr-only">비밀번호 재입력</label>
                         <input type="password" class="form-control" id="passwordCheck" placeholder="비밀번호를 다시 입력하세요.">
                         <div id="passwordCheckError" class="error"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">이메일</label>
+                        <label for="email" class="form-label sr-only">이메일</label>
                         <input type="email" name="EMAIL" class="form-control" id="email" placeholder="이메일을 입력하세요."
                             value="${EMAIL}">
                         <div id="emailError" class="error"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="name" class="form-label">이름</label>
+                        <label for="name" class="form-label sr-only">이름</label>
                         <input type="text" name="NAME" class="form-control" id="name" placeholder="이름을 입력하세요."
                             value="${NAME}">
                         <div id="nameError" class="error"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="gender" class="form-label">성별</label>
+                        <label for="gender" class="form-label sr-only">성별</label>
                         <select class="form-select" id="gender" name="GENDER_ID">
                             <option value="G-01">남성</option>
                             <option value="G-02">여성</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="birth" class="form-label">생년월일</label>
+                        <label for="birth" class="form-label sr-only">생년월일</label>
                         <input type="text" name="BIRTHDATE" class="form-control" id="birth" value maxlength="8"
                             placeholder="생년월일 8자리" value="${BIRTHDATE}">
                         <div id="birthError" class="error"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="telecom" class="form-label">통신사</label>
+                        <label for="telecom" class="form-label sr-only">통신사</label>
                         <select class="form-select" name="TELECOM_ID">
                             <option value="T-01">SKT</option>
                             <option value="T-02">KT</option>
@@ -74,7 +74,7 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="number" class="form-label">휴대폰번호</label>
+                        <label for="number" class="form-label sr-only">휴대폰번호</label>
                         <input type="text" name="PHONENUM" class="form-control" id="number" maxlength="13"
                             placeholder="휴대폰번호를 입력하세요." oninput="phoneNumber()" value="${PHONENUM}">
                     </div>
@@ -93,7 +93,7 @@
                         <input type="checkbox" class="form-check-input" id="accept">
                     </div>
                     <div class="d-grid gap-2">
-                        <button id="register" type="submit" class="register_box" name="MEMBER_ID" disabled onclick="signUpCheck(); member()">회원가입</button>
+                        <button id="USER" name="auth" value="ROLE_USER" type="submit" class="register_box" disabled onclick="signUpCheck(); member()">회원가입</button>
                     </div>
                 </div>
             </form>

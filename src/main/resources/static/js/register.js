@@ -61,8 +61,8 @@ function checkCompletion()
   alert("문자 인증이 완료되었습니다.")
   initButton();
   document.getElementById("completion").innerHTML="인증완료"
-  document.getElementById("register").disabled = false;
-  document.getElementById("register").setAttribute("style","background-color: rgb(0, 123, 255);")
+  document.getElementById("USER").disabled = false;
+  document.getElementById("USER").setAttribute("style","background-color: rgb(0, 123, 255);")
 }
 
 // 가입부분 체크
@@ -180,6 +180,6 @@ function member()
 {
   let stringNumber = number.toString();
   let member_ID = "M-" + stringNumber;
-  document.getElementById('register').value = member_ID;
+  document.getElementById('USER').value = member_ID;
   number = number + 1;
 }

@@ -13,21 +13,24 @@ import com.example.baekgu_project.service.UsersService;
 
 
 @Controller
-public class UsersController {
+public class UsersController
+{
 
     @Autowired
     UsersService usersService;
 
-    @RequestMapping(value = "/joinForm", method = RequestMethod.GET)
-    public ModelAndView joinForm(ModelAndView modelAndView){
-        String viewName = "/WEB-INF/views/member/joinForm.jsp";
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public ModelAndView registerForm(ModelAndView modelAndView)
+    {
+        String viewName = "/WEB-INF/views/security/register.jsp";
 
         modelAndView.setViewName(viewName);
         return modelAndView;
     }
 
     @RequestMapping(value = "/joinProc", method = RequestMethod.POST)
-    public ModelAndView joinProc(@RequestParam Map params, ModelAndView modelAndView){
+    public ModelAndView joinProc(@RequestParam Map params, ModelAndView modelAndView)
+    {
         Object result = usersService.insertWithAuths(params);
         String viewName = "/WEB-INF/views/main.jsp";
         modelAndView.setViewName(viewName);

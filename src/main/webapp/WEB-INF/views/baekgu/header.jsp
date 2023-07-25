@@ -1,9 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<sec:authentication property="principal" var="userDetailsBean" />
+<form>
 <div style="background-color: #b3d9eb;">
+    <sec:authorize access="isAnonymous()">
     <div class="loginLocation">
-        <a class="loginText nav-link" href="/main/login">로그인</a>
+        <a class="loginText nav-link" href="/loginPage">로그인</a>
         <a class="loginText nav-link" href="/main/register">회원가입</a>
     </div>
+    </sec:authorize>
+    <sec:authorize access="isAuthenticated()">
+    <div class="loginLocation">
+        User ID : ${userDetailsBean.username}
+        Name : ${userDetailsBean.memberName}
+        <a class="loginText nav-link" href="/main">로그아웃</a>
+    </div>
+    </sec:authorize>
+    
     <div style="text-align: center;">
         <ul class="list-unstyled m-25" style="display: inline-block;">
             <li style="display: inline-block;">
@@ -35,3 +47,4 @@
         </ul>
     </div>
 </div>
+</form>

@@ -8,10 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class SecurityController
 {
 
-    @GetMapping({"/loginForm"})
+    @GetMapping({"/loginPage"})
     public ModelAndView loginForm(ModelAndView modelAndView)
     {
-        String viewName = "/WEB-INF/views/login/login.jsp";
+        String viewName = "/WEB-INF/views/security/login.jsp";
         modelAndView.setViewName(viewName);
         return modelAndView;
     }
