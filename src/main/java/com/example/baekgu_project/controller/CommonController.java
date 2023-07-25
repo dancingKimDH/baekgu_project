@@ -14,15 +14,15 @@ public class CommonController {
     @Autowired
     CommonService commonService;
 
-    @GetMapping({ "/login" })
-    public ModelAndView login(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/login/login.jsp");
-        return modelAndView;
-    }
+    // @GetMapping({ "/login" })
+    // public ModelAndView login(ModelAndView modelAndView) {
+    //     modelAndView.setViewName("/WEB-INF/views/login/login.jsp");
+    //     return modelAndView;
+    // }
 
     @GetMapping({ "/register" })
     public ModelAndView register(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/login/register.jsp");
+        modelAndView.setViewName("/WEB-INF/views/security/register.jsp");
         return modelAndView;
     }
 

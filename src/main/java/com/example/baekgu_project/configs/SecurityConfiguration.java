@@ -16,20 +16,18 @@ public class SecurityConfiguration
     {
         httpSecurity.csrf().disable();
         httpSecurity.authorizeHttpRequests()
-                .requestMatchers("/manager*").hasAnyRole("ADMIN", "MANAGER")
                 .requestMatchers("/admin*").hasRole("ADMIN")
-                .requestMatchers("/community/communityList").authenticated()
-                .requestMatchers("/community/*").hasRole("USER")
+                .requestMatchers("/manager*").hasAnyRole("ADMIN", "MANAGER")
+                .requestMatchers("/community/community_write").authenticated()
                 .anyRequest().permitAll();
-        httpSecurity.formLogin(login -> login.loginPage("/login")
-                .failureUrl("/login?fail=true")
+        httpSecurity.formLogin(login -> login.loginPage("/loginPage")
+                .failureUrl("/loginPage?fail=true")
                 .loginProcessingUrl("/login")
                 .defaultSuccessUrl("/"));
         httpSecurity.logout(logout -> logout
                 .logoutSuccessUrl("/main")
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID"));
-
         httpSecurity.exceptionHandling()
                 .accessDeniedPage("/home");
 

@@ -29,8 +29,8 @@ public class CommonsCodeRestController
         Map result = null;
         try {
             result = new HashMap<>();
-            result.put("YEAR","per YEAR");
-            result.put("CAR_NAME","like CAR_NAME");
+            result.put("TITLE","like TITLE");
+            result.put("UNIQUE_ID","like UNQUE_ID");
 
         } catch (Exception e)
         {

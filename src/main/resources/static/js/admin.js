@@ -1,25 +1,27 @@
 
 function selectAnimal(data) {
-    console.log(data);
-    let outHtml = ``;
-    for (let animal of data) {
 
-        outHtml += `<tr><td>${data.NAME}</td><td>${data.SPECIES_NAME}</td><td>${data.AGE}</td><td>`;
+    const animalList = data;
+
+    console.log(data);
+
+    let outHtml = ``;
+    for (let animal of animalList) {
+
+        outHtml = `${outHtml}<tr><td>${animal.NAME}</td><td>${animal.SPECIES_NAME}</td><td>${animal.AGE}</td></tr>`;
+        console.log(`Successfully returned ${animal.NAME}`)
     }
+    outHtml += ``;
 
     console.log(outHtml);
 
-    let animalTable = document.querySelector('#animalTable');
-    animalTable.innerHTML = outHtml;
-
-    console.log(animalTable);
+    let selectanimal = document.querySelector("#animalTable");
+    selectanimal.innerHTML = outHtml;
 }
 
-let keydownObject = document.querySelector("#keydown");
-animalTableBody();
 
 function getSelectAllFromREST() {
-    let url = 'http://localhost:8080/memberId/${memberId}';
+    let url = '/memberId/M-01';
 
     let request = fetch(url)
         .then(response => {
@@ -32,4 +34,10 @@ function getSelectAllFromREST() {
         .catch((data) => {
             console.log(data)
         });
+}
+
+function searchMember(event) {
+    event.preventDefault();
+    const inputElement = document.getElementById('find_membername');
+    const nameValue = inputElement.value.trim();
 }
