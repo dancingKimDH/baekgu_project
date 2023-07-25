@@ -17,6 +17,7 @@ public class AdminService {
     @Autowired
     SharedDao sharedDao;
 
+    // 회원 리스트
     public Object selectAllMember(Map dataMap) {
         String sqlMapId = "AdminMapper.selectTotal";
 
@@ -26,6 +27,7 @@ public class AdminService {
         return result;
     }
 
+    // 애완동물 현황
     public Object selectAnimal(Map memberId) {
         String sqlMapId = "AdminMapper.selectAnimal";
 
@@ -33,6 +35,17 @@ public class AdminService {
         
         result.put("animalList", sharedDao.getList(sqlMapId, memberId));
         return result;
+    }
+
+    // 회원 검색
+    public Object selectSearch(Map memberName) {
+        String sqlMapId = "AdminMapper.selectSearch";
+        
+        HashMap result = new HashMap<>();
+
+        result.put("selectedMemberList", sharedDao.getList(sqlMapId, memberName));
+        return result;
+    
     }
 
     // Animal LIst

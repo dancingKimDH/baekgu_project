@@ -24,9 +24,9 @@
                     <%@ include file="../baekgu/header.jsp" %>
 
                         <div class="search_bar container">
-                            <form action="">
-                                <input class="search_box" type="text" name="find_membername" id=""
-                                    placeholder="검색할 회원 이름을 입력하세요">
+                            <form action="" onsubmit="searchMember(event)">
+                                <input class="search_box" type="text" name="find_membername" id="find_membername"
+                                    value="" placeholder="검색할 회원 이름을 입력하세요">
                                 <a href="">
                                     <img class="search_img" src="../images/search.png" alt="">
                                 </a>
@@ -87,9 +87,28 @@
                                             </td>
                                             <!-- 애완동물 현황 모달창  -->
                                             <td class="member_list_cell">
-                                                <a data-bs-toggle="modal" href="#modalTarget-center" onclick="selectAnimal" id="keydown" class="btn btn1">
+                                                <a data-bs-toggle="modal" href="#modalTarget-center"
+                                                    onclick="callbackWithModal('first', clickSomeButton)"
+                                                    class="btn btn1">
                                                     애완동물 현황
                                                 </a>
+
+                                                <script>
+                                                    function clickSomeButton(param, selectAnimal) {
+                                                        console.log(`Button clicked with parameter: ${param}`);
+                                                    }
+                                                    function callbackWithModal(param, callbackFunc) {
+                                                        let modal = document.querySelector("#modalTarget-center");
+                                                        const modalInstance = new bootstrap.Modal(modal);
+                                                        modalInstance.show();
+
+                                                        if (callbackFunc != null) {
+                                                            callbackFunc(param);
+                                                        }
+                                                    }
+
+                                                </script>
+
                                                 <div class="modal" id="modalTarget-center">
                                                     <div class="modal-dialog modal-dialog-centered">
                                                         <div class="modal-content">
@@ -99,29 +118,29 @@
                                                             <div class="modal-body">
                                                                 <table class="member_table">
 
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <td class="member_table_head" value=""
+                                                                                id="">
+                                                                                이름
+                                                                            </td>
+                                                                            <td class="member_table_head">
+                                                                                종
+                                                                            </td>
+                                                                            <td class="member_table_head">
+                                                                                나이
+                                                                            </td>
+                                                                            <td class="member_table_head">
+                                                                                특이사항
+                                                                            </td>
+                                                                        </tr>
+                                                                    </thead>
 
-                                                                    <tr>
-                                                                        <td class="member_table_head">
-                                                                            NO.
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            이름
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            종
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            나이
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            특이사항
-                                                                        </td>
-                                                                    </tr>
 
                                                                     <!-- fetch -->
-                                                                    <tr id="animalTable">
-
-                                                                    </tr>
+                                                                    <tbody>
+                                                                        <!-- tablerow -->
+                                                                    </tbody>
 
                                                                 </table>
                                                             </div>
@@ -131,6 +150,9 @@
                                                                 </button>
 
                                                             </div>
+
+
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -237,7 +259,7 @@
                 <%@ include file="../baekgu/footer.jsp" %>
 
             </body>
-            <script src="../../../../resources/static/js/admin.js"></script>
+            <script src="/js/admin.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
             </html>
