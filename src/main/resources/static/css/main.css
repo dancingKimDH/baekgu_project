@@ -40,3 +40,9 @@
     border: none;
     font-weight: bold;
 }
+
+.myName
+{
+    line-height: 40px;
+    font-weight: bold;
+}

@@ -9,7 +9,7 @@ public class SecurityController
 {
 
     @GetMapping({"/loginPage"})
-    public ModelAndView loginForm(ModelAndView modelAndView)
+    public ModelAndView loginPage(ModelAndView modelAndView)
     {
         String viewName = "/WEB-INF/views/security/login.jsp";
         modelAndView.setViewName(viewName);

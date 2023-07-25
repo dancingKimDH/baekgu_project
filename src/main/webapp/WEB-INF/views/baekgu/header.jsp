@@ -12,7 +12,8 @@
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
                     <div class="loginLocation">
-                        <a class="loginText nav-link" href="/main">내 정보</a>
+                        <div class="myName">${userDetailsBean.memberName}님</div>
+                        <a class="loginText nav-link" href="/main/myAccount">내 계정</a>
                         <button class="mainform" type="submit" formmethod="post" formaction="/logout">로그아웃</button>
                     </div>
                 </sec:authorize>
