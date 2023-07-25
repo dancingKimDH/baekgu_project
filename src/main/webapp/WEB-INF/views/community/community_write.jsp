@@ -28,12 +28,12 @@
                                         <div class="navbar-nav me-auto">
                                             <div class="dropdown nav-item">
                                                 <label class="content-title" for="">분류</label>
-                                                <select class="form-select" name="browsers" id="">
+                                                <select class="form-select" name="WRITINGGROUP_ID" id="">
                                                     <option value="-------------">-------------</option>
-                                                    <option value="자랑">자랑</option>
-                                                    <option value="병원">병원</option>
-                                                    <option value="사료/간식">사료/간식</option>
-                                                    <option value="기타">기타</option>
+                                                    <option value="C-01">자랑</option>
+                                                    <option value="C-02">병원</option>
+                                                    <option value="C-03">사료/간식</option>
+                                                    <option value="C-04">기타</option>
                                                 </select>
                                             </div>
 
@@ -42,13 +42,13 @@
                                                 <select class="form-insert" name="title-insert">
                                                     <option>Insert Title</option>
                                                 </select>
-                                                <input class="input-title-field" type="text" name="title"
+                                                <input class="input-title-field" type="text" name="TITLE" id="COMWRITE_ID"
                                                     placeholder="제목을 입력하세요">
                                             </div>
 
                                             <h3 class="content-title">내용</h3>
                                             <div class="textarea-box">
-                                                <textarea rows="30" class="textarea-field" name="content"
+                                                <textarea rows="30" class="textarea-field" name="CONTENT" 
                                                     placeholder="내용을 입력하세요"></textarea>
                                             </div>
 
