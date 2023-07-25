@@ -42,22 +42,9 @@ public class UsersService
 
     public Object insertWithAuths(Map dataMap)
     {
-        // password 암호화
-        String pw = (String) dataMap.get("PW");
-        dataMap.put("PW", bCryptPasswordEncoder.encode(pw));
-
-        // 사용자 정보를 먼저 추가하고 해당 ID를 가져옴
         Object result = this.insert(dataMap);
-
-        // authsService.insert(dataMap); 를 아래와 같이 수정
-        List<String> authList = (List<String>) dataMap.get("authList");
-        if (authList != null && !authList.isEmpty()) {
-            dataMap.put("authList", authList);
-            result = authsService.insert(dataMap);
-        }
-
+        result = authsService.insert(dataMap);
         return result;
-
     }
 
     public Object selectByUID(Map dataMap)
