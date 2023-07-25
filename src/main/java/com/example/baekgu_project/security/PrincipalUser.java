@@ -39,7 +39,7 @@ public class PrincipalUser implements UserDetails
     @Override
     public String getPassword()
     {
-        return (String) userInfo.get("PASSWORD");
+        return (String) userInfo.get("PW");
     }
 
     @Override

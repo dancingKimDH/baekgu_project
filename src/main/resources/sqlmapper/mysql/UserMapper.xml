@@ -5,14 +5,14 @@
 	<select id="selectByUID" parameterType="Map" resultType="Map">
         SELECT * 
         FROM users
-        where UNIQUE_ID = #{USERNAME}
+        where UNIQUE_ID = #{UNIQUE_ID}
 	</select>
     
     <insert id="create" parameterType="Map">
-    INSERT INTO MEMBER
-    (ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM, MEMBER_ID)
+    INSERT INTO USERS
+    (UNIQUE_ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM)
     values
-    (#{ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM}, #{MEMBER_ID});
+    (#{UNIQUE_ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM});
     
 </insert>
 </mapper>

@@ -18,11 +18,10 @@ public class SecurityConfiguration
         httpSecurity.authorizeHttpRequests()
                 .requestMatchers("/manager*").hasAnyRole("ADMIN", "MANAGER")
                 .requestMatchers("/admin*").hasRole("ADMIN")
-                .requestMatchers("/community/communityList").authenticated()
-                .requestMatchers("/community/*").hasRole("USER")
+                .requestMatchers("/community/community_write").hasRole("USER")
                 .anyRequest().permitAll();
-        httpSecurity.formLogin(login -> login.loginPage("/login")
-                .failureUrl("/login?fail=true")
+        httpSecurity.formLogin(login -> login.loginPage("/loginPage")
+                .failureUrl("/loginPage?fail=true")
                 .loginProcessingUrl("/login")
                 .defaultSuccessUrl("/"));
         httpSecurity.logout(logout -> logout

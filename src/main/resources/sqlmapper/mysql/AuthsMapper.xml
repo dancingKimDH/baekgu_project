@@ -4,9 +4,9 @@
         <select id="selectWithUSERNAME" parameterType="Map" resultType="Map">
         SELECT auth_names.AUTH_NAME, auth_names.UNIQUE_ID
         FROM auths
-                inner JOIN auth_names
+        inner JOIN auth_names
         ON auths.UNIQUE_ID_AUTH_NAMES = auth_names.UNIQUE_ID
-        AND auths.UNIQUE_ID_USERS = #{USERNAME}
+        AND auths.UNIQUE_ID_USERS = #{UNIQUE_ID}
         ;
         </select>
 
@@ -17,9 +17,8 @@
         values
         <foreach item="auth" collection="authList"
             separator="," nullable="true">
-        (#{USERNAME},#{auth})
-        </foreach>        
-        ;
+        (#{UNIQUE_ID},#{auth})
+        </foreach>
     </insert>
 
 </mapper>

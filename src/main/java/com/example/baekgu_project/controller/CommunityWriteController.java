@@ -55,10 +55,35 @@
 //     }
 
 
+//     @GetMapping({ "/community_write" })
+//     public ModelAndView community_write(ModelAndView modelAndView) {
+//         modelAndView.setViewName("/WEB-INF/views/community/community_write.jsp");
+//         return modelAndView;
+//     }
 
+//     @GetMapping({ "/myPage" })
+//     public ModelAndView myPage(ModelAndView modelAndView) {
+//         modelAndView.setViewName("/WEB-INF/views/myPage/myPage.jsp");
+//         return modelAndView;
+//     }
 
+//     @GetMapping("/statistics")
+//     public ModelAndView statistics(ModelAndView modelAndView) {
+//         modelAndView.setViewName("/WEB-INF/views/myPage/statistics.jsp");
+//         return modelAndView;
+//     }
 
+//     @GetMapping("/myNewPet")
+//     public ModelAndView myNewPet(ModelAndView modelAndView) {
+//         modelAndView.setViewName("/WEB-INF/views/myPage/myNewPet.jsp");
+//         return modelAndView;
+//     }
 
+//     @GetMapping("/animals")
+//     public ModelAndView animals(ModelAndView modelAndView) {
+//         modelAndView.setViewName("/WEB-INF/views/animals.jsp");
+//         return modelAndView;
+//     }
 
 
 
