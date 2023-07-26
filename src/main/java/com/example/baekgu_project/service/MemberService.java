@@ -13,7 +13,7 @@ import com.example.baekgu_project.utils.Commons;
 
 @Service
 @Transactional
-public class UsersService
+public class MemberService
 {
 
     @Autowired
@@ -35,7 +35,7 @@ public class UsersService
         String pw = (String) dataMap.get("PW");        
         dataMap.put("PW", bCryptPasswordEncoder.encode(pw));
 
-        String sqlMapId = "User.create";
+        String sqlMapId = "Member.create";
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
@@ -49,7 +49,7 @@ public class UsersService
 
     public Object selectByUID(Map dataMap)
     {
-        String sqlMapId = "User.selectByUID";
+        String sqlMapId = "Member.selectByUID";
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
