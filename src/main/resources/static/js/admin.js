@@ -1,6 +1,7 @@
 
 function selectAnimal(data) {
 
+
     const animalList = data;
     console.log(data);
 
@@ -19,8 +20,11 @@ function selectAnimal(data) {
 }
 
 
-function getSelectAllFromREST() {
-    let url = `/memberId/${memberId}`;
+function getSelectAllFromREST(param) {
+    
+    // const MEMBER_ID = document.getElementById(data).value;
+    
+    let url = `/memberId/${param}`;
 
     let request = fetch(url)
         .then(response => {

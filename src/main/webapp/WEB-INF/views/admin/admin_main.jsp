@@ -26,7 +26,7 @@
                         <div class="search_bar container">
                             <form action="/admin/admin_main" method="get">
                                 <input class="search_box" type="text" name="find_membername" id="find_membername"
-                                    value="" placeholder="검색할 회원 이름을 입력하세요">
+                                    placeholder="검색할 회원 이름을 입력하세요">
                                 <a href="">
                                     <img type="submit" class="search_img" src="../images/search.png" alt="">
                                 </a>
@@ -87,21 +87,27 @@
                                             </td>
                                             <!-- 애완동물 현황 모달창  -->
                                             <td class="member_list_cell">
-                                                <a data-bs-toggle="modal" href="#modalTarget-center"
-                                                    onclick="callbackWithModal('memberId', selectAnimal)"
+                                                <button data-bs-toggle="modal" href="#modalTarget-center"
+                                                    onclick="callbackWithModal(`<%= record.get(" MEMBER_ID") %>`,
+                                                    callbackwithModal)"
                                                     class="btn btn1">
                                                     애완동물 현황
-                                                </a>
+                                                </button>
 
-                                            
+
                                                 <script>
-                                                    function callbackWithModal(param, callbackFunc) {
+
+                                                    function selectAnimal(param){
+                                                            }
+
+
+                                                    function callbackWithModal(param, getSelectAllFromREST) {
                                                         let modal = document.querySelector("#modalTarget-center");
                                                         const modalInstance = new bootstrap.Modal(modal);
                                                         modalInstance.show();
 
-                                                        if (callbackFunc != null) {
-                                                            callbackFunc(param);
+                                                        if (getSelectAllFromREST != null) {
+                                                            getSelectAllFromREST(param);
                                                         }
                                                     }
 
@@ -110,7 +116,7 @@
                                                     <div class="modal-dialog modal-dialog-centered">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                김진석
+                                                                <%= record.get("NAME") %>
                                                             </div>
                                                             <div class="modal-body">
                                                                 <table class="member_table">
@@ -151,6 +157,7 @@
                                                     </div>
                                                 </div>
                                             </td>
+
                                             <!-- 수정/탈퇴버튼 -->
                                             <td class="member_list_cell">
                                                 <a data-bs-toggle="modal" href="#modalTarget-second"
