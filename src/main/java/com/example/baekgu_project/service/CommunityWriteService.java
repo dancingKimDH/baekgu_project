@@ -9,12 +9,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.baekgu_project.dao.SharedDao;
+import com.example.baekgu_project.dao.UserDao;
+import com.example.baekgu_project.utils.Commons;
 
 @Service
 @Transactional
 public class CommunityWriteService {
     @Autowired
     SharedDao sharedDao;
+    @Autowired
+    Commons commons;
+    @Autowired
+    UserDao UserDao;
     
     // 상세
     public Object selectDetail(String COMWRITE_ID) {
@@ -29,6 +35,9 @@ public class CommunityWriteService {
     // 입력
     public Object insert(Map dataMap) {
         String sqlMapId = "CommunityWrite.insert_CW";
+        dataMap.put("MEMBER_ID", "M-10");
+        dataMap.put("WRITINGGROUP_NAME", "병원");
+        dataMap.put("COMWRITE_ID", commons.getUniqueSequence());
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
@@ -74,8 +83,28 @@ public class CommunityWriteService {
         return result;
     }
 
-    public Object insertAndView(String uNIQUE_ID, Map params) {
-        return null;
+    public Map insertAndView(String uNIQUE_ID, Map dataMap) {
+        String sqlMapId = "CommunityWrite.insertAndView_CW";
+        HashMap result = new HashMap<>();
+        this.insert(dataMap);
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
     }  
+
+    // 'getUserID' 로그인 사용자(ID)얻기 : DB에서 사용자 ID 가져오기
+    public UserService(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public String getUserID(String username) {
+        // UserDao를 통해 데이터베이스에서 사용자 정보를 조회하여 사용자 ID를 얻어옴
+        User user = userDao.getUserByUsername(username);
+        
+        if (user != null) {
+            return user.getId(); // 사용자 ID 반환
+        } else {
+            return null; // 사용자가 존재하지 않을 경우 null 반환
+        }
+    }
    
 }
