@@ -128,6 +128,9 @@ public class CommunityWriteController {
         resultMap.put("CONTENT", "우리 햄찌는 언제 시원한 집에 살까..");
         resultMap.put("DATEOFPREPARATION", NOW());
        
+
+
+        
         return ResponseEntity.ok().body(arrayList);
     }
 
