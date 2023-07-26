@@ -92,6 +92,7 @@
                     %>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
+                            <li style="width: 160px;"></li>
                             <li class="page-item"><button class="page-link" formaction="/community/communityList/<%= paginations.getFirstPage() %>">First</button></li>
                             <li class="page-item"><button class="page-link" formaction="/community/communityList/<%= paginations.getPreviousPage() %>">Previous</button></li>
                             <%
@@ -106,6 +107,9 @@
                             %>
                             <li class="page-item"><button class="page-link" formaction="/community/communityList/<%= paginations.getNextPage() %>">Next</button></li>
                             <li class="page-item"><button class="page-link" formaction="/community/communityList/<%= paginations.getLastPage() %>">Last</button></li>
+                            <li style="margin-left: auto;">
+                                <a href="/commuWrite" class="page-link text-decoration-none" style="background-color: #0d6efd; color: white">글 작성</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
