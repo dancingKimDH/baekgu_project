@@ -9,12 +9,12 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class PrincipalMember implements UserDetails
+public class PrincipalUser implements UserDetails
 {
 
     Map userInfo;
 
-    public PrincipalMember(Map userInfo)
+    public PrincipalUser(Map userInfo)
     {
         this.userInfo = userInfo;
     }
@@ -22,21 +22,6 @@ public class PrincipalMember implements UserDetails
     public String getMemberName()
     {
         return (String) userInfo.get("NAME");
-    }
-
-    public String getMemberEmail()
-    {
-        return (String) userInfo.get("EMAIL");
-    }
-
-    public String getMemberBirth()
-    {
-        return (String) userInfo.get("BIRTHDATE");
-    }
-
-    public String getMemberPhone()
-    {
-        return (String) userInfo.get("PHONENUM");
     }
 
     @Override
@@ -60,7 +45,7 @@ public class PrincipalMember implements UserDetails
     @Override
     public String getUsername()
     {
-        return (String) userInfo.get("ID");
+        return (String) userInfo.get("UNIQUE_ID");
     }
 
     @Override
