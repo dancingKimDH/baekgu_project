@@ -24,11 +24,11 @@
                     <%@ include file="../baekgu/header.jsp" %>
 
                         <div class="search_bar container">
-                            <form action="" onsubmit="searchMember(event)">
+                            <form action="/admin/admin_main" method="get">
                                 <input class="search_box" type="text" name="find_membername" id="find_membername"
                                     value="" placeholder="검색할 회원 이름을 입력하세요">
                                 <a href="">
-                                    <img class="search_img" src="../images/search.png" alt="">
+                                    <img type="submit" class="search_img" src="../images/search.png" alt="">
                                 </a>
                             </form>
                         </div>
@@ -88,15 +88,13 @@
                                             <!-- 애완동물 현황 모달창  -->
                                             <td class="member_list_cell">
                                                 <a data-bs-toggle="modal" href="#modalTarget-center"
-                                                    onclick="callbackWithModal('first', clickSomeButton)"
+                                                    onclick="callbackWithModal('memberId', selectAnimal)"
                                                     class="btn btn1">
                                                     애완동물 현황
                                                 </a>
 
+                                            
                                                 <script>
-                                                    function selectAnimal (param) {
-                                                        // console.log(`Button clicked with parameter: ${param}`);
-                                                    }
                                                     function callbackWithModal(param, callbackFunc) {
                                                         let modal = document.querySelector("#modalTarget-center");
                                                         const modalInstance = new bootstrap.Modal(modal);
@@ -108,7 +106,6 @@
                                                     }
 
                                                 </script>
-
                                                 <div class="modal" id="modalTarget-center">
                                                     <div class="modal-dialog modal-dialog-centered">
                                                         <div class="modal-content">
@@ -130,15 +127,12 @@
                                                                             <td class="member_table_head">
                                                                                 나이
                                                                             </td>
-                                                                            <td class="member_table_head">
-                                                                                특이사항
-                                                                            </td>
                                                                         </tr>
                                                                     </thead>
 
 
                                                                     <!-- fetch -->
-                                                                    <tbody>
+                                                                    <tbody id="datashow">
                                                                         <!-- tablerow -->
                                                                     </tbody>
 

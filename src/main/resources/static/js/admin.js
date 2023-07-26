@@ -2,7 +2,6 @@
 function selectAnimal(data) {
 
     const animalList = data;
-
     console.log(data);
 
     let outHtml = ``;
@@ -15,13 +14,13 @@ function selectAnimal(data) {
 
     console.log(outHtml);
 
-    let selectanimal = document.querySelector("#animalTable");
-    selectanimal.innerHTML = outHtml;
+    const tableBody = document.querySelector("#datashow");
+    tableBody.innerHTML = outHtml;
 }
 
 
 function getSelectAllFromREST() {
-    let url = '/memberId/M-01';
+    let url = `/memberId/${memberId}`;
 
     let request = fetch(url)
         .then(response => {

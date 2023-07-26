@@ -20,9 +20,7 @@ public class AdminService {
     // 회원 리스트
     public Object selectAllMember(Map dataMap) {
         String sqlMapId = "AdminMapper.selectTotal";
-
         HashMap result = new HashMap<>();
-
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
         return result;
     }
@@ -42,7 +40,8 @@ public class AdminService {
         String sqlMapId = "AdminMapper.selectSearch";
         
         HashMap result = new HashMap<>();
-
+        
+        
         result.put("selectedMemberList", sharedDao.getList(sqlMapId, memberName));
         return result;
     
