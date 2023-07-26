@@ -31,9 +31,14 @@ public class CommunityController
         return modelAndView;
     }
 
-    @GetMapping("/communityList") 
-    public ModelAndView selectSearch(@RequestParam Map params, ModelAndView modelAndView)
+    @GetMapping({"/communityList", "/communityList/{currentPage}"}) 
+    public ModelAndView selectSearch(@PathVariable(required=false) String currentPage, @RequestParam Map params, ModelAndView modelAndView)
     {
+        if (currentPage == null)
+        {
+            currentPage = "1";
+        }
+        params.put("currentPage", currentPage);
         Object result = communityService.selectSearchWithPagination(params);
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);

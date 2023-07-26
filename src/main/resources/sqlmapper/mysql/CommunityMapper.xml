@@ -35,7 +35,7 @@
                 and TITLE like CONCAT('%', #{words}, '%')
             </when>
             <when test="search == 'ID'">
-                and ID like CONCAT(#{words}, '%')
+                and ID like CONCAT('%', #{words}, '%')
             </when>
         </choose> 
         ORDER BY DATEOFPREPARATION DESC
@@ -45,7 +45,16 @@
     <!-- total count -->
 	<select id="selectTotal" parameterType="Map" resultType="int">
         SELECT COUNT(*)
-        FROM COMMUNITY_LIST;
+        FROM COMMUNITY_LIST
+        WHERE 1 = 1
+        <choose>
+            <when test="search == 'TITLE'">
+                and TITLE like CONCAT('%', #{words}, '%')
+            </when>
+            <when test="search == 'ID'">
+                and ID like CONCAT('%', #{words}, '%')
+            </when>
+        </choose> 
 	</select>
 
 </mapper>

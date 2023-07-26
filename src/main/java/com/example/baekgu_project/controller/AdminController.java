@@ -28,8 +28,7 @@ public class AdminController {
         try {
 
         Object result = adminService.selectAllMember(params);
-        
-        
+
         modelAndView.addObject("params", params);
         modelAndView.addObject("result", result);
         modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");

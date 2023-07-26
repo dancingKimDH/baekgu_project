@@ -1,8 +1,8 @@
 
 function selectAnimal(data) {
 
-    const animalList = data;
 
+    const animalList = data;
     console.log(data);
 
     let outHtml = ``;
@@ -15,13 +15,16 @@ function selectAnimal(data) {
 
     console.log(outHtml);
 
-    let selectanimal = document.querySelector("#animalTable");
-    selectanimal.innerHTML = outHtml;
+    const tableBody = document.querySelector("#datashow");
+    tableBody.innerHTML = outHtml;
 }
 
 
-function getSelectAllFromREST() {
-    let url = '/memberId/M-01';
+function getSelectAllFromREST(param) {
+    
+    // const MEMBER_ID = document.getElementById(data).value;
+    
+    let url = `/memberId/${param}`;
 
     let request = fetch(url)
         .then(response => {
