@@ -16,74 +16,40 @@ public class CommunityWriteService {
     @Autowired
     SharedDao sharedDao;
     
-    // foreach HashMap.put("COMWRITE_ID_LIST", COMWRITE_ID_LIST)
-    public Object selectInUID(Map dataMap) {
-        String sqlMapId = "CommunityWrite.selectInUID";
-        Object result = sharedDao.getList(sqlMapId, dataMap);
-        return result;
-    }
-
-    // 검색
-    public Object selectSearch(Map dataMap) {
-        String sqlMapId = "CommunityWrite.selectSearch";
-        Object result = sharedDao.getList(sqlMapId, dataMap);
-        return result;
-    }
- 
-    // 전체
-    public Object selectAll(String COMWRITE_ID) {
+    // 상세
+    public Object selectDetail(String COMWRITE_ID) {
         // Object getOne(String sqlMapId, Object dataMap)
-        String sqlMapId = "CommunityWrite.selectAll";
+        String sqlMapId = "CommunityWrite.selectByUID_CW";
         HashMap dataMap = new HashMap<>();
         dataMap.put("COMWRITE_ID", COMWRITE_ID);
-        Object result = sharedDao.getList(sqlMapId, dataMap);
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
     }
 
-    // // 상세
-    // public Object selectDetail(String COMWRITE_ID) {
-    //     // Object getOne(String sqlMapId, Object dataMap)
-    //     String sqlMapId = "CommunityWrite.selectDetail";
-    //     HashMap dataMap = new HashMap<>();
-    //     dataMap.put("COMWRITE_ID", COMWRITE_ID);
-    //     Object result = sharedDao.getOne(sqlMapId, dataMap);
-    //     return result;
-    // }
-
-    
     // 입력
     public Object insert(Map dataMap) {
-        String sqlMapId = "CommunityWrite.insert";
+        String sqlMapId = "CommunityWrite.insert_CW";
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
 
     // update
     public Object update(Map dataMap) {
-        String sqlMapId = "CommunityWrite.update";
+        String sqlMapId = "CommunityWrite.update_CW";
         Object result = sharedDao.update(sqlMapId, dataMap);
         return result;
     }
 
-
-    // (delete) MVC view
+     // (delete) MVC view
     public Object delete(Map dataMap) {
-        String sqlMapId = "CommunityWrite.delete";
+        String sqlMapId = "CommunityWrite.delete_CW";
         Object result = sharedDao.delete(sqlMapId, dataMap);
-        return result;
-    }
-
-    // (delete) MVC view
-    public Object deleteAndSelectSearch(Map dataMap) {
-        HashMap result = new HashMap<>();
-        result.put("deleteCount", this.delete(dataMap));
-        result.put("resultList", this.selectSearch(dataMap));
         return result;
     }
 
     // (delete) rest api
     public Object delete(String COMWRITE_ID) {
-        String sqlMapId = "CommunityWrite.delete";
+        String sqlMapId = "CommunityWrite.delete_CW";
         HashMap dataMap = new HashMap<>();
         dataMap.put("COMWRITE_ID", COMWRITE_ID);
 
@@ -91,17 +57,25 @@ public class CommunityWriteService {
         return result;
     }
 
-    // 2PC(2 pace commit) : 같은 값 인서트 2번
-    public Object insertDouble(Map dataMap) {
-        String sqlMapId = "CommunityWrite.insert";
-        // sucess
-        Object result = sharedDao.insert(sqlMapId, dataMap);
-        // error
-        result = sharedDao.insert(sqlMapId, dataMap);
+    // 전체
+    public Object selectAll(String COMWRITE_ID) {
+        // Object getOne(String sqlMapId, Object dataMap)
+        String sqlMapId = "CommunityWrite.selectAll_CW";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("COMWRITE_ID", COMWRITE_ID);
+        Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
 
-    public Object selectSearch(String search, String words) {
-        return null;
+    // foreach HashMap.put("COMWRITE_ID_LIST", COMWRITE_ID_LIST)
+    public Object selectInUID(Map dataMap) {
+        String sqlMapId = "CommunityWrite.selectInUID_CW";
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
     }
+
+    public Object insertAndView(String uNIQUE_ID, Map params) {
+        return null;
+    }  
+   
 }

@@ -79,4 +79,10 @@ public class CommonController {
         modelAndView.setViewName("/WEB-INF/views/admin/admin_main.jsp");
         return modelAndView;
     }
+
+    @GetMapping({ "/myAccount" })
+    public ModelAndView myAccount(ModelAndView modelAndView) {
+        modelAndView.setViewName("/WEB-INF/views/myAccount.jsp");
+        return modelAndView;
+    }
 }
