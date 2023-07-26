@@ -40,21 +40,29 @@
 
 <!-- 전체 -->
     <select id="selectAll_CW" parameterType="Map" resultType="Map">
-        SELECT * 
-        FROM db_animals.community_write;
-        </select>
+        SELECT *
+        FROM COMMUNITY_LIST
+        where 1 = 1 ;
+    </select>
 
 <!-- Mapper.xml -->
     <select id="selectInUID_CW" parameterType="Map" resultType="Map">
-    SELECT * 
-    FROM community_write
-    WHERE 1 = 1
-    and COMWRITE_ID in
+        SELECT * 
+        FROM community_write
+        WHERE 1 = 1
+        and COMWRITE_ID in
     <foreach item="COMWRITE_ID" index="index" collection="COMWRITE_ID"
             open="(" separator="," close=")" nullable="true">
             #{COMWRITE_ID}
     </foreach>
-    ;
+        ;
     </select>
+
+<!-- insert_CW 후 community_list page 보기 -->
+    <select id="insertAndView_CW" parameterType="Map" resultType="Map"> 
+    SELECT * 
+    FROM community_write;
+    </select>
+
 
 </mapper>

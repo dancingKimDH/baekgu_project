@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="User">
+<mapper namespace="Member">
 
 	<select id="selectByUID" parameterType="Map" resultType="Map">
         SELECT * 
-        FROM users
-        where UNIQUE_ID = #{UNIQUE_ID}
+        FROM MEMBER
+        where ID = #{ID}
 	</select>
     
     <insert id="create" parameterType="Map">
-    INSERT INTO USERS
-    (UNIQUE_ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM)
+    INSERT INTO MEMBER
+    (ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM)
     values
-    (#{UNIQUE_ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM});
+    (#{ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM});
     
 </insert>
 </mapper>

@@ -9,12 +9,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.baekgu_project.dao.SharedDao;
+import com.example.baekgu_project.utils.Commons;
 
 @Service
 @Transactional
 public class CommunityWriteService {
     @Autowired
     SharedDao sharedDao;
+    @Autowired
+    Commons commons;
     
     // 상세
     public Object selectDetail(String COMWRITE_ID) {
@@ -29,6 +32,9 @@ public class CommunityWriteService {
     // 입력
     public Object insert(Map dataMap) {
         String sqlMapId = "CommunityWrite.insert_CW";
+        dataMap.put("MEMBER_ID", "M-10");
+        dataMap.put("WRITINGGROUP_NAME", "병원");
+        dataMap.put("COMWRITE_ID", commons.getUniqueSequence());
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
@@ -74,8 +80,12 @@ public class CommunityWriteService {
         return result;
     }
 
-    public Object insertAndView(String uNIQUE_ID, Map params) {
-        return null;
+    public Map insertAndView(String uNIQUE_ID, Map dataMap) {
+        String sqlMapId = "CommunityWrite.insertAndView_CW";
+        HashMap result = new HashMap<>();
+        this.insert(dataMap);
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
     }  
    
 }
