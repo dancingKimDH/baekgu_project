@@ -118,19 +118,18 @@ public class CommunityWriteController {
      @GetMapping("/insertList")
     public ResponseEntity<Object> insertList(@PathVariable String COMWRITE_ID, 
                             @PathVariable String WRITINGGROUP_NAME, @PathVariable String TITLE, 
-                            @PathVariable String CONTENT, @PathVariable String DATEOFPREPARATION) {
+                            @PathVariable String CONTENT,@PathVariable String MEMBER_ID,
+                            @PathVariable String DATEOFPREPARATION) {
         // (#{COMWRITE_ID}, #{WRITINGGROUP_NAME}, #{TITLE}, #{CONTENT}, #{MEMBER_ID}, NOW())
         ArrayList arrayList = new ArrayList<>();
         HashMap resultMap = new HashMap<>();
-        resultMap.put("COMWRITE_ID", "LW-08");
+        resultMap.put("COMWRITE_ID", "LW-15");
         resultMap.put("WRITINGGROUP_NAME", "기타");
-        resultMap.put("TITLE", "햄스터 집확장 도와주세요");
+        resultMap.put("TITLE", "햄스터 집 확장 도와주세요");
         resultMap.put("CONTENT", "우리 햄찌는 언제 시원한 집에 살까..");
+        resultMap.put("MEMBER_ID", "M-09");
         resultMap.put("DATEOFPREPARATION", NOW());
-       
 
-
-        
         return ResponseEntity.ok().body(arrayList);
     }
 
