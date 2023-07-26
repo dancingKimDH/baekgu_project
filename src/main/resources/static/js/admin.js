@@ -1,12 +1,14 @@
 
 function selectAnimal(data) {
 
-
+    console.log("Successfully working");
     const animalList = data;
     console.log(data);
 
-    let outHtml = ``;
-    for (let animal of animalList) {
+
+    
+    let outHtml = '';
+    for (let animal in animalList) {
 
         outHtml = `${outHtml}<tr><td>${animal.NAME}</td><td>${animal.SPECIES_NAME}</td><td>${animal.AGE}</td></tr>`;
         console.log(`Successfully returned ${animal.NAME}`)
@@ -35,7 +37,7 @@ function getSelectAllFromREST(param) {
             selectAnimal(data);
         })
         .catch((data) => {
-            console.log(data)
+            console.log(param)
         });
 }
 

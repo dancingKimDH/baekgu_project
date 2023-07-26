@@ -88,28 +88,42 @@
                                             <!-- 애완동물 현황 모달창  -->
                                             <td class="member_list_cell">
                                                 <button data-bs-toggle="modal" href="#modalTarget-center"
-                                                    onclick="callbackWithModal(`<%= record.get(" MEMBER_ID") %>`,
-                                                    callbackwithModal)"
+                                                    onclick="callbackWithModal(`<%= record.get("MEMBER_ID") %>`, getSelectAllFromREST)"
                                                     class="btn btn1">
                                                     애완동물 현황
                                                 </button>
 
 
                                                 <script>
+                                                    
+                                                    function getSelectAllFromRest(param) {
 
-                                                    function selectAnimal(param){
-                                                            }
+                                                    }
 
+                                                    function callbackWithModal(param, callbackFunc) {
 
-                                                    function callbackWithModal(param, getSelectAllFromREST) {
                                                         let modal = document.querySelector("#modalTarget-center");
                                                         const modalInstance = new bootstrap.Modal(modal);
                                                         modalInstance.show();
 
-                                                        if (getSelectAllFromREST != null) {
-                                                            getSelectAllFromREST(param);
+                                                        if(callbackFunc != null) {
+                                                            callbackFunc(param);
                                                         }
                                                     }
+
+                                                    // function selectAnimal(param){
+                                                    //         }
+
+
+                                                    // function callbackWithModal(param, getSelectAllFromREST) {
+                                                    //     let modal = document.querySelector("#modalTarget-center");
+                                                    //     const modalInstance = new bootstrap.Modal(modal);
+                                                    //     modalInstance.show();
+
+                                                    //     if (getSelectAllFromREST != null) {
+                                                    //         getSelectAllFromREST(param);
+                                                    //     }
+                                                    // }
 
                                                 </script>
                                                 <div class="modal" id="modalTarget-center">
