@@ -24,6 +24,21 @@ public class PrincipalUser implements UserDetails
         return (String) userInfo.get("NAME");
     }
 
+    public String getmemberEmail()
+    {
+        return (String) userInfo.get("EMAIL");
+    }
+
+    public String getmemberBirth()
+    {
+        return (String) userInfo.get("BIRTHDATE");
+    }
+
+    public String getmemberPhone()
+    {
+        return (String) userInfo.get("PHONENUM");
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities()
     {
