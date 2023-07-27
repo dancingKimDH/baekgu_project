@@ -96,15 +96,15 @@
 
                                                 <script>
                                                     
-                                                    function getSelectAllFromRest(param) {
+                                                    function selectAnimal(data) {
 
                                                     }
 
                                                     function callbackWithModal(param, callbackFunc) {
 
-                                                        let modal = document.querySelector("#modalTarget-center");
-                                                        const modalInstance = new bootstrap.Modal(modal);
-                                                        modalInstance.show();
+                                                        // let modal = document.querySelector("#modalTarget-center");
+                                                        // const modalInstance = new bootstrap.Modal(modal);
+                                                        // modalInstance.show();
 
                                                         if(callbackFunc != null) {
                                                             callbackFunc(param);
@@ -130,7 +130,7 @@
                                                     <div class="modal-dialog modal-dialog-centered">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <%= record.get("NAME") %>
+                                                                SHOW
                                                             </div>
                                                             <div class="modal-body">
                                                                 <table class="member_table">

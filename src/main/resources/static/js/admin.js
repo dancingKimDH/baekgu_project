@@ -2,21 +2,21 @@
 function selectAnimal(data) {
 
     console.log("Successfully working");
-    const animalList = data;
+    let animalList = data;
     console.log(data);
 
 
-    
     let outHtml = '';
-    for (let animal in animalList) {
 
+    for (let animal of animalList) {
+
+        console.log(`${animal.NAME}, ${animal.SPECIES_NAME}, ${animal.AGE}`)
         outHtml = `${outHtml}<tr><td>${animal.NAME}</td><td>${animal.SPECIES_NAME}</td><td>${animal.AGE}</td></tr>`;
-        console.log(`Successfully returned ${animal.NAME}`)
+        // console.log(`Successfully returned ${NAME}`)
+  
     }
     outHtml += ``;
-
     console.log(outHtml);
-
     const tableBody = document.querySelector("#datashow");
     tableBody.innerHTML = outHtml;
 }
