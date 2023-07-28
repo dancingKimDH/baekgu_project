@@ -44,13 +44,13 @@ public class AdminService {
     
     }
 
-    public Object delete(String memberId) {
-        String sqlMapId = "AdminMapper.delete";
-        HashMap dataMap = new HashMap<>();
-        dataMap.put("memberId", memberId);
+    // public Object delete(String memberId) {
+    //     String sqlMapId = "AdminMapper.delete";
+    //     HashMap dataMap = new HashMap<>();
+    //     dataMap.put("memberId", memberId);
 
-        Object result = sharedDao.delete(sqlMapId, dataMap);
-        return result;
-    }
+    //     Object result = sharedDao.delete(sqlMapId, dataMap);
+    //     return result;
+    // }
 
 }

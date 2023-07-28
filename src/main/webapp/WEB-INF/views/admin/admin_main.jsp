@@ -59,9 +59,7 @@
                                             <td>
                                                 애완동물 현황
                                             </td>
-                                            <td>
-                                                회원탈퇴
-                                            </td>
+                                            
                                         </tr>
 
 
@@ -146,20 +144,13 @@
 
                                                                 </div>
 
-
-
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
 
                                                 <!-- 탈퇴 버튼 -->
-                                                <td class="member_list_cell">
-                                                    <form action="">
-                                                        <button type="submit" formaction='/delete/<%= record.get("MEMBER_ID") %>'' class="btn btn-primary"
-                                                        formmethod="post">회원 탈퇴</button>
-                                                    </form>
-                                                </td>
+                                                
                                                 
 
                                                 
