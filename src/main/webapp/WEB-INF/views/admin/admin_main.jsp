@@ -118,14 +118,14 @@
 
                                                                         <thead>
                                                                             <tr>
-                                                                                <td class="member_table_head" value=""
+                                                                                <td class="member_table_head1" value=""
                                                                                     id="">
                                                                                     이름
                                                                                 </td>
-                                                                                <td class="member_table_head">
+                                                                                <td class="member_table_head1">
                                                                                     종
                                                                                 </td>
-                                                                                <td class="member_table_head">
+                                                                                <td class="member_table_head1">
                                                                                     나이
                                                                                 </td>
                                                                             </tr>

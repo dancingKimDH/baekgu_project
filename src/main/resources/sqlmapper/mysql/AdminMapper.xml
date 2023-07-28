@@ -5,18 +5,17 @@
 
 
 <!-- 회원 리스트 -->
- <select id = "selectTotal" parameterType = "Map" resultType = "Map">
+<select id = "selectTotal" parameterType = "Map" resultType = "Map">
 <choose>
-<when test = "NAME != NULL and NAME != ''">
+<when test = "find_membername != NULL and find_membername != ''">
 SELECT NAME, ID, PW, EMAIL, MEMBER_ID, PHONENUM
 FROM member
-WHERE NAME = #{Name}
+WHERE NAME LIKE CONCAT("%", #{find_membername}, "%")
 </when>
 <otherwise>
 SELECT NAME, ID, PW, EMAIL, MEMBER_ID, PHONENUM
 FROM member
 </otherwise> 
-
  </choose>
 </select> 
 
