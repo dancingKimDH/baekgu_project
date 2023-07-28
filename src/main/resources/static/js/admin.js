@@ -5,15 +5,14 @@ function selectAnimal(data) {
     let animalList = data;
     console.log(data);
 
-
     let outHtml = '';
+
 
     for (let animal of animalList) {
 
         console.log(`${animal.NAME}, ${animal.SPECIES_NAME}, ${animal.AGE}`)
         outHtml = `${outHtml}<tr><td>${animal.NAME}</td><td>${animal.SPECIES_NAME}</td><td>${animal.AGE}</td></tr>`;
-        // console.log(`Successfully returned ${NAME}`)
-  
+
     }
     outHtml += ``;
     console.log(outHtml);
@@ -23,8 +22,6 @@ function selectAnimal(data) {
 
 
 function getSelectAllFromREST(param) {
-    
-    // const MEMBER_ID = document.getElementById(data).value;
     
     let url = `/memberId/${param}`;
 

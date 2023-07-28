@@ -3,7 +3,7 @@
 <mapper namespace="AdminMapper">  
 
 <!-- 회원 리스트 -->
-<select id = "selectTotal" parameterType = "Map" resultType = "Map">
+<!-- <select id = "selectTotal" parameterType = "Map" resultType = "Map">
 <choose>
 <when test = "NAME != NULL and NAME != ''">
 SELECT NAME, ID, PW, EMAIL, MEMBER_ID
@@ -13,9 +13,23 @@ WHERE NAME = #{Name}
 <otherwise>
 SELECT NAME, ID, PW, EMAIL, MEMBER_ID
 FROM member
-</otherwise>
-<!-- where 1 = 1; -->
-</choose>
+</otherwise> -->
+
+<!-- </choose>
+</select> -->
+
+<select id="selectTotal" parameterType="Map" resultType="Map">
+  <choose>
+    <when test="NAME != NULL and NAME != ''">
+      SELECT NAME, ID, PW, EMAIL, MEMBER_ID
+      FROM member
+      WHERE NAME = #{Name}
+    </when>
+    <otherwise>
+      SELECT NAME, ID, PW, EMAIL, MEMBER_ID
+      FROM member
+    </otherwise>
+  </choose>
 </select>
 
 
@@ -36,7 +50,6 @@ INNER JOIN species ON FIRST.SPE = species.SPECIES_ID;
 <select id = "selectSearch" parameterType = "Map" resultType = "Map">
 SELECT NAME, ID, PW, EMAIL
 FROM member
-WHERE NAME = #{Name};
+WHERE NAME LIKE CONCAT(#{NAME}, '%')
 </select>
-
 </mapper>
