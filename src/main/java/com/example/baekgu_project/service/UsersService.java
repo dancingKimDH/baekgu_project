@@ -59,6 +59,7 @@ public class UsersService{
     public Object selectByUIDWithAuths(Map dataMap)
     {
         Map result = (Map) this.selectByUID(dataMap);
+        dataMap.put("MEMBER_ID", result.get("MEMBER_ID"));
         result.putAll(authsService.selectWithMemberName(dataMap));
         return result;
     }

@@ -46,7 +46,7 @@ public class PrincipalUser implements UserDetails
         List<Map<String, Object>> resultList = (List) userInfo.get("resultList");
         for(Map item: resultList)
         {
-            collections.add(new SimpleGrantedAuthority((String) item.get("ID")));
+            collections.add(new SimpleGrantedAuthority((String) item.get("UNIQUE_ID")));
         }
         return collections;
     }
@@ -60,7 +60,7 @@ public class PrincipalUser implements UserDetails
     @Override
     public String getUsername()
     {
-        return (String) userInfo.get("ID");
+        return (String) userInfo.get("MEMBER_ID");
     }
 
     @Override

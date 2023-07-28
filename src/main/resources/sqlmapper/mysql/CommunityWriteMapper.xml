@@ -63,6 +63,10 @@
     SELECT * 
     FROM community_write;
     </select>
-
+   
+    <select id="insertAndView_CL" parameterType="Map" resultType="Map"> 
+    SELECT * 
+    FROM community_list;
+    </select>
 
 </mapper>
