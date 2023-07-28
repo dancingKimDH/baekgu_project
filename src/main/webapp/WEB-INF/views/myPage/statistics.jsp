@@ -90,7 +90,7 @@
             data: {
                 labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
                 datasets: [{
-                    label: '사료량',
+                    label: '몸무게',
                     backgroundColor: 'transparent',
                     borderColor: 'red',
                     data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]

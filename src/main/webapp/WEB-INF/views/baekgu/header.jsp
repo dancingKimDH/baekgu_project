@@ -12,6 +12,9 @@
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
                     <div class="loginLocation">
+                        <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')">
+                        <a class="loginText nav-link" href="/admin/admin_main">관리자 설정</a>
+                        </sec:authorize>
                         <div class="myName">${userDetailsBean.memberName}님</div>
                         <a class="loginText nav-link" href="/main/myAccount">내 계정</a>
                         <button class="mainform" type="submit" formmethod="post" formaction="/logout">로그아웃</button>
