@@ -12,7 +12,13 @@
     INSERT INTO USERS
     (UNIQUE_ID, PW, EMAIL, NAME, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM)
     values
-    (#{UNIQUE_ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM});
-    
-</insert>
+    (#{UNIQUE_ID}, #{PW}, #{EMAIL}, #{NAME}, #{GENDER_ID}, #{BIRTHDATE}, #{TELECOM_ID}, #{PHONENUM}); 
+    </insert>
+
+    <update id="change" parameterType="Map">
+    UPDATE USERS
+    SET NAME = '', UNIQUE_ID = '', EMAIL = '', BIRTHDATE = '', TELECOM_ID = ''
+    WHERE
+    MEMBER_ID = '';
+    </update>
 </mapper>
