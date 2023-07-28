@@ -1,4 +1,4 @@
-USE db_animals
+-- USE db_animals
 -- GENDER 테이블 데이터
 INSERT INTO GENDER (GENDER_ID, GENDER_NAME)
 VALUES
@@ -74,8 +74,8 @@ VALUES
   ('M-10', 'AzureMysticBlaze', 'QbT4@3e!', 'AzureMysticBlaze@email.com', '김민재', 'G-01', '19901003', 'T-04', '010-0123-4567');
 
 
-community_list 테이블 데이터 *게시글에 댓글 기능 추가 시 사용* 
---- COMLIST_ID = UNIQUE_ID
+-- community_list 테이블 데이터 *게시글에 댓글 기능 추가 시 사용* 
+-- COMLIST_ID = UNIQUE_ID
 INSERT INTO COMMUNITY_LIST (COMLIST_ID, WRITINGGROUP_ID, TITLE, MEMBER_ID, DATEOFPREPARATION)
 VALUES
   ('L-01', 'C-01', '꽃 챌린지', 'M-01', '20230510'),
@@ -208,4 +208,4 @@ VALUES
   
   
   
-SELECT DONE;
+-- SELECT DONE;
