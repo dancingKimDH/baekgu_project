@@ -46,6 +46,8 @@
 	<select id="selectTotal" parameterType="Map" resultType="int">
         SELECT COUNT(*)
         FROM COMMUNITY_LIST
+        INNER JOIN MEMBER
+        ON COMMUNITY_LIST.MEMBER_ID = MEMBER.MEMBER_ID
         WHERE 1 = 1
         <choose>
             <when test="search == 'TITLE'">

@@ -24,8 +24,9 @@
                     <%@ include file="../baekgu/header.jsp" %>
 
                         <div class="search_bar container">
-                            <form action="/admin/admin_main" method="POST">
+                            <form action="/admin/admin_main_select" method="get">
                                 <input class="search_box" type="text" name="find_membername" id="find_membername"
+                                    value="<%= params.getOrDefualt("NAME", "") %>"
                                     placeholder="검색할 회원 이름을 입력하세요">
                                 <a href="">
                                     <img type="submit" class="search_img" src="../images/search.png" alt="">
@@ -200,7 +201,7 @@
                                                                         </td>
                                                                         <td class="member_table_head">
                                                                             <form action="">
-                                                                                <button class="deletebtn"
+                                                                                <button class="btn-danger btn-sm"
                                                                                     type="submit">탈퇴</button>
                                                                             </form>
                                                                         </td>

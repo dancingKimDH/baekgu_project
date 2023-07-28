@@ -1,5 +1,6 @@
 package com.example.baekgu_project.restapis;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.baekgu_project.restapis.etc.Animal;
 import com.example.baekgu_project.service.AdminService;
+
+
 
 @RestController
 public class AdminRestController {
@@ -18,8 +22,8 @@ public class AdminRestController {
 
     // 애완동물 현황
     @GetMapping("/memberId/{memberId}")
-    public ResponseEntity selectAnimal(@PathVariable Map memberId) {
-        Object result = adminService.selectAnimal(memberId);
+    public ResponseEntity<List<Animal>> selectAnimal(@PathVariable Map memberId) {
+        List<Animal> result = (List<Animal>) adminService.selectAnimal(memberId);
         return ResponseEntity.ok().body(result);
     }
 
