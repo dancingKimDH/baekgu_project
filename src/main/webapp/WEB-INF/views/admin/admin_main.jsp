@@ -156,9 +156,13 @@
                                                 <!-- 탈퇴 버튼 -->
                                                 <td class="member_list_cell">
                                                     <form action="">
-                                                        <button type="submit" formaction="" class="btn btn-primary">회원 탈퇴</button>
+                                                        <button type="submit" formaction='/delete/<%= record.get("MEMBER_ID") %>'' class="btn btn-primary"
+                                                        formmethod="post">회원 탈퇴</button>
                                                     </form>
                                                 </td>
+                                                
+
+                                                
                                                 
                                                 <!-- 수정/탈퇴버튼 -->
                                                 

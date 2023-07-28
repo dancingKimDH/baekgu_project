@@ -34,10 +34,20 @@ INNER JOIN species ON FIRST.SPE = species.SPECIES_ID;
 
 </select>
 
-<!-- 회원 검색 -->
+<delete id="delete" parameterType="Map">
+
+DELETE FROM member
+WHERE MEMBER_ID = #{memberId}
+
+</delete>
+
+
+<!-- 회원 검색
 <select id = "selectSearch" parameterType = "Map" resultType = "Map">
 SELECT NAME, ID, PW, EMAIL
 FROM member
 WHERE NAME LIKE CONCAT(#{NAME}, '%')
-</select>
+</select> -->
+
+
 </mapper>

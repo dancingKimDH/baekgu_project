@@ -38,8 +38,4 @@ function getSelectAllFromREST(param) {
         });
 }
 
-function searchMember(event) {
-    event.preventDefault();
-    const inputElement = document.getElementById('find_membername');
-    const nameValue = inputElement.value.trim();
-}
+
