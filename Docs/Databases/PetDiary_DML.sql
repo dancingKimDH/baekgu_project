@@ -1,3 +1,4 @@
+USE db_animals
 -- GENDER 테이블 데이터
 INSERT INTO GENDER (GENDER_ID, GENDER_NAME)
 VALUES
@@ -207,3 +208,4 @@ VALUES
   
   
   
+SELECT DONE;

@@ -13,8 +13,8 @@ import com.example.baekgu_project.utils.Commons;
 
 @Service
 @Transactional
-public class UsersService
-{
+public class UsersService{
+
 
     @Autowired
     SharedDao sharedDao;
@@ -27,6 +27,7 @@ public class UsersService
 
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
+
 
     // 회원 가입
     public Object insert(Map dataMap)
@@ -61,4 +62,5 @@ public class UsersService
         result.putAll(authsService.selectWithUSERNAME(dataMap));
         return result;
     }
+
 }
