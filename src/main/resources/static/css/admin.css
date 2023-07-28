@@ -41,10 +41,11 @@ position: fixed;
 }
 
 .search_box {
+    text-align: center;
     margin: 0 auto;
     display: block;
-    width: 100%;
-    padding-right: 40px;
+    width: 70%;
+
 }
 
 
@@ -140,3 +141,19 @@ td {
     cursor: pointer;
     border-radius: 5px;
 }
+.searchbtn {
+    border: none;
+    display: inline-block;
+    padding: 13px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bolder;
+    background-color:  #78998d !important;
+    color: whitesmoke !important;
+}
+
+.searchbtn:hover {
+    background-color: #1e6b7b !important;
+    transition: 0.7s;
+}
+
