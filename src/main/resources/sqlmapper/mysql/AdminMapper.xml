@@ -8,12 +8,12 @@
  <select id = "selectTotal" parameterType = "Map" resultType = "Map">
 <choose>
 <when test = "NAME != NULL and NAME != ''">
-SELECT NAME, ID, PW, EMAIL, MEMBER_ID
+SELECT NAME, ID, PW, EMAIL, MEMBER_ID, PHONENUM
 FROM member
 WHERE NAME = #{Name}
 </when>
 <otherwise>
-SELECT NAME, ID, PW, EMAIL, MEMBER_ID
+SELECT NAME, ID, PW, EMAIL, MEMBER_ID, PHONENUM
 FROM member
 </otherwise> 
 
