@@ -19,7 +19,7 @@ public class AdminService {
     SharedDao sharedDao;
 
     // 회원 리스트
-    public Object selectAllMember(Map dataMap) {
+    public Map selectAllMember(Map dataMap) {
         
         String sqlMapId = "AdminMapper.selectTotal";
         HashMap result = new HashMap<>();

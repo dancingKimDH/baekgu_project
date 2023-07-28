@@ -2,35 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="AdminMapper">  
 
+
+
 <!-- 회원 리스트 -->
-<!-- <select id = "selectTotal" parameterType = "Map" resultType = "Map">
+<select id = "selectTotal" parameterType = "Map" resultType = "Map">
 <choose>
-<when test = "NAME != NULL and NAME != ''">
-SELECT NAME, ID, PW, EMAIL, MEMBER_ID
+<when test = "find_membername != NULL and find_membername != ''">
+SELECT NAME, ID, PW, EMAIL, MEMBER_ID, PHONENUM
 FROM member
-WHERE NAME = #{Name}
+WHERE NAME LIKE CONCAT("%", #{find_membername}, "%")
 </when>
 <otherwise>
-SELECT NAME, ID, PW, EMAIL, MEMBER_ID
+SELECT NAME, ID, PW, EMAIL, MEMBER_ID, PHONENUM
 FROM member
-</otherwise> -->
+</otherwise> 
+ </choose>
+</select> 
 
-<!-- </choose>
-</select> -->
-
-<select id="selectTotal" parameterType="Map" resultType="Map">
-  <choose>
-    <when test="NAME != NULL and NAME != ''">
-      SELECT NAME, ID, PW, EMAIL, MEMBER_ID
-      FROM member
-      WHERE NAME = #{Name}
-    </when>
-    <otherwise>
-      SELECT NAME, ID, PW, EMAIL, MEMBER_ID
-      FROM member
-    </otherwise>
-  </choose>
-</select>
 
 
 <!-- 애완동물 현황 -->

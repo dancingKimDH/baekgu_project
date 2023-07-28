@@ -16,7 +16,7 @@ public class MainController
     @GetMapping({"/", "/home", "/main"})
     public ModelAndView main(ModelAndView modelAndView)
     {
-        String userId = commons.getUserID();
+        String userId = commons.getMemberID();
         modelAndView.setViewName("/WEB-INF/views/main.jsp");
         return modelAndView;
     }

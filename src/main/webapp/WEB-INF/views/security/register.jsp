@@ -22,7 +22,7 @@
                 <div class="container my-5">
                     <div class="mb-3">
                         <label for="id" class="form-label sr-only">아이디</label>
-                        <input type="text" name="UNIQUE_ID" class="form-control" id="id" placeholder="아이디를 입력하세요."
+                        <input type="text" name="ID" class="form-control" id="id" placeholder="아이디를 입력하세요."
                             value="${ID}" value maxlength="12">
                         <div id="idError" class="error"></div>
                     </div>
@@ -93,7 +93,8 @@
                         <input type="checkbox" name="auth" class="form-check-input" id="USER" value="ROLE_USER">
                     </div>
                     <div class="d-grid gap-2">
-                        <button id="human" type="submit" class="register_box" disabled onclick="signUpCheck(); member()">회원가입</button>
+                        <input type="hidden" name="MEMBER_ID" id="human">
+                        <button id="check" type="submit" class="register_box" disabled onclick="signUpCheck(); member();">회원가입</button>
                     </div>
                 </div>
             </form>

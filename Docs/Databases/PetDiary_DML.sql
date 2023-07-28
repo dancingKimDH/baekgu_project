@@ -199,6 +199,15 @@ VALUES
   ('D-55', 'PI-14', 'FN-03', '35', '20221106'),
   ('D-56', 'PI-14', 'FN-04', 'YES', '20221106');
 
+-- 권한 종류
+INSERT INTO AUTH_NAMES 
+(UNIQUE_ID,AUTH_NAME)
+VALUES
+('ROLE_MANAGER','SYSTEM_MANAGER'),
+('ROLE_ADMIN','ADMIN'),
+('ROLE_USER','USER'),
+('ROLE_GUEST','GUEST');
+
   
 -- 통계 위한 임의값  
 --   ('D-57', 'PI-11', 'FN-01', '0.55', '20221106'),
