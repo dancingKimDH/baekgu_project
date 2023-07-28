@@ -23,13 +23,15 @@
 
                     <%@ include file="../baekgu/header.jsp" %>
 
+    
                         <div class="search_bar container">
-                            <form action="/admin/admin_main" method="POST">
+                            <form action="" method="GET">
                                 <input class="search_box" type="text" name="find_membername" id="find_membername"
-                                    placeholder="검색할 회원 이름을 입력하세요">
-                                <a href="">
-                                    <img type="submit" class="search_img" src="../images/search.png" alt="">
-                                </a>
+                                value=''  
+                                placeholder="검색할 회원 이름을 입력하세요">
+                                <button type="submit">
+
+                                </button>
                             </form>
                         </div>
 
