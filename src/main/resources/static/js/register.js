@@ -174,14 +174,19 @@ function signUpCheck()
     }
 }
 
-let number = 0;
-const values = new Set();
-
-while (true)
+function getSavedValue()
 {
-  values.add(number);
-  let stringNumber = number.toString();
+  var value = document.cookie.replace(/(?:(?:^|.*;\s*)savedValue\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+  return value !== "" ? parseInt(value) : 0;
+}
+
+var count = getSavedValue();
+
+function member()
+{
+  let stringNumber = count.toString();
   let member_ID = "M-" + stringNumber;
   document.getElementById('human').value = member_ID;
-  number++;
+  count++;
+  document.cookie = "savedValue=" + count;
 }
