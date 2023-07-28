@@ -90,8 +90,7 @@
                                                 <!-- 애완동물 현황 모달창  -->
                                                 <td class="member_list_cell">
                                                     <button data-bs-toggle="modal" href="#modalTarget-center"
-                                                        onclick="callbackWithModal(`<%= record.get(" MEMBER_ID") %>`,
-                                                        getSelectAllFromREST)"
+                                                        onclick="callbackWithModal(`<%= record.get("MEMBER_ID") %>`, getSelectAllFromREST)"
                                                         class="btn btn1">
                                                         애완동물 현황
                                                     </button>
