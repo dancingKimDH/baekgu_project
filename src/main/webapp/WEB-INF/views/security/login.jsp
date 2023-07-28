@@ -23,7 +23,7 @@
     <div class="container my-5">
         <% String fail = request.getParameter("fail"); %>
         <div class="mx-5">
-            <label for="UNIQUE_ID" class="form-label">아이디</label>
+            <label for="ID" class="form-label">아이디</label>
             <input type="text" class="form-control" name="username" placeholder="아이디를 입력하세요">
             <div class="loginform"></div>
             <label for="PW" class="form-label">비밀번호</label>
