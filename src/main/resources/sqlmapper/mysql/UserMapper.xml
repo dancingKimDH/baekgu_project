@@ -5,7 +5,7 @@
 	<select id="selectByUID" parameterType="Map" resultType="Map">
         SELECT * 
         FROM MEMBER
-        where MEMBER_ID = #{MEMBER_ID}
+        where ID = #{ID}
 	</select>
     
     <insert id="create" parameterType="Map">
