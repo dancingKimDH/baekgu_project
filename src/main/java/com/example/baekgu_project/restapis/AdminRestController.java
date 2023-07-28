@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,12 @@ public class AdminRestController {
     @GetMapping("/memberName/{Name}")
     public ResponseEntity searchSearch(@PathVariable Map memberName) {
         Object result = adminService.selectSearch(memberName);
+        return ResponseEntity.ok().body(result);
+    }
+
+    @DeleteMapping("/delete/{memberId}")
+    public ResponseEntity delete(@PathVariable String memberId) {
+        Object result = adminService.delete(memberId);
         return ResponseEntity.ok().body(result);
     }
 
