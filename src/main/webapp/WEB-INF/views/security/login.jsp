@@ -46,7 +46,7 @@
         <div style="text-align: center;">
             <ul class="list-unstyled m-25" style="display: inline-block;">
                 <li style="display: inline-block;">
-                    <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+                    <div style="text-align: center; margin-top: 20px; margin-bottom: 100%;">
                         <ul class="list-unstyled m-0" style="display: inline-block;">
                             <li style="display: inline-block;">
                                 <a href="" class="text-decoration-none ps-3">아이디 찾기</a>

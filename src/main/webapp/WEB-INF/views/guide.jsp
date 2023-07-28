@@ -61,7 +61,7 @@
 </body>
 
 <!-- footer -->
-<%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
+<%@ include file="/WEB-INF/views/baekgu/footer.jsp" %>
 <!-- /footer -->
 
 </html>
