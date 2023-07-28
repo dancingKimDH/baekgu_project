@@ -36,7 +36,7 @@ public class UsersService{
         String pw = (String) dataMap.get("PW");        
         dataMap.put("PW", bCryptPasswordEncoder.encode(pw));
 
-        String sqlMapId = "User.create";
+        String sqlMapId = "Member.create";
         Object result = sharedDao.insert(sqlMapId, dataMap);
         return result;
     }
@@ -50,7 +50,7 @@ public class UsersService{
 
     public Object selectByUID(Map dataMap)
     {
-        String sqlMapId = "User.selectByUID";
+        String sqlMapId = "Member.selectByUID";
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
@@ -59,7 +59,7 @@ public class UsersService{
     public Object selectByUIDWithAuths(Map dataMap)
     {
         Map result = (Map) this.selectByUID(dataMap);
-        result.putAll(authsService.selectWithUSERNAME(dataMap));
+        result.putAll(authsService.selectWithMemberName(dataMap));
         return result;
     }
 

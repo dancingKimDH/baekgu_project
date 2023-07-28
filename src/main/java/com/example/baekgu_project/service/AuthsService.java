@@ -35,9 +35,9 @@ public class AuthsService
         return result;
     }
 
-    public Map selectWithUSERNAME(Map dataMap)
+    public Map selectWithMemberName(Map dataMap)
     {
-        String sqlMapId = "Auths.selectWithUSERNAME";
+        String sqlMapId = "Auths.selectWithMemberName";
         
         HashMap result = new HashMap<>();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));

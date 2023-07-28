@@ -1,5 +1,3 @@
-let number = 1;
-
 // 휴대폰 번호 입력 부분
 function phoneNumber()
 {
@@ -61,8 +59,8 @@ function checkCompletion()
   alert("문자 인증이 완료되었습니다.")
   initButton();
   document.getElementById("completion").innerHTML="인증완료"
-  document.getElementById("human").disabled = false;
-  document.getElementById("human").setAttribute("style","background-color: rgb(0, 123, 255);")
+  document.getElementById("check").disabled = false;
+  document.getElementById("check").setAttribute("style","background-color: rgb(0, 123, 255);")
 }
 
 // 가입부분 체크
@@ -176,10 +174,14 @@ function signUpCheck()
     }
 }
 
-function member()
+let number = 0;
+const values = new Set();
+
+while (true)
 {
+  values.add(number);
   let stringNumber = number.toString();
   let member_ID = "M-" + stringNumber;
   document.getElementById('human').value = member_ID;
-  number = number + 1;
+  number++;
 }

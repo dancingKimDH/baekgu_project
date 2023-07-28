@@ -22,7 +22,7 @@ public class PrincipalUserService implements UserDetailsService
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
     {
         Map dataMap = new HashMap<>();
-        dataMap.put("UNIQUE_ID", username);
+        dataMap.put("MEMBER_ID", username);
         Object usernameObj = username;
         Map resultMap = (Map) usersService.selectByUIDWithAuths(dataMap);
 

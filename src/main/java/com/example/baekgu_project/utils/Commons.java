@@ -15,7 +15,7 @@ public class Commons
         UUID uuid = UUID.randomUUID();
         return uuid.toString();
     }    
-    public String getUserID()
+    public String getMemberID()
     {
         // 현재 사용자 Authentication 객체 가져오기
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
