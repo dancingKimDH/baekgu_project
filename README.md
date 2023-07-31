@@ -29,7 +29,7 @@
 &nbsp;
 ## Demo 🖥
 
-Insert gif or link to demo
+[Insert gif or link to demo](https://github.com/dancingKimDH/baekgu_project/issues/1#issue-1828286867)
 
 
 ## Features 📋
