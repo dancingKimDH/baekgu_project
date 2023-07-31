@@ -29,7 +29,7 @@ public class AdminController {
 
         try {
 
-            Object result = adminService.selectAllMember(params);
+            Object result = adminService.selectSearchWithPagination(params);
 
             modelAndView.addObject("params", params);
             modelAndView.addObject("result", result);

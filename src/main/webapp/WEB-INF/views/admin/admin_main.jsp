@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ page import="java.util.ArrayList" %>
-        <%@ page import="java.util.HashMap" %>
+        <%@ page import="java.util.HashMap, com.example.baekgu_project.utils.Paginations" %>
 
             <!DOCTYPE html>
             <html lang="en">
@@ -237,7 +237,7 @@
 
                 <!-- page button -->
 
-                <div class="container pagination mt-5 mb-5">
+                <!-- <div class="container pagination mt-5 mb-5">
                     <button class="page_button2">&lt;&lt;</button>
                     <button class="page_button">&lt;</button>
                     <button class="page_button">1</button>
@@ -247,7 +247,45 @@
                     <button class="page_button">5</button>
                     <button class="page_button">&gt;</button>
                     <button class="page_button2">&gt;&gt;</button>
-                </div>
+                </div> -->
+
+                <%
+                Paginations paginations = (Paginations)result.get("paginations"); 
+                %>
+
+                <div>총 갯수 : <%= paginations.getTotalCount() %></div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+
+                        <%
+                        for(int i=paginations.getBlockStart();i <= paginations.getBlockEnd(); i=i+1){
+                        %>
+                        <li class="page-item">
+                            <a class="page-link" href="/admin/admin_main?currentPage=<%= i %>"><%= i %></a>
+                        </li>
+                        <%
+                        }
+                        %>
+                        <!--li class="page-item">
+                            <a class="page-link" href="/carInfor/map/selectSearch?currentPage=1">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="/carInfor/map/selectSearch?currentPage=2">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="/carInfor/map/selectSearch?currentPage=3">3</a>
+                        </li-->
+
+                        <li class="page-item">
+                            <a class="page-link" href="/admin/admin_main?currentPage=<%= paginations.getNextPage() %>">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
 
                 <%@ include file="../baekgu/footer.jsp" %>
 

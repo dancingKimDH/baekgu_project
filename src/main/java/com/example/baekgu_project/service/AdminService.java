@@ -32,7 +32,7 @@ public class AdminService {
         HashMap result = new HashMap<>();
         result.put("paginations", paginations);
 
-        String sqlMapId = "AdminService.selectSearchWithPagination";
+        String sqlMapId = "AdminMapper.selectSearchWithPagination";
         dataMap.put("pageScale", paginations.getPageScale());
         dataMap.put("pageBegin", paginations.getPageBegin());
 
