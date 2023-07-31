@@ -56,4 +56,4 @@
 김동현: "_좋은 분들과 함께 공부할 수 있었다는 점에서 소중한 경험이었다. 하지만 개인적인 역량의 한계로 제한된 기한 내에 기대했던 결과를 내지 못했다는 점에서 아쉬움이 남는다. 다음 번에는  계획부터 실행까지 더욱 철저히 준비해야겠다는 생각을 했다._"
 ## 💁‍♂️ Discover Our Project at 🙋
 
-Youtube: 
+Youtube: https://www.youtube.com/watch?v=Bwdn0CYEkwo
