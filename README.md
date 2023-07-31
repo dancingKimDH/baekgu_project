@@ -30,7 +30,7 @@
 &nbsp;
 ## Demo 🖥
 
-<img width="80%" src="https://github.com/dancingKimDH/baekgu_project/issues/2#issue-1828352308"/>
+<img width="80%" src="https://user-images.githubusercontent.com/132973383/257113682-e260de81-8777-46c9-8217-c770de0c709d.gif"/>
 
 
 ## Features 📋
