@@ -90,7 +90,15 @@
                     </div>
                     <div class="m-5 form-check registerText">
                         <label class="form-check-label">회원가입에 동의합니다.</label>
+                        <input type="checkbox"  class="form-check-input">
+                    </div>
+                    <div class="form-check form-check-inline">
                         <input type="checkbox" name="auth" class="form-check-input" id="USER" value="ROLE_USER">
+                        <label class="form-check-label">유저</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" name="auth" class="form-check-input" id="USER" value="ROLE_ADMIN">
+                        <label class="form-check-label">어드민</label>
                     </div>
                     <div class="d-grid gap-2">
                         <input type="hidden" name="MEMBER_ID" id="human">
