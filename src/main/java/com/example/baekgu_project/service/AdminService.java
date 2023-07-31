@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.baekgu_project.dao.SharedDao;
+import com.example.baekgu_project.utils.Paginations;
 
 @Service
 @Transactional
@@ -17,6 +18,37 @@ public class AdminService {
 
     @Autowired
     SharedDao sharedDao;
+
+    public Map selectSearchWithPagination(Map dataMap) {
+
+        int totalCount = (int) this.selectTotalNum(dataMap);
+
+        int currentPage = 1;
+
+        if(dataMap.get("currentPage") != null) {
+        currentPage = Integer.parseInt((String) dataMap.get("currentPage"));
+        }
+        Paginations paginations = new Paginations(totalCount, currentPage);
+        HashMap result = new HashMap<>();
+        result.put("paginations", paginations);
+
+        String sqlMapId = "AdminService.selectSearchWithPagination";
+        dataMap.put("pageScale", paginations.getPageScale());
+        dataMap.put("pageBegin", paginations.getPageBegin());
+
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+
+    }
+
+    public Object selectTotalNum(Map dataMap) {
+
+        String sqlMapId = "AdminMapper.selectTotalNum";
+        Object result = sharedDao.getOne(sqlMapId, dataMap);
+        return result;
+
+    }
+
 
     // 회원 리스트
     public Map selectAllMember(Map dataMap) {
