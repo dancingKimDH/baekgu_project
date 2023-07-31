@@ -27,7 +27,7 @@
                             </li>
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item" style="display: flex; justify-content: space-between;">아이디
-                                <div style="margin-left: auto; width:350px">${userDetailsBean.username}</div><button
+                                <div style="margin-left: auto; width:350px">${userDetailsBean.memberID}</div><button
                                     onclick="openModal()"
                                     style="text-decoration: none; border: none; background:none; color:#aa0abf">수정</button>
                             </li>

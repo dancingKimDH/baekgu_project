@@ -19,6 +19,11 @@ public class PrincipalUser implements UserDetails
         this.userInfo = userInfo;
     }
 
+        public String getMemberID()
+    {
+        return (String) userInfo.get("ID");
+    }
+
     public String getMemberName()
     {
         return (String) userInfo.get("NAME");
