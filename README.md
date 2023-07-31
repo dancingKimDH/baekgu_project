@@ -29,7 +29,7 @@
 &nbsp;
 ## Demo 🖥
 
-<img width="100" src="[{이미지 경로}](https://github.com/dancingKimDH/baekgu_project/issues/1#issue-1828286867)"/>
+<img width="100" src="https://github.com/dancingKimDH/baekgu_project/issues/1#issue-1828286867"/>
 
 
 ## Features 📋
