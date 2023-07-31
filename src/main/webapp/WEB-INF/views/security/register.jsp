@@ -98,7 +98,7 @@
                     </div>
                     <div class="form-check form-check-inline">
                         <input type="checkbox" name="auth" class="form-check-input" id="USER" value="ROLE_ADMIN">
-                        <label class="form-check-label">어드민</label>
+                        <label class="form-check-label">관리자</label>
                     </div>
                     <div class="d-grid gap-2">
                         <input type="hidden" name="MEMBER_ID" id="human">
