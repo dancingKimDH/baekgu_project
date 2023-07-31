@@ -16,7 +16,7 @@
                         <a class="loginText nav-link" href="/admin/admin_main">관리자 설정</a>
                         </sec:authorize>
                         <div class="myName">${userDetailsBean.memberName}님</div>
-                        <a class="loginText nav-link" href="/main/myAccount">내 계정</a>
+                        <a class="loginText nav-link" href="/main/myAccount">내 정보</a>
                         <button class="mainform" type="submit" formmethod="post" formaction="/logout">로그아웃</button>
                     </div>
                 </sec:authorize>
