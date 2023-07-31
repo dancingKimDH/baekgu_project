@@ -35,10 +35,6 @@ public class AdminRestController {
         return ResponseEntity.ok().body(result);
     }
 
-    @DeleteMapping("/delete/{memberId}")
-    public ResponseEntity delete(@PathVariable String memberId) {
-        Object result = adminService.delete(memberId);
-        return ResponseEntity.ok().body(result);
-    }
+
 
 }
