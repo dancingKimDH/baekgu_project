@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.baekgu_project.dao.SharedDao;
-import com.example.baekgu_project.dao.UserDao;
 import com.example.baekgu_project.utils.Commons;
 
 @Service

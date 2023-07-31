@@ -18,7 +18,8 @@ public class SecurityConfiguration
         httpSecurity.authorizeHttpRequests()
                 .requestMatchers("/admin*").hasRole("ADMIN")
                 .requestMatchers("/manager*").hasAnyRole("ADMIN", "MANAGER")
-                .requestMatchers("/community/community_write").authenticated()
+                .requestMatchers("/commuWrite/insertForm").authenticated()
+                .requestMatchers("/main/myPage").authenticated()
                 .anyRequest().permitAll();
         httpSecurity.formLogin(login -> login.loginPage("/loginPage")
                 .failureUrl("/loginPage?fail=true")
