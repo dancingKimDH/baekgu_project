@@ -253,8 +253,7 @@
                 Paginations paginations = (Paginations)result.get("paginations"); 
                 %>
 
-                <div>총 갯수 : <%= paginations.getTotalCount() %></div>
-                <nav aria-label="Page navigation">
+                    <nav aria-label="Page navigation">
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
 
