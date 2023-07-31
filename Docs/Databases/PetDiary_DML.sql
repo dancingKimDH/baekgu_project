@@ -1,11 +1,10 @@
--- USE db_animals
--- GENDER 테이블 데이터
+
 INSERT INTO GENDER (GENDER_ID, GENDER_NAME)
 VALUES
   ('G-01', '남성'),
   ('G-02', '여성');
   
--- TELECOM 테이블 데이터
+
 INSERT INTO TELECOM (TELECOM_ID, TELECOM_NAME)
 VALUES
   ('T-01', 'SK 텔레콤'),
@@ -15,13 +14,13 @@ VALUES
   ('T-05', 'KT 알뜰폰'),
   ('T-06', 'LG U+ 알뜰폰');
   
--- PET_GENDER 테이블 데이터
+
 INSERT INTO PET_GENDER (PETGEN_ID, PETGENDER_NAME)
 VALUES
   ('PG-01', '수컷'),
   ('PG-02', '암컷');
 
--- SPECIES 테이블 데이터
+
 INSERT INTO SPECIES (SPECIES_ID, SPECIES_NAME)
 VALUES
   ('PS-01', '개(강아지)'),
@@ -41,7 +40,7 @@ VALUES
   ('PS-15', '라쿤'),
   ('PS-16', '토끼');
 
--- KEY_FIGURE 테이블 데이터
+
 INSERT INTO KEY_FIGURE (KEYFIGURE_ID, KEYFIGURE_NAME)
 VALUES
   ('FN-01', '몸무게(kg)'),
@@ -49,7 +48,6 @@ VALUES
   ('FN-03', '음수량(ml)'),
   ('FN-04', '중성화 여부');
 
--- WRITING_GROUP 테이블 데이터 
 INSERT INTO WRITING_GROUP (WRITINGGROUP_ID, WRITINGGROUP_NAME)
 VALUES
   ('C-01', '자랑'),
@@ -57,9 +55,7 @@ VALUES
   ('C-03', '사료/간식'),
   ('C-04', '기타');
 
--- MEMBER 테이블 데이터
------ GENDER_ID는 GENDER 테이블, TELECOM_ID는 TELECOM 테이블, MEMBER_ID=UNIQUE_ID
------ PHONENUM는 전화번호
+
 INSERT INTO MEMBER (MEMBER_ID, ID, PW, EMAIL, `NAME`, GENDER_ID, BIRTHDATE, TELECOM_ID, PHONENUM)
 VALUES
   ('M-01', 'SparkleGazer89', 'KpW4$9s!', 'SparkleGazer89@email.com', '김영수', 'G-01', '19850712', 'T-01', '010-1234-5678'), 
@@ -74,8 +70,6 @@ VALUES
   ('M-10', 'AzureMysticBlaze', 'QbT4@3e!', 'AzureMysticBlaze@email.com', '김민재', 'G-01', '19901003', 'T-04', '010-0123-4567');
 
 
--- community_list 테이블 데이터 *게시글에 댓글 기능 추가 시 사용* 
--- COMLIST_ID = UNIQUE_ID
 INSERT INTO COMMUNITY_LIST (COMLIST_ID, WRITINGGROUP_ID, TITLE, MEMBER_ID, DATEOFPREPARATION)
 VALUES
   ('L-01', 'C-01', '꽃 챌린지', 'M-01', '20230510'),
@@ -110,16 +104,13 @@ VALUES
   ('L-30', 'C-04', '반려동물과 함께하는 액티비티 추천', 'M-01', '20230720');
 
 
--- community_write 테이블 데이터 
------ COMWRITE_ID = UNIQUE_ID
 INSERT INTO COMMUNITY_WRITE (COMWRITE_ID, MEMBER_ID, WRITINGGROUP_NAME, TITLE, CONTENT, DATEOFPREPARATION)
 VALUES
   ('LW-01', 'M-01', '자랑', '꽃챌린지', '우리집 고앵 꽃???챌린지', NOW());
 
 
 
--- pet_information 테이블 데이터 
------ PETINF_ID = UNIQUE_ID
+
 INSERT INTO PET_INFORMATION(PETINF_ID, MEMBER_ID, SPECIES_ID, PETGEN_ID, PETNAME, PETAGE)
 VALUES
   ('PI-01', 'M-01','PS-02','PG-02', '루시', '2년 8개월'),
@@ -138,8 +129,6 @@ VALUES
   ('PI-14', 'M-10','PS-05','PG-01', '아토', '4년 4개월');
 
 
--- PET_DIARY_INFORMATION 테이블 데이터
------ DIARYINF_ID = UNIQUE_ID
 INSERT INTO PET_DIARY_INFORMATION(DIARYINF_ID, PETINF_ID, KEYFIGURE_ID, KEYFIGUREINPUT, DIARYDATEOFPREPARATION)
 VALUES
   ('D-01', 'PI-01', 'FN-01', '3.5', '20230315'),
@@ -199,7 +188,7 @@ VALUES
   ('D-55', 'PI-14', 'FN-03', '35', '20221106'),
   ('D-56', 'PI-14', 'FN-04', 'YES', '20221106');
 
--- 권한 종류
+
 INSERT INTO AUTH_NAMES 
 (UNIQUE_ID,AUTH_NAME)
 VALUES
@@ -207,6 +196,7 @@ VALUES
 ('ROLE_ADMIN','ADMIN'),
 ('ROLE_USER','USER'),
 ('ROLE_GUEST','GUEST');
+
 
   
 -- 통계 위한 임의값  
