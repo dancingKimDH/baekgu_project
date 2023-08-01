@@ -27,7 +27,6 @@ limit #{pageBegin}, #{pageScale};
 </select> 
 
 
-
 <!-- 애완동물 현황 -->
 <select id = "selectAnimal" parameterType = "Map" resultType = "Map">
 
@@ -48,13 +47,12 @@ WHERE MEMBER_ID = #{memberId}
 
 </delete>
 
+<insert id="addpet" parameterType="Map">
 
-<!-- 회원 검색
-<select id = "selectSearch" parameterType = "Map" resultType = "Map">
-SELECT NAME, ID, PW, EMAIL
-FROM member
-WHERE NAME LIKE CONCAT(#{NAME}, '%')
-</select> -->
+INSERT INTO pet_information(PETINF_ID, MEMBER_ID, SPECIES_ID, PETGEN_ID, PETNAME, PETAGE)
+VALUE ('A0101', 'M-01', 'PS-03', 'PG-01', '제리', '1년 2개월'); 
+
+</insert>
 
 
 </mapper>
