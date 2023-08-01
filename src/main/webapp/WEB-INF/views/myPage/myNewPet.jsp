@@ -62,9 +62,9 @@
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary">등록하기</button>
                             </div>
-                            
+<!--                             
                             <div> <input type="text" name="PETINF_ID"></div>
-                            <div> <input type="text" name="MEMBER_ID"></div>
+                            <div> <input type="text" name="MEMBER_ID"></div> -->
 
                         </div>
                     </div>
