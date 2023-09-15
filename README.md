@@ -31,12 +31,12 @@
 
 |JSP|CSS|MAPPER|CONTROLLER|SERVICE|
 |---|---|---|---|---|
-|[ADMIN_MAIN](/src/main/webapp/WEB-INF/views/admin/admin_main.jsp)|ADMIN|ADMIN_MAPPER|ADMIN_CONTROLLER|ADMIN_SERVICE|
-|---|---|---|ADMIN_RESTCONTROLLER|---|
-|MY_NEWPET|MY_NEWPET|MYPET_MAPPER|MYPET_CONTROLLER|---|
-|MY_PAGE|MY_PAGE|---|MYPAGE_CONTROLLER|MYPAGE_SERVICE|
-|STATISTICS|---|---|---|---|
-|---|---|---|NEWPET_CONTROLLER|PETINFO_SERVICE|
+|[ADMIN_MAIN](/src/main/webapp/WEB-INF/views/admin/admin_main.jsp)|[ADMIN](./src/main/resources/static/css/admin.css)|[ADMIN_MAPPE](./src/main/resources/sqlmapper/mysql/AdminMapper.xml)|[ADMIN_CONTROLLER](./src/main/java/com/example/baekgu_project/controller/AdminController.java)|[ADMIN_SERVICE](./src/main/java/com/example/baekgu_project/service/AdminService.java)|
+|---|---|---|[ADMIN_RESTCONTROLLER](./src/main/java/com/example/baekgu_project/restapis/AdminRestController.java)|---|
+|[MY_NEWPET](/src/main/webapp/WEB-INF/views/myPage/myNewPet.jsp)|[MY_NEWPET](./src/main/resources/static/css/myNewPet.css)|[MYPET_MAPPER](./src/main/resources/sqlmapper/mysql/MyPetMapper.xml)|[MYPET_CONTROLLER](./src/main/java/com/example/baekgu_project/controller/NewPetController.java)|---|
+|[MY_PAGE](/src/main/webapp/WEB-INF/views/myPage/myPage.jsp)|[MY_PAGE](./src/main/resources/static/css/myPage.css)|---|[MYPAGE_CONTROLLER](./src/main/java/com/example/baekgu_project/controller/MyPageController.java)|[MYPAGE_SERVICE](./src/main/java/com/example/baekgu_project/service/MyPageService.java.java)|
+|[STATISTICS](/src/main/webapp/WEB-INF/views/myPage/statistics.jsp)|---|---|---|---|
+|---|---|---|[NEWPET_CONTROLLER](./src/main/java/com/example/baekgu_project/controller/NewPetController.java)|[PETINFO_SERVICE](./src/main/java/com/example/baekgu_project/service/PetInformationService.java)|
 |---|---|---|---|---|
 |---|---|---|---|---|
 
