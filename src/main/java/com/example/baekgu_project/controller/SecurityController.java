@@ -19,8 +19,13 @@ public class SecurityController
         return modelAndView;
     }
 
+    @GetMapping("/api/currentUserName")
     @ResponseBody
     public String currentUserName(Principal principal) {
-        return principal.getName();
+        if(principal != null) {
+            return principal.getName();
+        } else {
+            return "Anonymous";
+        }
     }
 }
