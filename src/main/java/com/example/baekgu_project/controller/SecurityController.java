@@ -1,7 +1,10 @@
 package com.example.baekgu_project.controller;
 
+import java.security.Principal;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -14,5 +17,10 @@ public class SecurityController
         String viewName = "/WEB-INF/views/security/login.jsp";
         modelAndView.setViewName(viewName);
         return modelAndView;
+    }
+
+    @ResponseBody
+    public String currentUserName(Principal principal) {
+        return principal.getName();
     }
 }

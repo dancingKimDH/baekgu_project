@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MyPetMapper">  
+
+<select id="selectanimals" parameterType="Map" resultType="Map">
+    SELECT PETNAME, PETAGE 
+    FROM pet_information
+    WHERE MEMBER_ID = 
+    (SELECT MEMBER_ID FROM member 
+    WHERE ID = #{id});
+</select>

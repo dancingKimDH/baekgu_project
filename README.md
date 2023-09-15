@@ -27,6 +27,19 @@
 | 사이트 소개 및 안내 | DB 작성 및 관리 | | 관리자 홈페이지
 | 로그인/회원가입 창 | |
 
+1. 김동현
+
+|JSP|CSS|MAPPER|CONTROLLER|SERVICE|
+|---|---|---|---|---|
+|ADMIN_MAIN(#src/main/webapp/WEB-INF/views/admin/admin_main.jsp)|ADMIN|ADMIN_MAPPER|ADMIN_CONTROLLER|ADMIN_SERVICE|
+|---|---|---|ADMIN_RESTCONTROLLER|---|
+|MY_NEWPET|MY_NEWPET|MYPET_MAPPER|MYPET_CONTROLLER|---|
+|MY_PAGE|MY_PAGE|---|MYPAGE_CONTROLLER|MYPAGE_SERVICE|
+|STATISTICS|---|---|---|---|
+|---|---|---|NEWPET_CONTROLLER|PETINFO_SERVICE|
+|---|---|---|---|---|
+|---|---|---|---|---|
+
 &nbsp;
 ## Demo 🖥
 
