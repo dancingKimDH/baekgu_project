@@ -37,8 +37,7 @@
 |[MY_PAGE](/src/main/webapp/WEB-INF/views/myPage/myPage.jsp)|[MY_PAGE](./src/main/resources/static/css/myPage.css)|---|[MYPAGE_CONTROLLER](./src/main/java/com/example/baekgu_project/controller/MyPageController.java)|[MYPAGE_SERVICE](./src/main/java/com/example/baekgu_project/service/MyPageService.java.java)|
 |[STATISTICS](/src/main/webapp/WEB-INF/views/myPage/statistics.jsp)|---|---|---|---|
 |---|---|---|[NEWPET_CONTROLLER](./src/main/java/com/example/baekgu_project/controller/NewPetController.java)|[PETINFO_SERVICE](./src/main/java/com/example/baekgu_project/service/PetInformationService.java)|
-|---|---|---|---|---|
-|---|---|---|---|---|
+
 
 &nbsp;
 ## Demo 🖥
