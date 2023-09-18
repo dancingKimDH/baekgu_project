@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <%@ page import="java.util.ArrayList" %>
+        <%@ page import="java.util.HashMap, com.example.baekgu_project.utils.Paginations" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,40 +37,33 @@
                         <td>
                             Age
                         </td>
-                        <td>
-                            Status
-                        </td>
-                        <td>
-                            Notice
-                        </td>
-                        <td>
-                            자세히 보기
-                        </td>
 
                     </tr>
                 </div>
+                
+                <% HashMap params=(HashMap)request.getAttribute("params"); %>
+
+                <% HashMap result=(HashMap) request.getAttribute("result"); ArrayList
+                resultList=(ArrayList) result.get("resultList"); for (int i=0; i <
+                resultList.size(); i++) { HashMap record=(HashMap) resultList.get(i); %> -->
+
                 <tr>
                     <td>
-                        팅팅이
+                        <%= record.get("PETNAME")>
                     </td>
                     <td>
-                        5
+                        <%= record.get("PETAGE")>
                     </td>
                     <td>
-                        건강
-                    </td>
-                    <td>
-                        예방접종
-                    </td>
-                    <td>
-                        <div class="container">
-
+                        <div class="container"> 
+                            
                             <a data-bs-toggle="modal" href="#modalTarget-id1" class="btn btn1">
                                 자세히 보기
                             </a>
                             <div class="modal" id="modalTarget-id1">
                                 <div class="modal-dialog modal-dialog-centered">
 
+                                   
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             팅팅이
@@ -97,106 +92,8 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        통통이
-                    </td>
-                    <td>
-                        4
-                    </td>
-                    <td>
-                        건강
-                    </td>
-                    <td>
-                        -
-                    </td>
-                    <td>
-                        <div class="container">
 
-                            <a data-bs-toggle="modal" href="#modalTarget-id2" class="btn btn1">
-                                자세히 보기
-                            </a>
-                            <div class="modal" id="modalTarget-id2">
-                                <div class="modal-dialog modal-dialog-centered">
-
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            통통이
-                                        </div>
-                                        <div class="modal-body">
-                                            <table class="container">
-                                                <tr>
-                                                    <td>
-
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button data-bs-dismiss="modal" class="btn btn-secondary">
-                                                Close
-                                            </button>
-                                            <form action="">
-                                                <button class="submit">
-                                                    수정하기
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        탱탱이
-                    </td>
-                    <td>
-                        3
-                    </td>
-                    <td>
-                        -
-                    </td>
-                    <td>
-                        예방접종
-                    </td>
-                    <td>
-                        <div class="container">
-
-                            <a data-bs-toggle="modal" href="#modalTarget-id3" class="btn btn1">
-                                자세히 보기
-                            </a>
-                            <div class="modal" id="modalTarget-id3">
-                                <div class="modal-dialog modal-dialog-centered">
-
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            탱탱이
-                                        </div>
-                                        <div class="modal-body">
-                                            <table class="container">
-                                                <tr>
-                                                    <td>
-
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button data-bs-dismiss="modal" class="btn btn-secondary">
-                                                Close
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
+                <% } %>
     </div>
     <div class="button_box">
         <form action="/main/myNewPet">
