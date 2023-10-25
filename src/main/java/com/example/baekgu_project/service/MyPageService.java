@@ -21,14 +21,12 @@ public class MyPageService {
     @Autowired
     SharedDao sharedDao;
 
-    public Map selectWithUserName(Map dataMap) {
-        String sqlMapId = "PetStatus.selectAnimals";
-        HashMap result = new HashMap<>();
-        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+    public Object selectWithUserName(String username) {
+        String sqlMapId = "petStatus.selectAnimalStatus";
+        HashMap dataMap = new HashMap<>();
+        dataMap.put("username", username);
+        Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
     }
 
-        
-    }
-
-
+}

@@ -3,6 +3,7 @@ package com.example.baekgu_project.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Service;
@@ -61,6 +62,13 @@ public class UsersService{
         Map result = (Map) this.selectByUID(dataMap);
         dataMap.put("MEMBER_ID", result.get("MEMBER_ID"));
         result.putAll(authsService.selectWithMemberName(dataMap));
+        return result;
+    }
+
+    public Object selectByID(String username) {
+        Map dataMap = new HashMap<>();
+        dataMap.put("username", username);
+        Object result = this.selectByUID(dataMap);
         return result;
     }
 

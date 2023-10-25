@@ -41,22 +41,24 @@
                     </tr>
                 </div>
                 
-                <% HashMap params=(HashMap)request.getAttribute("params"); %>
-
-                <% HashMap result=(HashMap) request.getAttribute("result"); ArrayList
-                resultList=(ArrayList) result.get("resultList"); for (int i=0; i <
-                resultList.size(); i++) { HashMap record=(HashMap) resultList.get(i); %> -->
+                <% 
+                HashMap result = (HashMap) request.getAttribute("modelAndView"); 
+                ArrayList resultList = (ArrayList) result.get("result");
+                HashMap record;
+                for(int i = 0; i < resultList.size(); i++) {
+                    record = (HashMap) resultList.get(i);
+                %>
 
                 <tr>
                     <td>
-                        <%= record.get("PETNAME")>
+                        <%= record.get("PETNAME") %>
                     </td>
                     <td>
-                        <%= record.get("PETAGE")>
+                        <%= record.get("PETAGE") %>
                     </td>
                     <td>
                         <div class="container"> 
-                            
+
                             <a data-bs-toggle="modal" href="#modalTarget-id1" class="btn btn1">
                                 자세히 보기
                             </a>
