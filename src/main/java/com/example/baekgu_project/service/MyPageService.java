@@ -3,6 +3,7 @@ package com.example.baekgu_project.service;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,6 +14,7 @@ import com.example.baekgu_project.dao.SharedDao;
 
 @Service
 @Transactional
+
 public class MyPageService {
 
     @Autowired
@@ -21,12 +23,13 @@ public class MyPageService {
     @Autowired
     SharedDao sharedDao;
 
-    public Object selectWithUserName(String username) {
-        String sqlMapId = "petStatus.selectAnimalStatus";
-        HashMap dataMap = new HashMap<>();
-        dataMap.put("username", username);
-        Object result = sharedDao.getList(sqlMapId, dataMap);
-        return result;
-    }
+    public Object selectWithUserName(Map dataMap) {
 
+        String sqlMapId = "petStatus.selectAnimalStatus";
+
+        HashMap result = new HashMap();
+        result.put("resultList", sharedDao.getList(sqlMapId, dataMap));
+        return result;
+
+    }
 }

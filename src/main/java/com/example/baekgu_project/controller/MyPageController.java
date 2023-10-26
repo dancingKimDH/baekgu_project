@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.baekgu_project.service.MyPageService;
 import com.example.baekgu_project.service.PetInformationService;
 import com.example.baekgu_project.service.UsersService;
+import com.example.baekgu_project.utils.Commons;
 
 @Controller
 public class MyPageController {
@@ -29,19 +31,17 @@ public class MyPageController {
     @Autowired
     UsersService usersService;
 
-    @GetMapping("/myPage")
-    public ModelAndView petStatus(Principal principal) {
+    @Autowired
+    Commons commons;
 
-        ModelAndView modelAndView = new ModelAndView("/WEB-INF/views/myPage/myPage.jsp");
-        HashMap result = new HashMap();
+    @GetMapping("/myPages")
+    public ModelAndView petStatus(@RequestParam Map params, ModelAndView modelAndView) {
+        
+        Object result = myPageService.selectWithUserName(params);
+        modelAndView.addObject("params", params);
+        modelAndView.addObject("result", result);
+        modelAndView.setViewName("/WEB-INF/views/myPage/myPage.jsp");
 
-        if (principal != null) {
-            String username = principal.getName();
-
-            result = (HashMap) myPageService.selectWithUserName(username);
-            modelAndView.addObject("result", result);
-
-        }
         return modelAndView;
 
     }
