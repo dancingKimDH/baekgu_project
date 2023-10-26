@@ -34,7 +34,7 @@ public class MyPageController {
     @Autowired
     Commons commons;
 
-    @GetMapping("/myPages")
+    @GetMapping("/myPage")
     public ModelAndView petStatus(@RequestParam Map params, ModelAndView modelAndView) {
         
         Object result = myPageService.selectWithUserName(params);

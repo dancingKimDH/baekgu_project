@@ -13,7 +13,7 @@
                 <sec:authorize access="isAuthenticated()">
                     <div class="loginLocation">
                         <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')">
-                        <a class="loginText nav-link" href="/admin/admin_main">관리자 설정</a>
+                            <a class="loginText nav-link" href="/admin/admin_main">관리자 설정</a>
                         </sec:authorize>
                         <div class="myName">${userDetailsBean.memberName}님</div>
                         <a class="loginText nav-link" href="/main/myAccount">내 정보</a>
@@ -43,10 +43,13 @@
                                             class="headerAddress text-decoration-none ps-3"
                                             style="font-size: 1.3rem;">커뮤니티</a>
                                     </li>
+
                                     <li style="display: inline-block;">
-                                        <a href="/main/myPage" onclick="redirectToPage(); return false;"
-                                            class="headerAddress text-decoration-none ps-3"
-                                            style="font-size: 1.3rem;">마이페이지</a>
+                                        <form action="/myPage" value="${userDetailsBean.memberName}" formmethod="get">
+                                            <a href="/myPage"
+                                                class="headerAddress text-decoration-none ps-3"
+                                                style="font-size: 1.3rem;">마이페이지</a>
+                                        </form>
                                     </li>
                                 </ul>
                             </div>
