@@ -44,11 +44,14 @@
                                             style="font-size: 1.3rem;">커뮤니티</a>
                                     </li>
 
-                                    <li style="display: inline-block;">
-                                        <button formaction="/myPage" formmethod="get">
-                                            마이페이지
-                                        </button>
-                                    </li>
+                                    <sec:authorize access="isAuthenticated()">
+                                        <li style="display: inline-block;">
+                                            <button formaction="/myPage" formmethod="get">
+                                                <input type="hidden" name="userId" value="${userDetailsBean.username}">
+                                                마이페이지
+                                            </button>
+                                        </li>
+                                    </sec:authorize>
                                 </ul>
                             </div>
                         </li>

@@ -10,4 +10,9 @@
     VALUES(#{PETINF_ID}, #{MEMBER_ID}, #{SPECIES_ID}, #{PETGEN_ID}, #{PETNAME}, #{PETAGE});
     </insert>
 
+    <select id="selectAnimalStatus" parameterType="Map" resultType="Map">
+    SELECT * FROM pet_information 
+    WHERE MEMBER_ID = #{userId}
+    </select>
+
 </mapper>
