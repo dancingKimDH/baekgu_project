@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-        <%@ page import="java.util.HashMap, java.util.ArrayList" %>
+    <%@ page import="java.util.HashMap, java.util.ArrayList" %>
             <!DOCTYPE html>
             <html lang="en">
 
@@ -17,6 +17,7 @@
 
             <body>
                 <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
+
                     <div>
                         <table class="">
                             <thead>
@@ -33,11 +34,10 @@
                                         애완동물 나이
                                     </th>
                                 </tr>
-
-                                <% ArrayList resultList = (ArrayList) request.getAttribute("result");
-                                for(int i = 0; i < resultList.size(); i++) {
-                                    HashMap record = (HashMap) resultList.get(i); %>
-                                    
+                                <% 
+                            ArrayList resultList = (ArrayList)request.getAttribute("result");
+                            for(int i=0; i < resultList.size(); i=i+1){
+                                HashMap record = (HashMap)resultList.get(i); %>
                                     <tr>
                                         <td>
                                             <%= record.get("PETNAME") %>
@@ -46,8 +46,7 @@
                                             <%= record.get("PETAGE") %>
                                         </td>
                                     </tr>
-
-                                    <% } %>
+                             <% } %>
                             </tbody>
                         </table>
 
