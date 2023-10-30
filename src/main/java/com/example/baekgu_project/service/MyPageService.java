@@ -25,7 +25,7 @@ public class MyPageService {
 
     public Object selectWithUserName(Map dataMap) {
 
-        String sqlMapId = "petStatus.selectAnimalStatus";
+        String sqlMapId = "MemberManage.selectAnimalStatus";
 
         HashMap result = new HashMap();
         result.put("resultList", sharedDao.getList(sqlMapId, dataMap));

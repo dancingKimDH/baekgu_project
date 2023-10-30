@@ -44,14 +44,14 @@
                                             style="font-size: 1.3rem;">커뮤니티</a>
                                     </li>
 
-                                    <li style="display: inline-block;">
-                                        <form action="/myPage" formmethod="get">
-                                            <input type="hidden" name="userId" value="${userDetailsBean.userId}">
-                                            <a href="/myPage"
-                                                class="headerAddress text-decoration-none ps-3"
-                                                style="font-size: 1.3rem;">마이페이지</a>
-                                        </form>
-                                    </li>
+                                    <sec:authorize access="isAuthenticated()">
+                                        <li style="display: inline-block;">
+                                            <button formaction="/myPage" formmethod="get">
+                                                <input type="hidden" name="userId" value="${userDetailsBean.username}">
+                                                마이페이지
+                                            </button>
+                                        </li>
+                                    </sec:authorize>
                                 </ul>
                             </div>
                         </li>
