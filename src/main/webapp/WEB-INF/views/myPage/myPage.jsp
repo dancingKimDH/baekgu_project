@@ -32,6 +32,9 @@
                                     <th>
                                         애완동물 나이
                                     </th>
+                                    <th>
+                                        애완동물 종
+                                    </th>
                                 </tr>
 
                                 <% ArrayList resultList = (ArrayList) request.getAttribute("result");
@@ -44,6 +47,9 @@
                                         </td>
                                         <td>
                                             <%= record.get("PETAGE") %>
+                                        </td>
+                                        <td>
+                                            <%= record.get("SPECIES_NAME") %>
                                         </td>
                                     </tr>
 
