@@ -17,11 +17,11 @@
 
             <body>
                 <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
-                    <div>
-                        <table class="">
-                            <thead>
+                    <div class="table_box">
+                        <table class="main_table">
+                            <thead class="headline">
                                 <tr>
-                                    <th colspan="2"> 나의 애완동물 정보</th>
+                                    <th colspan="3"> 나의 애완동물 정보</th>
                                 </tr>
                             </thead>
                             <tbody>
