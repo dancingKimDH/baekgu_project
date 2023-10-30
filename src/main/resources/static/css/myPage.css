@@ -4,9 +4,15 @@
     justify-content: center;
 }
 
+.button_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main_table {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     width: 80%;
     border-top: 1px solid #444444;
     border-collapse: collapse;

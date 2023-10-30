@@ -18,6 +18,7 @@
             <body>
                 <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
                     <div class="table_box">
+                        <div>
                         <table class="main_table">
                             <thead class="headline">
                                 <tr>
@@ -54,9 +55,44 @@
                                     </tr>
 
                                     <% } %>
+                                    
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="animal_name" placeholder="애완동물 이름">
+                                        </td>
+                                        <td>
+                                            <input type="text" id="animal_age" placeholder="0년 0개월">
+                                        </td>
+                                        <td>
+                                            <select name="animal_type" id="animal_type">
+                                                <option value="PS-01">개(강아지)</option>
+                                                <option value="PS-02">고양이</option>
+                                                <option value="PS-03">햄스터</option>
+                                                <option value="PS-04">슈가글라이더</option>
+                                                <option value="PS-05">고슴도치</option>
+                                                <option value="PS-06">앵무새</option>
+                                                <option value="PS-07">기니피그</option>
+                                                <option value="PS-08">카멜레온</option>
+                                                <option value="PS-09">다람쥐</option>
+                                                <option value="PS-10">도마뱀</option>
+                                                <option value="PS-11">거북이</option>
+                                                <option value="PS-12">미어캣</option>
+                                                <option value="PS-13">오리</option>
+                                                <option value="PS-14">친칠라</option>
+                                                <option value="PS-15">라쿤</option>
+                                                <option value="PS-16">토끼</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
                             </tbody>
                         </table>
-
+                    </div>
+                    </div>
+                    <div class="button_box" id="animal_btn" onclick="new_animal">
+                        <button>
+                            신규동물 등록하기
+                        </button>
                     </div>
             </body>
 
