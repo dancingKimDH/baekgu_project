@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.baekgu_project.dao.SharedDao;
+import com.example.baekgu_project.utils.Commons;
 import com.example.baekgu_project.utils.Paginations;
 
 @Service
@@ -56,5 +57,14 @@ public class CommunityService
 
         Object result = sharedDao.getOne(sqlMapId, dataMap);
         return result;
-    }    
+    }
+    
+    public Object addAnimal(Map dataMap){
+        String sqlMapId = "MemberManage.newpetinsert";
+        Commons commons = new Commons(); // Create an instance of the Commons class
+        String UUID = commons.getUniqueSequence(); // Call the method on the instance
+        dataMap.put("PETINF_ID", UUID);
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
+    }
 }

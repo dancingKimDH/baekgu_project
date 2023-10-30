@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.baekgu_project.service.CommunityService;
 import com.example.baekgu_project.service.PetInformationService;
 
 @Controller
@@ -18,9 +19,12 @@ public class NewPetController {
     @Autowired
     PetInformationService petInformationService;
 
-    @PostMapping({"/add"})
+    @Autowired
+    CommunityService communityService;
+
+    @PostMapping({"/addAnimal"})
     public ResponseEntity addPetInformation(@RequestParam Map paramMap) {
-        Object result = petInformationService.insertPetInformation(paramMap);
+        Object result = communityService.addAnimal(paramMap);
         return ResponseEntity.ok().body(result);
     }
 }
