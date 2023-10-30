@@ -45,7 +45,8 @@
                                     </li>
 
                                     <li style="display: inline-block;">
-                                        <form action="/myPage" value="${userDetailsBean.memberName}" formmethod="get">
+                                        <form action="/myPage" formmethod="get">
+                                            <input type="hidden" name="userId" value="${userDetailsBean.userId}">
                                             <a href="/myPage"
                                                 class="headerAddress text-decoration-none ps-3"
                                                 style="font-size: 1.3rem;">마이페이지</a>
