@@ -24,12 +24,11 @@
 
                         <sec:authorize access="isAuthenticated()">
                             <input type="hidden" name="userId" id="userId" value="${userDetailsBean.username}">
-                        </sec:authorize>
-
+                    
                         <table class="main_table">
                             <thead class="headline">
                                 <tr>
-                                    <th colspan="4"> 나의 애완동물 정보</th>
+                                    <th colspan="5"> 나의 애완동물 정보</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +44,9 @@
                                     </th>
                                     <th>
                                         애완동물 성별
+                                    </th>
+                                    <th>
+                                        삭제
                                     </th>
                                 </tr>
 
@@ -64,6 +66,14 @@
                                         <td>
                                             <%= record.get("PETGENDER_NAME") %>
                                         </td>
+                                        <td>
+                                            <form action="/deletePet/{petId}" method="post">
+                                                <button type="submit">
+                                                    <input type="hidden" name="userId" id="userId" value="${userDetailsBean.username}">
+                                                    <input type="hidden" name="petId" id="petId" value="<%= record.get("PETINF_ID") %>">
+                                                </button>
+                                            </form>
+                                        </td>
                                     </tr>
 
                                     <% } %>
@@ -72,13 +82,11 @@
                                         <tr>
                                             <td>
                                                 <input type="text" name="animal_name" id="animal_name"
-                                                    placeholder="애완동물 이름" value="<%= request.getAttribute("
-                                                    animal_name") %>">
+                                                    placeholder="애완동물 이름" value="<%= (request.getAttribute("animal_name") != null) ? request.getAttribute("animal_name") : " " %>">
                                             </td>
                                             <td>
                                                 <input type="text" name="animal_age" id="animal_age"
-                                                    placeholder="0년 0개월" value="<%= request.getAttribute(" animal_age")
-                                                    %>">
+                                                    placeholder="0년 0개월" value="<%= (request.getAttribute("animal_age") != null) ? request.getAttribute("animal_age") : " " %>">
                                             </td>
                                             <td>
                                                 <select name="animal_type" id="animal_type">
@@ -100,8 +108,8 @@
                                                     <option value="PS-16">토끼</option>
                                                 </select>
                                             </td>
-                                            <td name="" id="">
-                                                <select name="animal_gen" id="animal_gen">
+                                            <td name="" id="" colspan="2">
+                                                <select name="animal_gen" id="animal_gen" >
                                                     <option value="PG-01">수컷</option>
                                                     <option value="PG-02">암컷</option>
                                                 </select>
@@ -110,6 +118,7 @@
 
                             </tbody>
                         </table>
+                    </sec:authorize>
 
                     </div>
                     <div class="button_box" id="animal_btn">

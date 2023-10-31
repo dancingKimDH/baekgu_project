@@ -17,4 +17,9 @@
     AND MEMBER_ID = #{userId}
     </select>
 
+    <delete id="deletePet" parameterType="Map">
+    DELETE FROM pet_information
+    WHERE PETINF_ID = #{petId}
+    </delete>
+
 </mapper>
