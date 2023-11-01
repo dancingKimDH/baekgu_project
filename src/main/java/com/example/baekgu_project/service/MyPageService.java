@@ -1,12 +1,8 @@
 package com.example.baekgu_project.service;
 
-import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,5 +25,11 @@ public class MyPageService {
         Object result = sharedDao.getList(sqlMapId, dataMap);
         return result;
 
+    }
+
+    public Object deletePet(Map dataMap) {
+        String sqlMapId = "MemberManage.deletePet";
+        Object result = sharedDao.delete(sqlMapId, dataMap);
+        return result;
     }
 }

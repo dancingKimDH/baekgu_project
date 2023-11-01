@@ -10,14 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.baekgu_project.service.CommunityService;
-import com.example.baekgu_project.service.PetInformationService;
 
 @Controller
 @RequestMapping({"/pets"})
 public class NewPetController {
     
-    @Autowired
-    PetInformationService petInformationService;
 
     @Autowired
     CommunityService communityService;
