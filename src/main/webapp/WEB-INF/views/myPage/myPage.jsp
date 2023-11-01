@@ -115,6 +115,26 @@
                                                 </select>
                                             </td>
                                         </tr>
+                                        <tr class="pet_addition">
+                                            <td class="info_added">
+                                                
+                                            </td>
+                                            <td class="info_added">
+                                                
+                                            </td>
+                                            <td class="info_added">
+                                                
+                                            </td>
+                                            <td class="info_added">
+                                                
+                                            </td>
+                                            <td class="info_added">
+                                                
+                                            </td>
+                                            <td class="info_added">
+                                                
+                                            </td>
+                                        </tr>
 
                             </tbody>
                         </table>
