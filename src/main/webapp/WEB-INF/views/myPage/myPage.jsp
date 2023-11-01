@@ -18,20 +18,24 @@
             <body>
                 <%@ include file="/WEB-INF/views/baekgu/header.jsp" %>
 
-                    <div>
+                    <div class="container">
+                        <div class="table_box">
                         <table class="">
                             <thead>
-                                <tr>
-                                    <th colspan="2"> 나의 애완동물 정보</th>
+                                <tr class="table_header">
+                                    <th colspan="3" > 나의 애완동물 정보</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="">
                                     <th>
                                         애완동물 이름
                                     </th>
                                     <th>
                                         애완동물 나이
+                                    </th>
+                                    <th>
+                                        애완동물 종
                                     </th>
                                 </tr>
                                 <% 
@@ -45,12 +49,18 @@
                                         <td>
                                             <%= record.get("PETAGE") %>
                                         </td>
+                                        <td>
+                                            <%= record.get("SPECIES_NAME") %>
+                                        </td>
                                     </tr>
                              <% } %>
                             </tbody>
                         </table>
+                    </div>
 
                     </div>
+
+                    <%@ include file="/WEB-INF/views/baekgu/footer.jsp" %>
             </body>
 
 
