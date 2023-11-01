@@ -5,16 +5,6 @@ let pet_type;
 let pet_gen
 const submit_btn = document.getElementById("animal_btn");
 
-
-let number = 1;
-
-function myNewPet() {
-  let stringNumber = number.toString();
-  let petinf_id = "PI-" + stringNumber;
-  document.getElementById('myNewPet').value = petinf_id;
-  number = number + 1;
-}
-
 submit_btn.addEventListener("click", (result) => {
 
   pet_name = document.getElementsByName("animal_name")[0].value;

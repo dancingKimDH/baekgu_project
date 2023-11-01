@@ -68,9 +68,10 @@
                                         </td>
                                         <td>
                                             <form action="/deletePet/{petId}" method="post">
-                                                <button type="submit">
+                                                <button class="delete_btn" type="submit">
                                                     <input type="hidden" name="userId" id="userId" value="${userDetailsBean.username}">
                                                     <input type="hidden" name="petId" id="petId" value="<%= record.get("PETINF_ID") %>">
+                                                    ❌
                                                 </button>
                                             </form>
                                         </td>
@@ -82,11 +83,11 @@
                                         <tr>
                                             <td>
                                                 <input type="text" name="animal_name" id="animal_name"
-                                                    placeholder="애완동물 이름" value="<%= (request.getAttribute("animal_name") != null) ? request.getAttribute("animal_name") : " " %>">
+                                                    placeholder="애완동물 이름" value="<%= (request.getAttribute("animal_name") != null) ? request.getAttribute("animal_name") : "애완동물 이름" %>">
                                             </td>
                                             <td>
                                                 <input type="text" name="animal_age" id="animal_age"
-                                                    placeholder="0년 0개월" value="<%= (request.getAttribute("animal_age") != null) ? request.getAttribute("animal_age") : " " %>">
+                                                    placeholder="0년 0개월" value="<%= (request.getAttribute("animal_age") != null) ? request.getAttribute("animal_age") : "0년 0개월" %>">
                                             </td>
                                             <td>
                                                 <select name="animal_type" id="animal_type">
@@ -115,35 +116,15 @@
                                                 </select>
                                             </td>
                                         </tr>
-                                        <tr class="pet_addition">
-                                            <td class="info_added">
-                                                
-                                            </td>
-                                            <td class="info_added">
-                                                
-                                            </td>
-                                            <td class="info_added">
-                                                
-                                            </td>
-                                            <td class="info_added">
-                                                
-                                            </td>
-                                            <td class="info_added">
-                                                
-                                            </td>
-                                            <td class="info_added">
-                                                
-                                            </td>
-                                        </tr>
 
                             </tbody>
                         </table>
                     </sec:authorize>
 
                     </div>
-                    <div class="button_box" id="animal_btn">
-                        <button class="w-btn-green-outline">
-                            신규동물 등록하기
+                    <div class="button_box" >
+                        <button class="w-btn-green-outline" id="animal_btn">
+                            신규동물 등록
                         </button>
                     </div>
             </body>
