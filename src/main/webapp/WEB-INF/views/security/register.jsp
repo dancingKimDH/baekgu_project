@@ -102,7 +102,7 @@
                     </div>
                     <div class="d-grid gap-2">
                         <input type="hidden" name="MEMBER_ID" id="human">
-                        <button id="check" type="submit" class="register_box" disabled onclick="signUpCheck(); member();">회원가입</button>
+                        <button id="check" type="submit" class="register_box" onclick="signUpCheck(); member();">회원가입</button>
                     </div>
                 </div>
             </form>

@@ -19,15 +19,14 @@ public class PetInformationService {
     @Autowired
     AuthsService authsService;
 
-    public Object insertPetInformation(Map dataMap) {
-        String sqlMapId = "MemberManageMapper.newpetinsert";
-        Object result = sharedDao.insert(sqlMapId, dataMap);
+    @Autowired
+    MyPageService myPageService;
+
+    public Object deletePet(Map dataMap) {
+        String sqlMapId = "MemberManage.deletePet";
+        Object result = sharedDao.delete(sqlMapId, dataMap);
         return result;
     }
 
-    public Object getDetails(String username) {
-        String sqlMapId = "PetStatus.selectanimals";
-        Object result = sharedDao.getList(sqlMapId, username);
-        return result;
-    }
+
 }

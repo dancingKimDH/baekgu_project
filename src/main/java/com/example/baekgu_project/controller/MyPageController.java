@@ -6,7 +6,9 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -40,6 +42,15 @@ public class MyPageController {
 
         return modelAndView;
 
+    }
+
+    @PostMapping("/deletePet/{petId}")
+    public ModelAndView petDelete(@RequestParam Map params, ModelAndView modelAndView) {
+
+        Object result = petInformationService.deletePet(params);
+        modelAndView.addObject(params);
+        modelAndView.addObject(result);
+        return new ModelAndView("redirect:/myPage");
     }
 
 }

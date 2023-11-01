@@ -46,9 +46,9 @@
 
                                     <sec:authorize access="isAuthenticated()">
                                         <li style="display: inline-block;">
-                                            <button formaction="/myPage" formmethod="get"
-                                            style="font-size: 1.3rem; background: none; border: none; padding: 0; outline: inherit; cursor: pointer;"
-                                            class="headerAddress text-decoration-none ps-3">
+                                            <button formaction="/myPage" formmethod="get" 
+                                            class="ps-3"
+                                            style="font-size: 1.3rem; background-color: inherit; border: none; color: grey; font-weight: bold;" >
                                                 <input type="hidden" name="userId" value="${userDetailsBean.username}">
                                                 마이페이지
                                             </button>

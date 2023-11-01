@@ -13,7 +13,13 @@
     <select id="selectAnimalStatus" parameterType="Map" resultType="Map">
     SELECT * FROM pet_information
     INNER JOIN species ON pet_information.SPECIES_ID = species.SPECIES_ID
-    AND MEMBER_ID = #{userId};
+    INNER JOIN pet_gender ON pet_information.PETGEN_ID = pet_gender.PETGEN_ID
+    AND MEMBER_ID = #{userId}
     </select>
+
+    <delete id="deletePet" parameterType="Map">
+    DELETE FROM pet_information
+    WHERE PETINF_ID = #{petId}
+    </delete>
 
 </mapper>
