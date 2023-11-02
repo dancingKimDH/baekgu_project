@@ -6,8 +6,9 @@
 <!-- com.example.baekgu_project.dao.SharedDao -->
 
     <insert id="newpetinsert" parameterType="Map">
-    INSERT INTO pet_information(PETINF_ID, MEMBER_ID, SPECIES_ID, PETGEN_ID, PETNAME, PETAGE)
-    VALUES(#{PETINF_ID}, #{MEMBER_ID}, #{SPECIES_ID}, #{PETGEN_ID}, #{PETNAME}, #{PETAGE});
+    INSERT INTO pet_information(PETINF_ID, MEMBER_ID, SPECIES_ID, PETGEN_ID, PETNAME, BIRTHDATE, PETAGE)
+    VALUES(#{PETINF_ID}, #{MEMBER_ID}, #{SPECIES_ID}, #{PETGEN_ID}, #{PETNAME}, #{BIRTHDATE}, CONCAT(TIMESTAMPDIFF(YEAR, #{BIRTHDATE}, CURDATE()), '년 ',
+            TIMESTAMPDIFF(MONTH, #{BIRTHDATE}, CURDATE()) % 12, ' 개월'));
     </insert>
 
     <select id="selectAnimalStatus" parameterType="Map" resultType="Map">
@@ -15,6 +16,13 @@
     INNER JOIN species ON pet_information.SPECIES_ID = species.SPECIES_ID
     INNER JOIN pet_gender ON pet_information.PETGEN_ID = pet_gender.PETGEN_ID
     AND MEMBER_ID = #{userId}
+    </select>
+
+    <select id="updateAndSelect" parameterType="Map" resultType="Map">
+    SELECT * FROM pet_information
+    INNER JOIN species ON pet_information.SPECIES_ID = species.SPECIES_ID
+    INNER JOIN pet_gender ON pet_information.PETGEN_ID = pet_gender.PETGEN_ID
+    AND MEMBER_ID = #{MEMBER_ID}
     </select>
 
     <delete id="deletePet" parameterType="Map">

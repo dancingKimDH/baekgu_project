@@ -12,7 +12,6 @@
 
                 <link rel="stylesheet" href="/css/myNewPet.css">
                 <link rel="stylesheet" href="/css/admin.css">
-                <link rel="stylesheet" href="/css/myPage.css">
                 <link rel="stylesheet" href="/css/main.css">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css">
 
@@ -26,7 +25,7 @@
                             <!-- Main Content -->
 
                             <div class="search_bar container search_box">
-                                <form action="" method="GET">
+                                <form action="" method="GET" class="search_input">
                                     <input class="" type="text" name="find_membername" id="find_membername"
                                         value='<%= params.getOrDefault("find_membername", "") %>'
                                         placeholder="검색할 회원 이름을 입력하세요">
@@ -44,22 +43,21 @@
                                     <tbody class="member_list_body">
 
                                         <tr class="table_headline">
-                                            <td>
+                                            <th>
                                                 이름
-                                            </td>
-                                            <td>
+                                            </th>
+                                            <th>
                                                 ID
-                                            </td>
-                                            <td>
+                                            </th>
+                                            <th>
                                                 TEL.
-                                            </td>
-                                            <td>
+                                            </th>
+                                            <th>
                                                 EMAIL
-                                            </td>
-                                            <td>
+                                            </th>
+                                            <th>
                                                 애완동물 현황
-                                            </td>
-                                            
+                                            </th>                                            
                                         </tr>
 
 
@@ -115,7 +113,7 @@
                                                                     <table class="member_table">
 
                                                                         <thead>
-                                                                            <tr>
+                                                                            <tr class="modal_headline">
                                                                                 <td class="member_table_head1" value=""
                                                                                     id="">
                                                                                     이름
@@ -148,79 +146,6 @@
                                                         </div>
                                                     </div>
                                                 </td>
-
-                                                <!-- 탈퇴 버튼 -->
-                                                
-                                                
-
-                                                
-                                                
-                                                <!-- 수정/탈퇴버튼 -->
-                                                
-                                                <!-- <a data-bs-toggle="modal" href="#modalTarget-second"
-                                                    class="btn btn-primary">
-                                                    수정/탈퇴
-                                                </a>
-                                                <div class="modal" id="modalTarget-second">
-                                                    <div class="modal-dialog modal-dialog-centered modal-xl">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">회원 정보 수정</div>
-                                                            <div class="modal-body">
-
-                                                                <table class="member_table">
-                                                                    <tr>
-                                                                        
-                                                                        <td class="member_table_head">
-                                                                            나이
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            전화번호
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            이메일주소
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            탈퇴
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                       
-                                                                        <td class="member_table_head">
-                                                                            <input class="inputs" type="text" name=""
-                                                                                id="" placeholder="25">
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            <input class="inputs" type="text" name=""
-                                                                                id="" placeholder="010-1111-2222">
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            <input class="inputs" type="text" name=""
-                                                                                id="" placeholder="kimjs@go.kr">
-                                                                        </td>
-                                                                        <td class="member_table_head">
-                                                                            <form action="">
-                                                                                <button class="deletebtn"
-                                                                                    type="submit">탈퇴</button>
-                                                                            </form>
-                                                                        </td>
-                                                                    </tr>
-
-                                                                </table>
-
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button data-bs-dismiss="modal" class="btn btn1">
-                                                                    Close
-                                                                </button>
-                                                                <form action="">
-                                                                    <button class="btn btn-warning">
-                                                                        저장
-                                                                    </button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
                                                 </td>
                                             </tr>
                                             <% } %>

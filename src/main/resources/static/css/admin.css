@@ -2,33 +2,34 @@
     margin: 10px auto 20px auto;
     justify-content: center;
     text-align: center;
-    width: 80%;
-    border-top: 1px solid black;
+    width: 80%;    
     border-collapse: collapse;
-
+    border-top: 1px solid black;
     padding: 10px;
 }
+
+.modal_headline {
+    border-bottom: 1px solid black;
+}
+
+.modal_body {
+    padding: 30px;
+}
+
+th, td{
+
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 10px;
+}
+
+th:first-child, td:first-child{
+    border-left: none;
+} 
 
 .table_first {
     background-color: whitesmoke;
 }
-
-.member_table_head {
-    border-bottom: 1px solid #000;
-    padding: 8px;
-  }
-  
-  .member_table_head:first-child {
-    border-left: none;
-  }
-  
-  .member_table_head:last-child {
-    border-right: none;
-  }
-  
-  .member_list_body tr:last-child td {
-    border-bottom: none;
-  }
 
 .admin_subject {
 position: fixed;
@@ -37,7 +38,12 @@ position: fixed;
 .search_bar {
     margin-top: 50px;
     position: relative;
-    width: 300px;
+    width: 80%;
+}
+
+.search_input {
+    width: 100%;
+    margin-top: 50px;
 }
 
 .search_box {
@@ -94,10 +100,6 @@ input {
     cursor: pointer;
 }
 
-td {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
 
 .modal-table {
     padding-bottom: 10px;
@@ -111,23 +113,12 @@ td {
     font-size: small;
 }
 
-.table_row_apply {
-
-        width: 80%;
-        border-top: 1px solid #444444;
-        border-collapse: collapse;
-}
-
-.table_row_apply td {
-    
-    border-bottom: 1px solid #444444;
-    padding: 10px;
-}
 
 .table_headline {
 
     background-color: whitesmoke;
     font-weight: bold;
+    border-bottom: 1px solid black;
 
 }
 

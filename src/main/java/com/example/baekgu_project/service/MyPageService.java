@@ -26,6 +26,13 @@ public class MyPageService {
         return result;
 
     }
+    public Object updateAndSelect(Map dataMap) {
+
+        String sqlMapId = "MemberManage.updateAndSelect";
+        Object result = sharedDao.getList(sqlMapId, dataMap);
+        return result;
+
+    }
 
     public Object deletePet(Map dataMap) {
         String sqlMapId = "MemberManage.deletePet";

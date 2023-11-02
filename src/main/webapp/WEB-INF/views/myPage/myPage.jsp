@@ -28,7 +28,7 @@
                         <table class="main_table">
                             <thead class="headline">
                                 <tr>
-                                    <th colspan="5"> 나의 애완동물 정보</th>
+                                    <th colspan="6"> 나의 애완동물 정보</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,6 +38,9 @@
                                     </th>
                                     <th>
                                         애완동물 나이
+                                    </th>
+                                    <th>
+                                        애완동물 생년월일
                                     </th>
                                     <th>
                                         애완동물 종
@@ -59,6 +62,9 @@
                                         </td>
                                         <td>
                                             <%= record.get("PETAGE") %>
+                                        </td>
+                                        <td>
+                                            <%= record.get("BIRTHDATE") %>
                                         </td>
                                         <td>
                                             <%= record.get("SPECIES_NAME") %>
@@ -83,11 +89,11 @@
                                         <tr>
                                             <td>
                                                 <input type="text" name="animal_name" id="animal_name"
-                                                    placeholder="애완동물 이름" value="<%= (request.getAttribute("animal_name") != null) ? request.getAttribute("animal_name") : "애완동물 이름" %>">
+                                                    placeholder="애완동물 이름" value="<%= (request.getAttribute("animal_name") != null) ? request.getAttribute("animal_name") : " " %>">
                                             </td>
-                                            <td>
-                                                <input type="text" name="animal_age" id="animal_age"
-                                                    placeholder="0년 0개월" value="<%= (request.getAttribute("animal_age") != null) ? request.getAttribute("animal_age") : "0년 0개월" %>">
+                                            <td colspan="2">
+                                                <input type="date" name="birthdate" id="birthdate"
+                                                    >
                                             </td>
                                             <td>
                                                 <select name="animal_type" id="animal_type">
